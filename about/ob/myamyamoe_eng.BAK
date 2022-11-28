@@ -1,24 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="content-style-type" content="text/css">
 <title>Motion Control Lab. (Ohishi Lab.)</title>
 <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 <div id="all">
-<!--///////////////* @ƒwƒbƒ_[ ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½wï¿½bï¿½_ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="header">
 
 <h1>Motion Control Lab. (Ohishi Lab.)</h1>
-<!-- <h2>š ‚ ‚È‚½‚ÌƒTƒCƒg‚É‚Â‚¢‚Ä‚ÌŠÈ’P‚Èà–¾•¶ š</h2> -->
+<!-- <h2>ï¿½ï¿½ ï¿½ï¿½ï¿½È‚ï¿½ï¿½ÌƒTï¿½Cï¿½gï¿½É‚Â‚ï¿½ï¿½Ä‚ÌŠÈ’Pï¿½Èï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½</h2> -->
 
 </div>
-<!--///////////////* @ƒwƒbƒ_[ ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½wï¿½bï¿½_ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
 
-<!--///////////////* @ƒƒjƒ…[ ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="menu">
 
 <p class="bk"><a href="../../index_eng.html">TOP</a></p>
@@ -34,17 +34,17 @@
 <p class="bk3"></p>
 
 </div>
-<!--///////////////* @ƒƒjƒ…[ ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
 
 <div id="main">
 
 
-<!--///////////////* @¶‹LŽ– ‚±‚±‚©‚ç@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½Lï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½@ï¿½@ *///////////////-->
 <div id="kizi">
 
 
-<!--///////////////* @ƒy[ƒWƒ^ƒCƒgƒ‹ ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½yï¿½[ï¿½Wï¿½^ï¿½Cï¿½gï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="pagetitle">
 
 <h3>Mya Mya Moe</h3>
@@ -52,7 +52,7 @@
 </div>
 <hr>
 <br>
-<!--///////////////* @ƒy[ƒWƒ^ƒCƒgƒ‹ ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½yï¿½[ï¿½Wï¿½^ï¿½Cï¿½gï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
 
 <h4 class="h43">Profile</h4>
@@ -65,8 +65,8 @@
 			</center>
 		</td>
 		<td>
-			DegreeF<br>
-			Old SchoolF<br>
+			Degreeï¿½F<br>
+			Old Schoolï¿½F<br>
 		</td>
 		<td>
 			Master<br>
@@ -101,10 +101,10 @@
 <br>
 
 </div>
-<!--///////////////* @¶‹LŽ– ‚±‚±‚Ü‚Å@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½Lï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ï¿½@ï¿½@ *///////////////-->
 
 
-<!--///////////////* @‰Eƒiƒr•” ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½Eï¿½iï¿½rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="navi">
 
   <p class="nbut"><a href="../member_eng.html">Member</a></p>
@@ -116,30 +116,30 @@
 
 <!--<div class="nbox">
 <p class="ntit">INFORMATION</p>
-<p class="ntxt">‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg</p>
+<p class="ntxt">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½g</p>
 </div>
 <br>
 <ul>
-	<li>3ƒJƒ‰ƒ€</li>
-	<li>“¯••‰æ‘œ1–‡</li>
-	<li>”wŒi‰æ‘œ‚Ì•ÏX‰Â</li>
+	<li>3ï¿½Jï¿½ï¿½ï¿½ï¿½</li>
+	<li>ï¿½ï¿½ï¿½ï¿½ï¿½æ‘œ1ï¿½ï¿½</li>
+	<li>ï¿½wï¿½iï¿½æ‘œï¿½Ì•ÏXï¿½ï¿½</li>
 </ul>-->
 
 </div>
-<!--///////////////* @‰Eƒiƒr•” ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½Eï¿½iï¿½rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
-<br style="clear:both"><!--/* @© Firefox‚Å•\Ž¦@íœ•s‰Â@ */-->
+<br style="clear:both"><!--/* ï¿½@ï¿½ï¿½ Firefoxï¿½Å•\ï¿½ï¿½ï¿½@ï¿½íœï¿½sï¿½Â@ */-->
 </div>
 
-<!--///////////////* @ƒtƒbƒ^[ ‚±‚±‚©‚ç@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½tï¿½bï¿½^ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½@ï¿½@ *///////////////-->
 <div id="footer">
 
 <div>Copyright&nbsp;(C)&nbsp;Ohishi Laboratory&nbsp;All Rights Reserved.</div>
 
 </div>
-<!--///////////////* @ƒtƒbƒ^[ ‚±‚±‚Ü‚Å@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½tï¿½bï¿½^ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ï¿½@ï¿½@ *///////////////-->
 
-<!--/* @ƒeƒ“ƒvƒŒ[ƒg‚Ì’˜ìŒ •\Ž¦Bíœ•ÏX•s‰Â@@ */-->
+<!--/* ï¿½@ï¿½eï¿½ï¿½ï¿½vï¿½ï¿½ï¿½[ï¿½gï¿½Ì’ï¿½ï¿½ìŒ ï¿½\ï¿½ï¿½ï¿½Bï¿½íœï¿½ÏXï¿½sï¿½Â@ï¿½@ */-->
 <div id="copy">Designed by <a href="http://www.chocoto.com/">chocoto</a></div>
 
 </div>

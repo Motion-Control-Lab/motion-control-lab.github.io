@@ -1,24 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="content-style-type" content="text/css">
 <title>Motion Control Lab. (Ohishi Lab.)</title>
 <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 <div id="all">
-<!--///////////////* @ƒwƒbƒ_[ ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½wï¿½bï¿½_ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="header">
 
 <h1>Motion Control Lab. (Ohishi Lab.)</h1>
-<!-- <h2>š ‚ ‚È‚½‚ÌƒTƒCƒg‚É‚Â‚¢‚Ä‚ÌŠÈ’P‚Èà–¾•¶ š</h2> -->
+<!-- <h2>ï¿½ï¿½ ï¿½ï¿½ï¿½È‚ï¿½ï¿½ÌƒTï¿½Cï¿½gï¿½É‚Â‚ï¿½ï¿½Ä‚ÌŠÈ’Pï¿½Èï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½</h2> -->
 
 </div>
-<!--///////////////* @ƒwƒbƒ_[ ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½wï¿½bï¿½_ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
 
-<!--///////////////* @ƒƒjƒ…[ ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="menu">
 
 <p class="bk"><a href="../../index_eng.html">TOP</a></p>
@@ -34,17 +34,17 @@
 <p class="bk3"></p>
 
 </div>
-<!--///////////////* @ƒƒjƒ…[ ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
 
 <div id="main">
 
 
-<!--///////////////* @¶‹L– ‚±‚±‚©‚ç@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½Lï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½@ï¿½@ *///////////////-->
 <div id="kizi">
 
 
-<!--///////////////* @ƒy[ƒWƒ^ƒCƒgƒ‹ ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½yï¿½[ï¿½Wï¿½^ï¿½Cï¿½gï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="pagetitle">
 
 <h3>Chowarit Mitsantisuk</h3>
@@ -52,7 +52,7 @@
 </div>
 <hr>
 <br>
-<!--///////////////* @ƒy[ƒWƒ^ƒCƒgƒ‹ ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½yï¿½[ï¿½Wï¿½^ï¿½Cï¿½gï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
 
 <h4 class="h43">Profile</h4>
@@ -61,12 +61,12 @@
 	<tr>
 		<td>
 			<center>
-				<img src="image/chowarit.jpg" alt="ƒ`ƒƒƒƒŠƒbƒg"  height="200">
+				<img src="image/chowarit.jpg" alt="ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½g"  height="200">
 			</center>
 		</td>
 		<td>
-		   DegreeF<br>
-		   Old SchoolF<br>
+		   Degreeï¿½F<br>
+		   Old Schoolï¿½F<br>
 		</td>
 		<td>
 			PD<br>
@@ -89,97 +89,97 @@
 		<td>Journals<br></td>
 		<td>
 			[1] C. Mitsantisuk, S. Katsura, and K. Ohishi:
-			@uSensorless Interaction Force Control Based on B-Spline Function for Human-Robot Systemsv
-			@SICE Journal of Control, Measurement, and System Integration, vol. 1, no. 6, pp. 452-459, Nov. 2008.<br>
+			ï¿½@ï¿½uSensorless Interaction Force Control Based on B-Spline Function for Human-Robot Systemsï¿½v
+			ï¿½@SICE Journal of Control, Measurement, and System Integration, vol. 1, no. 6, pp. 452-459, Nov. 2008.<br>
 			[2] C. Mitsantisuk, S. Katsura, and K. Ohishi:
-			@uKalman-Filter-Based Sensor Integration of Variable Power Assist Control Based on Human Stiffness Estimationv
-			@IEEE Transactions on Industrial Electronics, vol. 56, no. 10, pp. 3897-3905, Oct. 2009.<br>
+			ï¿½@ï¿½uKalman-Filter-Based Sensor Integration of Variable Power Assist Control Based on Human Stiffness Estimationï¿½v
+			ï¿½@IEEE Transactions on Industrial Electronics, vol. 56, no. 10, pp. 3897-3905, Oct. 2009.<br>
 			[3] C. Mitsantisuk, K. Ohishi, S. Urushihara, and S. Katsura:
-			@uDevelopment and Analysis of a Wire-Based Robot with Twin Direct-Drive Motor Systemv
-			@IEEJ Transactions on Industry Applications, vol. 130-D, no. 3, pp. 385-392, Mar. 2010.<br>
+			ï¿½@ï¿½uDevelopment and Analysis of a Wire-Based Robot with Twin Direct-Drive Motor Systemï¿½v
+			ï¿½@IEEJ Transactions on Industry Applications, vol. 130-D, no. 3, pp. 385-392, Mar. 2010.<br>
 			[4] C. Mitsantisuk, S. Katsura, and K. Ohishi:
-			@uForce Control of Human-Robot Interaction Using Twin Direct-Drive Motor System Based on Modal Space Designv
-			@IEEE Transactions on Industrial Electronics, vol. 57, no. 4, pp. 1383-1392, Apr. 2010.<br>
+			ï¿½@ï¿½uForce Control of Human-Robot Interaction Using Twin Direct-Drive Motor System Based on Modal Space Designï¿½v
+			ï¿½@IEEE Transactions on Industrial Electronics, vol. 57, no. 4, pp. 1383-1392, Apr. 2010.<br>
 			[5] C. Mitsantisuk, K. Ohishi, S. Urushihara, and S. Katsura:
-			@uKalman Filter-Based Disturbance Observer and its Applications to Sensorless Force Controlv
-			@ Advanced Robotics, vol.25, no. 3-4, pp. 335-353, Jan. 2011.<br>
+			ï¿½@ï¿½uKalman Filter-Based Disturbance Observer and its Applications to Sensorless Force Controlï¿½v
+			ï¿½@ Advanced Robotics, vol.25, no. 3-4, pp. 335-353, Jan. 2011.<br>
 			[6] T. T. Phuong, C. Mitsantisuk, and K. Ohishi:
-			@uHigh Performance Force Sensing Based on Kalman-Filter-Based Disturbance Observer Utilizing FPGAv
-			@IEEJ Transactions on Industry Applications, vol. 131-D, no. 3, pp. 334-342, Mar. 2011.<br>
+			ï¿½@ï¿½uHigh Performance Force Sensing Based on Kalman-Filter-Based Disturbance Observer Utilizing FPGAï¿½v
+			ï¿½@IEEJ Transactions on Industry Applications, vol. 131-D, no. 3, pp. 334-342, Mar. 2011.<br>
 			[7] C. Mitsantisuk, S. Katsura, and K. Ohishi:
-			@uControl of Interaction Force of Twin Direct-Drive Motor System Using Variable Wire Rope Tension With Multi-Sensor Integrationv
-			@IEEE Transactions on Industrial Electronics, vol. 59, no. 1, pp. 498-510, Jan. 2012<br>
+			ï¿½@ï¿½uControl of Interaction Force of Twin Direct-Drive Motor System Using Variable Wire Rope Tension With Multi-Sensor Integrationï¿½v
+			ï¿½@IEEE Transactions on Industrial Electronics, vol. 59, no. 1, pp. 498-510, Jan. 2012<br>
 			[8] C. Mitsantisuk, S. Katsura, and K. Ohishi:
-			@uEstimation of Action/Reaction Forces for the Bilateral Control using Kalman Filterv
-			@IEEE Transactions on Industrial Electronics, (This paper has been accepted for publication)<br>
+			ï¿½@ï¿½uEstimation of Action/Reaction Forces for the Bilateral Control using Kalman Filterï¿½v
+			ï¿½@IEEE Transactions on Industrial Electronics, (This paper has been accepted for publication)<br>
 			[9] M. Nandayapa, C. Mitsantisuk, , and K. Ohishi,:
-			@uHigh Performance Velocity Estimation for Controllers with Short Processing Time by FPGAv
-			@IEEJ Transactions on Industry Applications, vol. 1, no. 1, pp. 55-61 Jul. 2012<br>
+			ï¿½@ï¿½uHigh Performance Velocity Estimation for Controllers with Short Processing Time by FPGAï¿½v
+			ï¿½@IEEJ Transactions on Industry Applications, vol. 1, no. 1, pp. 55-61 Jul. 2012<br>
 			[10]  M. Nandayapa, C. Mitsantisuk, , and K. Ohishi:
-			@uEnhance Transparency on Ball Screw Teleoperation Robot System using Novel Velocity Estimation Method in FPGAv
-			@Advanced Robotics, (Under review process)<br>
+			ï¿½@ï¿½uEnhance Transparency on Ball Screw Teleoperation Robot System using Novel Velocity Estimation Method in FPGAï¿½v
+			ï¿½@Advanced Robotics, (Under review process)<br>
 		</td>
 	</tr>
 	<tr>
 		<td>International Conference<br></td>
 		<td>
 			[1] C. Mitsantisuk, S. Katsura and K. Ohishi:
-			@uAutomatic Load Regulation System for Training System Using B-Spline Interpolationv
-			@in The 4th IEEE International Conference on Mechatronics, ICM f07, Kumamoto, Japan, May. 2007,pp. 1-6.<br>
+			ï¿½@ï¿½uAutomatic Load Regulation System for Training System Using B-Spline Interpolationï¿½v
+			ï¿½@in The 4th IEEE International Conference on Mechatronics, ICM ï¿½f07, Kumamoto, Japan, May. 2007,pp. 1-6.<br>
 			[2] C. Mitsantisuk, S. Katsura and K. Ohishi:
-			@uSensorless Interaction Force Control Based on Modal Space Design for Twin Belt-Driven Systemv
-			@in SICE Annual Conference 2007, International Conference on Instrumentation, Control and Information Technology, SICEf 07, Takamatsu, Japan, Sep. 2007, pp. 2327-2332.<br>
+			ï¿½@ï¿½uSensorless Interaction Force Control Based on Modal Space Design for Twin Belt-Driven Systemï¿½v
+			ï¿½@in SICE Annual Conference 2007, International Conference on Instrumentation, Control and Information Technology, SICEï¿½f 07, Takamatsu, Japan, Sep. 2007, pp. 2327-2332.<br>
 			[3] C. Mitsantisuk, S. Katsura and K. Ohishi:
-			@uVariable Power Assist Control of Twin Direct-Drive Motor System Based on Human Stiffness Estimationv
-			@in The 10th IEEE International Workshop on Advanced Motion Control, AMC f08,Trento, Italy, Mar. 2008, pp. 520-525.<br>
+			ï¿½@ï¿½uVariable Power Assist Control of Twin Direct-Drive Motor System Based on Human Stiffness Estimationï¿½v
+			ï¿½@in The 10th IEEE International Workshop on Advanced Motion Control, AMC ï¿½f08,Trento, Italy, Mar. 2008, pp. 520-525.<br>
 			[4] C. Mitsantisuk, K. Ohishi, S. Urushihara, and S. Katsura:
-			@uDesign and Control of Cooperative Human-Robot System Based on Variable Wire Rope Tension Actuatorsv
-			@in Japan-Thailand Bilateral Symposium 2008 on Higher Practical Engineering Education and Research Organization Nagaoka, Japan, Dec. 2008.<br>
+			ï¿½@ï¿½uDesign and Control of Cooperative Human-Robot System Based on Variable Wire Rope Tension Actuatorsï¿½v
+			ï¿½@in Japan-Thailand Bilateral Symposium 2008 on Higher Practical Engineering Education and Research Organization Nagaoka, Japan, Dec. 2008.<br>
 			[5] C. Mitsantisuk, K. Ohishi, S. Urushihara, and S. Katsura,:
-			@uIdentification of Twin Direct-Drive Motor System with Consideration of Wire Rope Tensionv
-			@in The 5th IEEE International Conference on Mechatronics, ICM f09, Malaga, Spain, Apr. 2009.<br>
+			ï¿½@ï¿½uIdentification of Twin Direct-Drive Motor System with Consideration of Wire Rope Tensionï¿½v
+			ï¿½@in The 5th IEEE International Conference on Mechatronics, ICM ï¿½f09, Malaga, Spain, Apr. 2009.<br>
 			[6] C. Mitsantisuk, K. Ohishi, S. Urushihara, and S. Katsura:
-			@uApplication of The Twin Direct-Drive Motor System for Human-Robot Interaction Controlv
-			@in The 1st joint symposium between National Science and Technology Development Agency (NSTDA) and Nagaoka University of Technology (NUT), Pathumthani, Thailand, May. 2009.<br>
+			ï¿½@ï¿½uApplication of The Twin Direct-Drive Motor System for Human-Robot Interaction Controlï¿½v
+			ï¿½@in The 1st joint symposium between National Science and Technology Development Agency (NSTDA) and Nagaoka University of Technology (NUT), Pathumthani, Thailand, May. 2009.<br>
 			[7] C. Mitsantisuk, T. T. Phuong, K. Ohishi, S. Urushihara, and S. Katsura:
-			@uAnalysis of Interaction Force of Wire-Based Robot Using Variable Wire Rope Tension Controlv
-			@in The 35th Annual Conference of the IEEE Industrial Electronics Society, IECON f09, Porto, Portugal, Nov. 2009. (Received IEEE IES student scholarship award)<br>
+			ï¿½@ï¿½uAnalysis of Interaction Force of Wire-Based Robot Using Variable Wire Rope Tension Controlï¿½v
+			ï¿½@in The 35th Annual Conference of the IEEE Industrial Electronics Society, IECON ï¿½f09, Porto, Portugal, Nov. 2009. (Received IEEE IES student scholarship award)<br>
 			[8] C. Mitsantisuk, K. Ohishi, S. Urushihara, and S. Katsura:
-			@uSimulation and Identification of Twin Direct-Drive Motor System based on Variable Wire Rope Tension Controlv
-			@in The 2nd Thailand-Japan International Academic Conference, TJIA2009, Kyoto, Japan, Nov. 2009, pp. 77.<br>
+			ï¿½@ï¿½uSimulation and Identification of Twin Direct-Drive Motor System based on Variable Wire Rope Tension Controlï¿½v
+			ï¿½@in The 2nd Thailand-Japan International Academic Conference, TJIA2009, Kyoto, Japan, Nov. 2009, pp. 77.<br>
 			[9] C. Mitsantisuk, S. Katsura and K. Ohishi:
-			@uStiffness Modeling Across Transition Temperatures in Virtual Environments by B-Spline Interpolationv
-			@in The 11th IEEE International Workshop on Advanced Motion Control, AMC f10, Nagaoka, Japan, Mar. 2010, pp. 349-354.<br>
+			ï¿½@ï¿½uStiffness Modeling Across Transition Temperatures in Virtual Environments by B-Spline Interpolationï¿½v
+			ï¿½@in The 11th IEEE International Workshop on Advanced Motion Control, AMC ï¿½f10, Nagaoka, Japan, Mar. 2010, pp. 349-354.<br>
 			[10] C. Mitsantisuk, T. T. Phuong, K. Ohishi, and S. Katsura:
-			@uCombining Position and Acceleration Information for High Performance of Bilateral Control using Kalman-Filter-Based Disturbance Observerv
-			@in The 36th Annual Conference of the IEEE Industrial Electronics Society, IECON f10, Glendale, AZ, USA., Nov. 2010.<br>
+			ï¿½@ï¿½uCombining Position and Acceleration Information for High Performance of Bilateral Control using Kalman-Filter-Based Disturbance Observerï¿½v
+			ï¿½@in The 36th Annual Conference of the IEEE Industrial Electronics Society, IECON ï¿½f10, Glendale, AZ, USA., Nov. 2010.<br>
 			[11] T. T. Phuong, C. Mitsantisuk, K. Ohishi, and M. Sazawa:
-			@uFPGA-based Wideband Force Sensing with Kalman-Filter-Based Disturbance Observerv
-			@in The 36th Annual Conference of the IEEE Industrial Electronics Society, IECON f10, Glendale, AZ, USA., Nov. 2010.<br>
+			ï¿½@ï¿½uFPGA-based Wideband Force Sensing with Kalman-Filter-Based Disturbance Observerï¿½v
+			ï¿½@in The 36th Annual Conference of the IEEE Industrial Electronics Society, IECON ï¿½f10, Glendale, AZ, USA., Nov. 2010.<br>
 			[12] C. Mitsantisuk, K. Ohishi, and S. Katsura:
-			@uTransmission of Haptic Sensation for Human-Assisted Devicesv
-			@in The 3rd Thailand-Japan International Academic Conference, TJIA2010, Nagoya , Japan, Nov. 2010. (Received Best Presentation Award)<br>
+			ï¿½@ï¿½uTransmission of Haptic Sensation for Human-Assisted Devicesï¿½v
+			ï¿½@in The 3rd Thailand-Japan International Academic Conference, TJIA2010, Nagoya , Japan, Nov. 2010. (Received Best Presentation Award)<br>
 			[13] C. Mitsantisuk, T. T. Phuong, K. Ohishi, and S. Katsura:
-			@uSensorless Force Sensing Using Kalman Filtering Techniques for Bilateral Control Systemv
-			@in The 8th edition of France-Japan and 6th Europe-Asia Congress on Mechatronics, MECATRONICSf10, Yokohama, Japan, Nov. 2010.<br>
+			ï¿½@ï¿½uSensorless Force Sensing Using Kalman Filtering Techniques for Bilateral Control Systemï¿½v
+			ï¿½@in The 8th edition of France-Japan and 6th Europe-Asia Congress on Mechatronics, MECATRONICSï¿½f10, Yokohama, Japan, Nov. 2010.<br>
 			[14] T. T. Phuong, C. Mitsantisuk, and K. Ohishi:
-			@uMulti-sensor Fusion in Kalman-filter for High Performance Force Sensingv
-			@in The 2011 Joint IEEE International Conference on Industrial Electronics (ICIT) & South-eastern Symposium on System Theory (SSST) , ICIT-SSST 2011, Auburn, Alabama March, 2011.<br>
+			ï¿½@ï¿½uMulti-sensor Fusion in Kalman-filter for High Performance Force Sensingï¿½v
+			ï¿½@in The 2011 Joint IEEE International Conference on Industrial Electronics (ICIT) & South-eastern Symposium on System Theory (SSST) , ICIT-SSST 2011, Auburn, Alabama March, 2011.<br>
 			[15] C. Mitsantisuk, K. Ohishi, and S. Katsura:
-			@uVariable Mechanical Stiffness based on Human Stiffness Estimationv
-			@in The 6th IEEE International Conference on Mechatronics, ICM f11, Istanbul, Turkey, Apr. 2011.<br>
+			ï¿½@ï¿½uVariable Mechanical Stiffness based on Human Stiffness Estimationï¿½v
+			ï¿½@in The 6th IEEE International Conference on Mechatronics, ICM ï¿½f11, Istanbul, Turkey, Apr. 2011.<br>
 			[16] T. T. Phuong, R. Furusawa, C. Mitsantisuk, and K. Ohishi:
-			@uForce Sensing Considering Periodic Disturbance Suppression Based on High Order Disturbance Observer and Kalman-filterv
-			@in The 4th International Conference on Human System Interaction, HSI 2011, Yokohama, Japan, May, 2011.<br>
+			ï¿½@ï¿½uForce Sensing Considering Periodic Disturbance Suppression Based on High Order Disturbance Observer and Kalman-filterï¿½v
+			ï¿½@in The 4th International Conference on Human System Interaction, HSI 2011, Yokohama, Japan, May, 2011.<br>
 			[17] C. Mitsantisuk, K. Ohishi, and S. Katsura:
-			@uDesign of Ball-Cage Miniature Stroke for Integration in A Flexible Actuator with Thrust Wirev
-			@in The 1st International Symposium on Access Spaces, IEEE-ISAS f11, Yokohama, Japan, June, 2011.<br>
+			ï¿½@ï¿½uDesign of Ball-Cage Miniature Stroke for Integration in A Flexible Actuator with Thrust Wireï¿½v
+			ï¿½@in The 1st International Symposium on Access Spaces, IEEE-ISAS ï¿½f11, Yokohama, Japan, June, 2011.<br>
 			[18] C. Mitsantisuk, K. Ohishi, and S. Katsura:
-			@uCompensation of Backlash for Improving the Efficiency of Flexible Actuator in Bilateral Teleoperation Systemv
-			@in The 37th Annual Conference of the IEEE Industrial Electronics Society, IECON f11, Melbourne, Australia, Nov., 2011.<br>
+			ï¿½@ï¿½uCompensation of Backlash for Improving the Efficiency of Flexible Actuator in Bilateral Teleoperation Systemï¿½v
+			ï¿½@in The 37th Annual Conference of the IEEE Industrial Electronics Society, IECON ï¿½f11, Melbourne, Australia, Nov., 2011.<br>
 			[19] S. Yaemprayoon, C. Mitsantisuk, and K. Ohishi:
-			@uDevelopment of Temperature Controller by Using Customized Proportional Controller Based on Disturbance Observerv
-			@in The 4h Thailand-Japan International Academic Conference, TJIA2011, Tokyo, Japan, Nov. 2011.<br>
+			ï¿½@ï¿½uDevelopment of Temperature Controller by Using Customized Proportional Controller Based on Disturbance Observerï¿½v
+			ï¿½@in The 4h Thailand-Japan International Academic Conference, TJIA2011, Tokyo, Japan, Nov. 2011.<br>
 		</td>
 	</tr>
 
@@ -187,10 +187,10 @@
 </center>
 
 </div>
-<!--///////////////* @¶‹L– ‚±‚±‚Ü‚Å@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½ï¿½ï¿½Lï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ï¿½@ï¿½@ *///////////////-->
 
 
-<!--///////////////* @‰Eƒiƒr•” ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½Eï¿½iï¿½rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="navi">
 
   <p class="nbut"><a href="../member_eng.html">Member</a></p>
@@ -202,30 +202,30 @@
 
 <!--<div class="nbox">
 <p class="ntit">INFORMATION</p>
-<p class="ntxt">‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg</p>
+<p class="ntxt">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½g</p>
 </div>
 <br>
 <ul>
-	<li>3ƒJƒ‰ƒ€</li>
-	<li>“¯••‰æ‘œ1–‡</li>
-	<li>”wŒi‰æ‘œ‚Ì•ÏX‰Â</li>
+	<li>3ï¿½Jï¿½ï¿½ï¿½ï¿½</li>
+	<li>ï¿½ï¿½ï¿½ï¿½ï¿½æ‘œ1ï¿½ï¿½</li>
+	<li>ï¿½wï¿½iï¿½æ‘œï¿½Ì•ÏXï¿½ï¿½</li>
 </ul>-->
 
 </div>
-<!--///////////////* @‰Eƒiƒr•” ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½Eï¿½iï¿½rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
-<br style="clear:both"><!--/* @© Firefox‚Å•\¦@íœ•s‰Â@ */-->
+<br style="clear:both"><!--/* ï¿½@ï¿½ï¿½ Firefoxï¿½Å•\ï¿½ï¿½ï¿½@ï¿½íœï¿½sï¿½Â@ */-->
 </div>
 
-<!--///////////////* @ƒtƒbƒ^[ ‚±‚±‚©‚ç@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½tï¿½bï¿½^ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½@ï¿½@ *///////////////-->
 <div id="footer">
 
 <div>Copyright&nbsp;(C)&nbsp;Ohishi Laboratory&nbsp;All Rights Reserved.</div>
 
 </div>
-<!--///////////////* @ƒtƒbƒ^[ ‚±‚±‚Ü‚Å@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½tï¿½bï¿½^ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ï¿½@ï¿½@ *///////////////-->
 
-<!--/* @ƒeƒ“ƒvƒŒ[ƒg‚Ì’˜ìŒ •\¦Bíœ•ÏX•s‰Â@@ */-->
+<!--/* ï¿½@ï¿½eï¿½ï¿½ï¿½vï¿½ï¿½ï¿½[ï¿½gï¿½Ì’ï¿½ï¿½ìŒ ï¿½\ï¿½ï¿½ï¿½Bï¿½íœï¿½ÏXï¿½sï¿½Â@ï¿½@ */-->
 <div id="copy">Designed by <a href="http://www.chocoto.com/">chocoto</a></div>
 
 </div>

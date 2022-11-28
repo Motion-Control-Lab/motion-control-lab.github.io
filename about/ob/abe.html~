@@ -1,32 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="content-style-type" content="text/css">
-    <title>ƒ‚[ƒVƒ‡ƒ“ƒRƒ“ƒgƒ[ƒ‹Œ¤‹†Žº ‘åÎŒ¤‹†Žº</title>
+    <title>ï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÎŒï¿½ï¿½ï¿½ï¿½ï¿½</title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div id="all">
-      <!--///////////////* @ƒwƒbƒ_[ ‚±‚±‚©‚ç@ *///////////////-->
+      <!--///////////////* ï¿½@ï¿½wï¿½bï¿½_ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
       <div id="lang"><a href="abe_eng.html">English</a></div>
       
       <div id="header">
-	<h1>ƒ‚[ƒVƒ‡ƒ“ƒRƒ“ƒgƒ[ƒ‹Œ¤‹†Žº ‘åÎŒ¤‹†Žº</h1>
-	<!-- <h2>š ‚ ‚È‚½‚ÌƒTƒCƒg‚É‚Â‚¢‚Ä‚ÌŠÈ’P‚Èà–¾•¶ š</h2> -->
+	<h1>ï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÎŒï¿½ï¿½ï¿½ï¿½ï¿½</h1>
+	<!-- <h2>ï¿½ï¿½ ï¿½ï¿½ï¿½È‚ï¿½ï¿½ÌƒTï¿½Cï¿½gï¿½É‚Â‚ï¿½ï¿½Ä‚ÌŠÈ’Pï¿½Èï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½</h2> -->
 	
       </div>
-      <!--///////////////* @ƒwƒbƒ_[ ‚±‚±‚Ü‚Å@ *///////////////-->
+      <!--///////////////* ï¿½@ï¿½wï¿½bï¿½_ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
       
       
-      <!--///////////////* @ƒƒjƒ…[ ‚±‚±‚©‚ç@ *///////////////-->
+      <!--///////////////* ï¿½@ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
       <div id="menu">
 	
 	<p class="bk"><a href="../../index.html">TOP</a></p>
-	<p class="bksel"><a href="../../about/about.html">Œ¤‹†Žº‚ÌÐ‰î</a></p>
-	<p class="bk"><a href="../../research/research.html">Œ¤‹†“à—e</a></p>
+	<p class="bksel"><a href="../../about/about.html">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌÐ‰ï¿½</a></p>
+	<p class="bk"><a href="../../research/research.html">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½e</a></p>
 	<p class="bk"><a href="../../link/link.html">LINK</a></p>
-	<p class="bk"><a href="../../link/link.html">‚¨–â‚¢‡‚í‚¹</a></p>
+	<p class="bk"><a href="../../link/link.html">ï¿½ï¿½ï¿½â‚¢ï¿½ï¿½ï¿½í‚¹</a></p>
 	
       </div>
       
@@ -35,28 +35,28 @@
 	<p class="bk3"></p>
 	
       </div>
-      <!--///////////////* @ƒƒjƒ…[ ‚±‚±‚Ü‚Å@ *///////////////-->
+      <!--///////////////* ï¿½@ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
       
       
       <div id="main">
 	
 	
-	<!--///////////////* @¶‹LŽ– ‚±‚±‚©‚ç@@@ *///////////////-->
+	<!--///////////////* ï¿½@ï¿½ï¿½ï¿½Lï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½@ï¿½@ *///////////////-->
 	<div id="kizi">
 	  
 	  
-	  <!--///////////////* @ƒy[ƒWƒ^ƒCƒgƒ‹ ‚±‚±‚©‚ç@ *///////////////-->
+	  <!--///////////////* ï¿½@ï¿½yï¿½[ï¿½Wï¿½^ï¿½Cï¿½gï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 	  <div id="pagetitle">
 	    
-	    <h3>ˆ¢•” W‘å</h3>
+	    <h3>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</h3>
 	    
 	  </div>
 	  <hr>
 	  <br>
-	  <!--///////////////* @ƒy[ƒWƒ^ƒCƒgƒ‹ ‚±‚±‚Ü‚Å@ *///////////////-->
+	  <!--///////////////* ï¿½@ï¿½yï¿½[ï¿½Wï¿½^ï¿½Cï¿½gï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 	  
 	  
-	  <h4 class="h43">ƒvƒƒtƒB[ƒ‹</h4>
+	  <h4 class="h43">ï¿½vï¿½ï¿½ï¿½tï¿½Bï¿½[ï¿½ï¿½</h4>
 	  <center>
 	    <table class="table1">
 	      <tr>
@@ -64,132 +64,132 @@
 		  <center>
 		    
 	      
-		    <img src="image/abe2.jpg" alt="ˆ¢•”W‘å" width="200" height="140">
+		    <img src="image/abe2.jpg" alt="ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½" width="200" height="140">
 		    
 		  </center>
 		</td>
 		<td>
-		  Šw”NF<br>
-		  •”Šˆ¥ƒT[ƒNƒ‹F<br>
-		  Žï–¡F<br>
-		  og‚êF<br>
+		  ï¿½wï¿½Nï¿½F<br>
+		  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½[ï¿½Nï¿½ï¿½ï¿½F<br>
+		  ï¿½ï–¡ï¿½F<br>
+		  ï¿½oï¿½gï¿½ï¿½ï¿½ï¿½F<br>
 		</td>
 		<td>
-		  ”ŽŽm1”N<br>
-		  ƒTƒbƒJ[<br>
-		  ƒTƒbƒJ[AƒJƒ‰ƒIƒP<br>
-		  H“cH‹Æ‚“™ê–åŠwZ&“¯êU‰È<br>
+		  ï¿½ï¿½ï¿½m1ï¿½N<br>
+		  ï¿½Tï¿½bï¿½Jï¿½[<br>
+		  ï¿½Tï¿½bï¿½Jï¿½[ï¿½Aï¿½Jï¿½ï¿½ï¿½Iï¿½P<br>
+		  ï¿½Hï¿½cï¿½Hï¿½Æï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½Z&ï¿½ï¿½ï¿½ï¿½Uï¿½ï¿½<br>
 		</td>
 	      </tr>
 	    </table>
 	  </center>
 	  <br>
 	  <br>
-	  <h4 class="h45">Œ¤‹†“à—e</h4>
+	  <h4 class="h45">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½e</h4>
 	  <center>
 	    <table class="table2">
 	      <tr>
-		<td>Œ¤‹†ƒebƒ}<br></td>
-		<td>IPMSM‹ì“®—p“d‰ðƒRƒ“ƒfƒ“ƒTƒŒƒX’P‘Š-ŽO‘ŠƒCƒ“ƒo[ƒ^‚É‚¨‚¯‚é<br>“ü—Í“d—¬‚’²”g‚¨‚æ‚ÑU“®—}§‚ÉŠÖ‚·‚éŒ¤‹†</td>
+		<td>ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½bï¿½}<br></td>
+		<td>IPMSMï¿½ì“®ï¿½pï¿½dï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½Xï¿½Pï¿½ï¿½-ï¿½Oï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½<br>ï¿½ï¿½ï¿½Í“dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ÑUï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½éŒ¤ï¿½ï¿½</td>
 	      </tr>
 	      <tr>
-		<td>Œ´’˜˜_•¶<br></td>
+		<td>ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½<br></td>
 		<td>
 		  
 		</td>
 	      </tr>
 	      <tr>
-		<td>‘Û‰ï‹c<br></td>
-		<td>(‚Í”­•\ŽÒ)<br>
-		  [1]Itaru Ando, <b>Kodai Abe</b>, Masashi Ochiai, Kiyoshi Ohishi : "Soft-Switching-Interleaved Power Factor Correction Converter with Lossless Snubber", The 39rd Annual Conference of the IEEE Industrial Electronics Society (IECON), pp.7214-7219, 2013 (2013.11)  (‚êŽž‘ã‚ÌŒ¤‹†)<br><br>
+		<td>ï¿½ï¿½ï¿½Û‰ï¿½c<br></td>
+		<td>(ï¿½ï¿½ï¿½Í”ï¿½ï¿½\ï¿½ï¿½)<br>
+		  [1]Itaru Ando, ï¿½ï¿½<b>Kodai Abe</b>, Masashi Ochiai, Kiyoshi Ohishi : "Soft-Switching-Interleaved Power Factor Correction Converter with Lossless Snubber", The 39rd Annual Conference of the IEEE Industrial Electronics Society (IECON), pp.7214-7219, 2013 (2013.11)  (ï¿½ï¿½ï¿½êŽžï¿½ï¿½ÌŒï¿½ï¿½ï¿½)<br><br>
 		  
-		  [2]Toshio Hiraide, <b>Kodai Abe</b>, Kiyoshi Ohishi, Hitoshi Haga : "Current Harmonics Reduction Method of Electrolytic Capacitor-less Diode Rectifier using Inverter-controlled IPM Motor", The 39rd Annual Conference of the IEEE Industrial Electronics Society (IECON), pp.2695-2700, 2013 (2013.11)<br><br>
+		  [2]Toshio Hiraide, ï¿½ï¿½<b>Kodai Abe</b>, Kiyoshi Ohishi, Hitoshi Haga : "Current Harmonics Reduction Method of Electrolytic Capacitor-less Diode Rectifier using Inverter-controlled IPM Motor", The 39rd Annual Conference of the IEEE Industrial Electronics Society (IECON), pp.2695-2700, 2013 (2013.11)<br><br>
 	    
-		  [3]<b>Kodai Abe</b>, Kiyoshi Ohishi, Hitoshi Haga : "Input Current Harmonics Reduction Control for Electrolytic Capacitor Less Inverter Based IPMSM Drive System", The seventh International Power Electronics Conference, IPEC-Hiroshima 2014 -ECCE Asia-, 21P6-14 (2014.5) <br><br>
+		  [3]ï¿½ï¿½<b>Kodai Abe</b>, Kiyoshi Ohishi, Hitoshi Haga : "Input Current Harmonics Reduction Control for Electrolytic Capacitor Less Inverter Based IPMSM Drive System", The seventh International Power Electronics Conference, IPEC-Hiroshima 2014 -ECCE Asia-, 21P6-14 (2014.5) <br><br>
 
-		  [4]<b>Kodai Abe</b>, Kiyoshi Ohishi, Hitoshi Haga : "Realization of IPMSM Drive Systems without both an Electrolytic Capacitor and an Line Inductor", The 40th Annual Conference of the IEEE Industrial Electronics Society (IECON), pp.819-824, 2014 (2014.11)<br>
+		  [4]ï¿½ï¿½<b>Kodai Abe</b>, Kiyoshi Ohishi, Hitoshi Haga : "Realization of IPMSM Drive Systems without both an Electrolytic Capacitor and an Line Inductor", The 40th Annual Conference of the IEEE Industrial Electronics Society (IECON), pp.819-824, 2014 (2014.11)<br>
 		  
 		</td>
 	      </tr>
 	      <tr>
-		<td>‘“àŠw‰ï<br></td>
-		<td>(‚Í”­•\ŽÒ)<br>
-		  [1]<b>ˆ¢•” W‘å</b>CˆÀ“Œ ŽŠC—Ž‡ ­ŽiFuƒƒXƒŒƒXƒXƒiƒo‚ðŠˆ—p‚µ‚½ƒCƒ“ƒ^[ƒŠ[ƒuŽ®ƒ\ƒtƒgƒXƒCƒbƒ`ƒ“ƒOPFC‰ñ˜HvC•½¬23”N“d‹CŠÖŒWŠw‰ï“Œ–kŽx•”˜A‡‘å‰ïC1B09Cp.41 (2011.8) (‚êŽž‘ã‚ÌŒ¤‹†)<br><br>
+		<td>ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½<br></td>
+		<td>(ï¿½ï¿½ï¿½Í”ï¿½ï¿½\ï¿½ï¿½)<br>
+		  [1]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½iï¿½Fï¿½uï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½Xï¿½Xï¿½iï¿½oï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½[ï¿½uï¿½ï¿½ï¿½\ï¿½tï¿½gï¿½Xï¿½Cï¿½bï¿½`ï¿½ï¿½ï¿½OPFCï¿½ï¿½Hï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½23ï¿½Nï¿½dï¿½Cï¿½ÖŒWï¿½wï¿½ï“Œï¿½kï¿½xï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½C1B09ï¿½Cp.41 (2011.8) (ï¿½ï¿½ï¿½êŽžï¿½ï¿½ÌŒï¿½ï¿½ï¿½)<br><br>
 		  
-		  [2]<b>ˆ¢•” W‘å</b>CˆÀ“Œ ŽŠC—Ž‡ ­ŽiFuƒƒXƒŒƒXƒXƒiƒo‚ð‘g‚Ý“ü‚ê‚½ƒCƒ“ƒ^[ƒŠ[ƒuŽ®ƒ\ƒtƒgƒXƒCƒbƒ`ƒ“ƒO¸~ˆ³ƒ`ƒ‡ƒbƒpvC•½¬24”N‚êƒVƒ“ƒ|ƒWƒEƒ€CSB31Cp.111 (2012.1) (‚êŽž‘ã‚ÌŒ¤‹†)<br><br>
+		  [2]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½iï¿½Fï¿½uï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½Xï¿½Xï¿½iï¿½oï¿½ï¿½gï¿½Ý“ï¿½ï¿½ê‚½ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½[ï¿½uï¿½ï¿½ï¿½\ï¿½tï¿½gï¿½Xï¿½Cï¿½bï¿½`ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½bï¿½pï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½24ï¿½Nï¿½ï¿½ï¿½ï¿½Vï¿½ï¿½ï¿½|ï¿½Wï¿½Eï¿½ï¿½ï¿½CSB31ï¿½Cp.111 (2012.1) (ï¿½ï¿½ï¿½êŽžï¿½ï¿½ÌŒï¿½ï¿½ï¿½)<br><br>
 		  
-		  [3]<b>ˆ¢•” W‘å</b>CˆÀ“Œ ŽŠC—Ž‡ ­ŽiFuƒƒXƒŒƒXƒXƒiƒo‚ð‘g‚Ý“ü‚ê‚½ƒCƒ“ƒ^[ƒŠ[ƒuŽ®ƒ\ƒtƒgƒXƒCƒbƒ`ƒ“ƒOPFC‰ñ˜H‚ÌŽÀŒ±“IŒŸ“¢vC•½¬24”N“d‹CŠÖŒWŠw‰ï“Œ–kŽx•”˜A‡‘å‰ïC2G22 (2012.8) (‚êŽž‘ã‚ÌŒ¤‹†)<br><br>
+		  [3]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½iï¿½Fï¿½uï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½Xï¿½Xï¿½iï¿½oï¿½ï¿½gï¿½Ý“ï¿½ï¿½ê‚½ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½[ï¿½uï¿½ï¿½ï¿½\ï¿½tï¿½gï¿½Xï¿½Cï¿½bï¿½`ï¿½ï¿½ï¿½OPFCï¿½ï¿½Hï¿½ÌŽï¿½ï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½24ï¿½Nï¿½dï¿½Cï¿½ÖŒWï¿½wï¿½ï“Œï¿½kï¿½xï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½C2G22 (2012.8) (ï¿½ï¿½ï¿½êŽžï¿½ï¿½ÌŒï¿½ï¿½ï¿½)<br><br>
 		  
-		  [4]<b>ˆ¢•” W‘å</b>C¼‹´ ³—ÏCˆÀ“Œ ŽŠC—Ž‡ ­ŽiFuƒƒXƒŒƒXƒXƒiƒo‚ð‘g‚Ý“ü‚ê‚½ƒCƒ“ƒ^[ƒŠ[ƒuŽ®ƒ\ƒtƒgƒXƒCƒbƒ`ƒ“ƒOPFC‰ñ˜H‚Ì”gŒ`‰ü‘PvC•½¬25”N“d‹CŠw‰ï‘S‘‘å‰ïCIB014-A3C4-050 (2013.3) (‚êŽž‘ã‚ÌŒ¤‹†)<br><br>
+		  [4]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÏCï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½iï¿½Fï¿½uï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½Xï¿½Xï¿½iï¿½oï¿½ï¿½gï¿½Ý“ï¿½ï¿½ê‚½ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½[ï¿½uï¿½ï¿½ï¿½\ï¿½tï¿½gï¿½Xï¿½Cï¿½bï¿½`ï¿½ï¿½ï¿½OPFCï¿½ï¿½Hï¿½Ì”gï¿½`ï¿½ï¿½ï¿½Pï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½25ï¿½Nï¿½dï¿½Cï¿½wï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½CIB014-A3ï¿½C4-050 (2013.3) (ï¿½ï¿½ï¿½êŽžï¿½ï¿½ÌŒï¿½ï¿½ï¿½)<br><br>
 
-		  [5]¼‰Y ŒcC<b>ˆ¢•” W‘å</b>CˆÀ“Œ ŽŠC‘åÎ Œ‰FuƒXƒCƒbƒ`ƒ“ƒO‚ÌŽ–‘Oî•ñ‚ð•K—v‚Æ‚µ‚È‚¢’¼—¬“d—¬ŒŸo‚É‚æ‚éŽO‘ŠŒð—¬“d—¬‚Ì•œŒ³vC•½¬25”N“d‹CŠw‰ï‘S‘‘å‰ïCIB013-A3C4-040 (2013.3) (‚êŽž‘ã‚ÌŒ¤‹†)<br><br>
+		  [5]ï¿½ï¿½ï¿½ï¿½ï¿½Y ï¿½cï¿½C<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Fï¿½uï¿½Xï¿½Cï¿½bï¿½`ï¿½ï¿½ï¿½Oï¿½ÌŽï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½Æ‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½oï¿½É‚ï¿½ï¿½Oï¿½ï¿½ï¿½ð—¬“dï¿½ï¿½ï¿½Ì•ï¿½ï¿½ï¿½ï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½25ï¿½Nï¿½dï¿½Cï¿½wï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½CIB013-A3ï¿½C4-040 (2013.3) (ï¿½ï¿½ï¿½êŽžï¿½ï¿½ÌŒï¿½ï¿½ï¿½)<br><br>
 	    
-		  [6]•½o •q—YC<b>ˆ¢•” W‘å</b>C‘åÎ Œ‰C–F‰ê mFuIPMSM‹ì“®—p“d‰ðƒRƒ“ƒfƒ“ƒTƒŒƒXƒCƒ“ƒo[ƒ^‚É‚¨‚¯‚é•âž“d—¬‚ð—p‚¢‚½“ü—Í“d—¬‚’²”g‚Ì—}§–@vC•½¬25”N“d‹CŠw‰ïŽY‹Æ‰ž—p•”–å‘å‰ïC3-41Cpp.III-231-III-236 (2013.8)<br><br>
+		  [6]ï¿½ï¿½ï¿½o ï¿½qï¿½Yï¿½Cï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½Fï¿½ï¿½ ï¿½mï¿½Fï¿½uIPMSMï¿½ì“®ï¿½pï¿½dï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½Xï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½âžï¿½dï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í“dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ì—}ï¿½ï¿½ï¿½@ï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½25ï¿½Nï¿½dï¿½Cï¿½wï¿½ï¿½Yï¿½Æ‰ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½C3-41ï¿½Cpp.III-231-III-236 (2013.8)<br><br>
 		  
-		  [7]<b>ˆ¢•” W‘å</b>C‘åÎ Œ‰C–F‰ê mFuIPMSM‹ì“®—p“d‰ðƒRƒ“ƒfƒ“ƒTƒŒƒXƒCƒ“ƒo[ƒ^‚Ì“dˆ³Žw—ß’l‹KŠi‰»•û–@‚ÌˆêŒŸ“¢vC‘æ23‰ñ“d‹CŠw‰ï“Œ‹žŽx•”VŠƒŽxŠŒ¤‹†”­•\‰ïCp.36 (2013.11)<br><br>
+		  [7]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½Fï¿½ï¿½ ï¿½mï¿½Fï¿½uIPMSMï¿½ì“®ï¿½pï¿½dï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½Xï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½wï¿½ß’lï¿½Kï¿½iï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½ÌˆêŒŸï¿½ï¿½ï¿½vï¿½Cï¿½ï¿½23ï¿½ï¿½dï¿½Cï¿½wï¿½ï“Œï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Vï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½Cp.36 (2013.11)<br><br>
 
-		  [8]<b>ˆ¢•” W‘å</b>C‘åÎ Œ‰C–F‰ê mFuIPMSM‹ì“®—p“d‰ðƒRƒ“ƒfƒ“ƒTƒŒƒXƒCƒ“ƒo[ƒ^‚Ì“ü—Í“d—¬U“®‚Ì—}§§ŒävCƒ‚[ƒ^ƒhƒ‰ƒCƒu/‰Æ“dE–¯¶‡“¯Œ¤‹†‰ïCMD-14-57CHCA-14-9Cpp.43-48 (2014.3)<br><br>
+		  [8]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½Fï¿½ï¿½ ï¿½mï¿½Fï¿½uIPMSMï¿½ì“®ï¿½pï¿½dï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½Xï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½Ì“ï¿½ï¿½Í“dï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½Ì—}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Cï¿½ï¿½ï¿½[ï¿½^ï¿½hï¿½ï¿½ï¿½Cï¿½u/ï¿½Æ“dï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CMD-14-57ï¿½CHCA-14-9ï¿½Cpp.43-48 (2014.3)<br><br>
 
-		  [9]<b>ˆ¢•” W‘å</b>C‘åÎ Œ‰C–F‰ê mFuIPMSM‹ì“®—p“d‰ðƒRƒ“ƒfƒ“ƒTƒŒƒXƒCƒ“ƒo[ƒ^‚Ìƒ‰ƒCƒ“ƒŠƒAƒNƒgƒ‹ƒŒƒXŽÀŒ»‚Ì‚½‚ß‚Ì“ü—Í“d—¬U“®—}§–@vC•½¬26”N“d‹CŠw‰ïŽY‹Æ‰ž—p•”–å‘å‰ïC3-54Cp.III-299-III-304 (2014.8)<br><br>
+		  [9]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½Fï¿½ï¿½ ï¿½mï¿½Fï¿½uIPMSMï¿½ì“®ï¿½pï¿½dï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½Xï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½Ìƒï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ß‚Ì“ï¿½ï¿½Í“dï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½@ï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½26ï¿½Nï¿½dï¿½Cï¿½wï¿½ï¿½Yï¿½Æ‰ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½C3-54ï¿½Cp.III-299-III-304 (2014.8)<br><br>
 		  
-		  [10]<b>ˆ¢•” W‘å</b>C‘åÎ Œ‰C–F‰ê mFuIPMSM‹ì“®—p“d‰ðƒRƒ“ƒfƒ“ƒTƒŒƒX’P‘Š|ŽO‘ŠƒCƒ“ƒo[ƒ^‚Ì“ü—Í“d—¬U“®—}§–@‚ÌˆêŒŸ“¢vC”¼“±‘Ì“d—Í•ÏŠ·/ƒ‚[ƒ^ƒhƒ‰ƒCƒu‡“¯Œ¤‹†‰ïCSPC-15-052CMD-15-052Cpp.131-136C(2015.1)<br>
+		  [10]ï¿½ï¿½<b>ï¿½ï¿½ï¿½ï¿½ ï¿½Wï¿½ï¿½</b>ï¿½Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Cï¿½Fï¿½ï¿½ ï¿½mï¿½Fï¿½uIPMSMï¿½ì“®ï¿½pï¿½dï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½Xï¿½Pï¿½ï¿½ï¿½|ï¿½Oï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½Ì“ï¿½ï¿½Í“dï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½@ï¿½ÌˆêŒŸï¿½ï¿½ï¿½vï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ì“dï¿½Í•ÏŠï¿½/ï¿½ï¿½ï¿½[ï¿½^ï¿½hï¿½ï¿½ï¿½Cï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CSPC-15-052ï¿½CMD-15-052ï¿½Cpp.131-136ï¿½C(2015.1)<br>
 		</td>
 	      </tr>
 	      <tr>
-		<td>ŽóÜ—ð<br></td>
+		<td>ï¿½ï¿½Ü—ï¿½<br></td>
 		<td>
-		  [1]Best paper in session (TT06 17 Control of Electrical Drives) (‘Û‰ï‹c[1] IECON2013)<br>
-		  [2]“d‹CŠw‰ï—DG˜_•¶”­•\ÜA(‘“àŠw‰ï[8] ƒ‚[ƒ^ƒhƒ‰ƒCƒu/‰Æ“dE–¯¶‡“¯Œ¤‹†‰ï)
+		  [1]Best paper in session (TT06 17 Control of Electrical Drives) (ï¿½ï¿½ï¿½Û‰ï¿½c[1] IECON2013)<br>
+		  [2]ï¿½dï¿½Cï¿½wï¿½ï¿½Dï¿½Gï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½A(ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½[8] ï¿½ï¿½ï¿½[ï¿½^ï¿½hï¿½ï¿½ï¿½Cï¿½u/ï¿½Æ“dï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 		</td>
 	      </tr>
 	    </table>
 	  </center>
 	  <br>
 	  <br>
-	  <h4 class="h46">‰½‚©ˆêŒ¾</h4>
-	  Ž‹—Í‚ª‰º‚ª‚è‚Ü‚µ‚½B<br>
+	  <h4 class="h46">ï¿½ï¿½ï¿½ï¿½ï¿½êŒ¾</h4>
+	  ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B<br>
 	  <br>
 	  
 	</div>
-	<!--///////////////* @¶‹LŽ– ‚±‚±‚Ü‚Å@@@ *///////////////-->
+	<!--///////////////* ï¿½@ï¿½ï¿½ï¿½Lï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ï¿½@ï¿½@ *///////////////-->
 
 
-<!--///////////////* @‰Eƒiƒr•” ‚±‚±‚©‚ç@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½Eï¿½iï¿½rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ *///////////////-->
 <div id="navi">
 
-<p class="nbutsel"><a href="../member.html">ƒƒ“ƒo[‚ÌÐ‰î</a></p>
-<p class="nbut"><a href="../ob.html">‘²‹Æ¶‚ÌÐ‰î</a></p>
-<p class="nbut"><a href="../map.html">Œ¤‹†Žº‚ÌêŠ</a></p>
-<p class="nbut"><a href="../memory.html">Œ¤‹†Žº‚ÌŽv‚¢o</a></p>
+<p class="nbutsel"><a href="../member.html">ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½[ï¿½ÌÐ‰ï¿½</a></p>
+<p class="nbut"><a href="../ob.html">ï¿½ï¿½ï¿½Æï¿½ï¿½ÌÐ‰ï¿½</a></p>
+<p class="nbut"><a href="../map.html">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌêŠ</a></p>
+<p class="nbut"><a href="../memory.html">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌŽvï¿½ï¿½ï¿½o</a></p>
 
 <br>
 
 <!--<div class="nbox">
 <p class="ntit">INFORMATION</p>
-<p class="ntxt">‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg‚ ‚¢‚¤‚¦‚¨ƒeƒLƒXƒg</p>
+<p class="ntxt">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½g</p>
 </div>
 <br>
 <ul>
-	<li>3ƒJƒ‰ƒ€</li>
-	<li>“¯••‰æ‘œ1–‡</li>
-	<li>”wŒi‰æ‘œ‚Ì•ÏX‰Â</li>
+	<li>3ï¿½Jï¿½ï¿½ï¿½ï¿½</li>
+	<li>ï¿½ï¿½ï¿½ï¿½ï¿½æ‘œ1ï¿½ï¿½</li>
+	<li>ï¿½wï¿½iï¿½æ‘œï¿½Ì•ÏXï¿½ï¿½</li>
 </ul>-->
 
 </div>
-<!--///////////////* @‰Eƒiƒr•” ‚±‚±‚Ü‚Å@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½Eï¿½iï¿½rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ *///////////////-->
 
-<br style="clear:both"><!--/* @© Firefox‚Å•\Ž¦@íœ•s‰Â@ */-->
+<br style="clear:both"><!--/* ï¿½@ï¿½ï¿½ Firefoxï¿½Å•\ï¿½ï¿½ï¿½@ï¿½íœï¿½sï¿½Â@ */-->
 </div>
 
-<!--///////////////* @ƒtƒbƒ^[ ‚±‚±‚©‚ç@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½tï¿½bï¿½^ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½@ï¿½@ *///////////////-->
 <div id="footer">
 
 <div>Copyright&nbsp;(C)&nbsp;Ohishi Laboratory&nbsp;All Rights Reserved.</div>
 
 </div>
-<!--///////////////* @ƒtƒbƒ^[ ‚±‚±‚Ü‚Å@@@ *///////////////-->
+<!--///////////////* ï¿½@ï¿½tï¿½bï¿½^ï¿½[ ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å@ï¿½@ï¿½@ *///////////////-->
 
-<!--/* @ƒeƒ“ƒvƒŒ[ƒg‚Ì’˜ìŒ •\Ž¦Bíœ•ÏX•s‰Â@@ */-->
+<!--/* ï¿½@ï¿½eï¿½ï¿½ï¿½vï¿½ï¿½ï¿½[ï¿½gï¿½Ì’ï¿½ï¿½ìŒ ï¿½\ï¿½ï¿½ï¿½Bï¿½íœï¿½ÏXï¿½sï¿½Â@ï¿½@ */-->
 <div id="copy">Designed by <a href="http://www.chocoto.com/">chocoto</a></div>
 
 </div>
