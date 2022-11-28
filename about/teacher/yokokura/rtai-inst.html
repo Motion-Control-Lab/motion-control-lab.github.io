@@ -1,118 +1,118 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<title>Side Warehouse of Laboratory - 研究室の横の倉庫</title>
+<title>Side Warehouse of Laboratory - 遐皮ｩｶ螳､縺ｮ讓ｪ縺ｮ蛟牙ｺｫ</title>
 <head>
 	<link rel=stylesheet type="text/css" href="normalpage.css" />
 </head>
 <body>
 
-	<!---// 表題レイヤー //--->
+	<!---// 陦ｨ鬘後Ξ繧､繝､繝ｼ //--->
 	<DIV class="toplayer">
-		<font size=6><b>RTAIのインストール方法</b></font>
+		<font size=6><b>RTAI縺ｮ繧､繝ｳ繧ｹ繝医�ｼ繝ｫ譁ｹ豕�</b></font>
 		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
 	</DIV>
 
-	<!---// 横帯レイヤー //--->
+	<!---// 讓ｪ蟶ｯ繝ｬ繧､繝､繝ｼ //--->
 	<DIV class="sidelayer"></DIV>
 
-	<!---// 本文レイヤー //--->
+	<!---// 譛ｬ譁�繝ｬ繧､繝､繝ｼ //--->
 	<DIV class="mainlayer">
 		<br>
-		<font size=4><b>コレは何？</b></font><br>
-			　RTAIの導入手順書です。
-			一般的なLinuxディストリビューションにおいてリアルタイム動作を可能とするものです。
-			カーネルモジュールを実時間で動かすことだけでなく，ユーザ空間においてスレッドを実時間で動作させることも可能になります。
-			Ｃ/Ｃ++のライブラリをそのまま利用できますし，ディスプレイ，マウス，NIC等々も使用できるので便利です。
-			実験結果をそのままfprintfでHDDにファイルとして書き込むこともできます。
-			速度の面ではDSPやFPGAには敵いませんが，便利さでは圧倒的にこちらの方が上でしょう。<br>
-			<p align="right">(09/06/10改訂)</p>
-			<u>ここの内容は少々古いので，<a href="rtai-inst64bit.html"> RTAI＋Fedora12 64bit </a>
-			もしくは <a href="rtai-inst64bit-3.9test2.html"> RTAI3.9＋Fedora17 64bit </a>
-			 を試した方が良いかもしれません。</u>(12/07/26追記)<br>
+		<font size=4><b>繧ｳ繝ｬ縺ｯ菴包ｼ�</b></font><br>
+			縲�RTAI縺ｮ蟆主�･謇矩��譖ｸ縺ｧ縺吶��
+			荳�闊ｬ逧�縺ｪLinux繝�繧｣繧ｹ繝医Μ繝薙Η繝ｼ繧ｷ繝ｧ繝ｳ縺ｫ縺翫＞縺ｦ繝ｪ繧｢繝ｫ繧ｿ繧､繝�蜍穂ｽ懊ｒ蜿ｯ閭ｽ縺ｨ縺吶ｋ繧ゅ�ｮ縺ｧ縺吶��
+			繧ｫ繝ｼ繝阪Ν繝｢繧ｸ繝･繝ｼ繝ｫ繧貞ｮ滓凾髢薙〒蜍輔°縺吶％縺ｨ縺�縺代〒縺ｪ縺擾ｼ後Θ繝ｼ繧ｶ遨ｺ髢薙↓縺翫＞縺ｦ繧ｹ繝ｬ繝�繝峨ｒ螳滓凾髢薙〒蜍穂ｽ懊＆縺帙ｋ縺薙→繧ょ庄閭ｽ縺ｫ縺ｪ繧翫∪縺吶��
+			�ｼ｣/�ｼ｣++縺ｮ繝ｩ繧､繝悶Λ繝ｪ繧偵◎縺ｮ縺ｾ縺ｾ蛻ｩ逕ｨ縺ｧ縺阪∪縺吶＠�ｼ後ョ繧｣繧ｹ繝励Ξ繧､�ｼ後�槭え繧ｹ�ｼ君IC遲峨��繧ゆｽｿ逕ｨ縺ｧ縺阪ｋ縺ｮ縺ｧ萓ｿ蛻ｩ縺ｧ縺吶��
+			螳滄ｨ鍋ｵ先棡繧偵◎縺ｮ縺ｾ縺ｾfprintf縺ｧHDD縺ｫ繝輔ぃ繧､繝ｫ縺ｨ縺励※譖ｸ縺崎ｾｼ繧�縺薙→繧ゅ〒縺阪∪縺吶��
+			騾溷ｺｦ縺ｮ髱｢縺ｧ縺ｯDSP繧ЁPGA縺ｫ縺ｯ謨ｵ縺�縺ｾ縺帙ｓ縺鯉ｼ御ｾｿ蛻ｩ縺輔〒縺ｯ蝨ｧ蛟堤噪縺ｫ縺薙■繧峨�ｮ譁ｹ縺御ｸ翫〒縺励ｇ縺�縲�<br>
+			<p align="right">(09/06/10謾ｹ險�)</p>
+			<u>縺薙％縺ｮ蜀�螳ｹ縺ｯ蟆代��蜿､縺�縺ｮ縺ｧ�ｼ�<a href="rtai-inst64bit.html"> RTAI�ｼ祈edora12 64bit </a>
+			繧ゅ＠縺上�ｯ <a href="rtai-inst64bit-3.9test2.html"> RTAI3.9�ｼ祈edora17 64bit </a>
+			 繧定ｩｦ縺励◆譁ｹ縺瑚憶縺�縺九ｂ縺励ｌ縺ｾ縺帙ｓ縲�</u>(12/07/26霑ｽ險�)<br>
 		<br>
 		<br>
-		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
-			　使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+		<font size=4><b>繝上�ｼ繝峨え繧ｧ繧｢/繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�蝉ｾ�</b></font><br>
+			縲�菴ｿ逕ｨ縺励◆繝代た繧ｳ繝ｳ縺ｮ繝上�ｼ繝峨え繧ｧ繧｢縺翫ｈ縺ｳ繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�舌�ｯ莉･荳九�ｮ騾壹ｊ縺ｧ縺吶��<br>
 			<blockquote>
-				ハードウェア構成：Pentium4 ＋ 845G ＋ Intel EtherExpressPro<br>
-				ソフトウェア構成：kernel-2.6.23 ＋ Slackware-12.2 ＋ rtai-3.7<br>
+				繝上�ｼ繝峨え繧ｧ繧｢讒区�撰ｼ啀entium4 �ｼ� 845G �ｼ� Intel EtherExpressPro<br>
+				繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�撰ｼ嗅ernel-2.6.23 �ｼ� Slackware-12.2 �ｼ� rtai-3.7<br>
 			</blockquote>
-			上記で動作を確認しています。<br>
+			荳願ｨ倥〒蜍穂ｽ懊ｒ遒ｺ隱阪＠縺ｦ縺�縺ｾ縺吶��<br>
 		<br>
 		<br>
-		<font size=4><b>導入方法</b></font><br>
-			　まず普通に slackware12.2 を入れます。
-			注意点として，slackwareインストール時に画面設定を Normal (default) にすること。
-			画面が表示できなくなります。<br>
+		<font size=4><b>蟆主�･譁ｹ豕�</b></font><br>
+			縲�縺ｾ縺壽勸騾壹↓ slackware12.2 繧貞�･繧後∪縺吶��
+			豕ｨ諢冗せ縺ｨ縺励※�ｼ茎lackware繧､繝ｳ繧ｹ繝医�ｼ繝ｫ譎ゅ↓逕ｻ髱｢險ｭ螳壹ｒ Normal (default) 縺ｫ縺吶ｋ縺薙→縲�
+			逕ｻ髱｢縺瑚｡ｨ遉ｺ縺ｧ縺阪↑縺上↑繧翫∪縺吶��<br>
 			<br>
-			インストールが終わったら、
-			研究室で共有するディレクトリをどっかに作っちゃいましょう。<br>
+			繧､繝ｳ繧ｹ繝医�ｼ繝ｫ縺檎ｵゅｏ縺｣縺溘ｉ縲�
+			遐皮ｩｶ螳､縺ｧ蜈ｱ譛峨☆繧九ョ繧｣繝ｬ繧ｯ繝医Μ繧偵←縺｣縺九↓菴懊▲縺｡繧�縺�縺ｾ縺励ｇ縺�縲�<br>
 			<blockquote>
 				<b>mkdir /hoge</b><br>
 			</blockquote>
-			hogeの権限を変えます。<br>
+			hoge縺ｮ讓ｩ髯舌ｒ螟峨∴縺ｾ縺吶��<br>
 			<blockquote>
 				<b>chmod 777 /hoge</b><br>
 			</blockquote>
-			RTAIのカーネルとかの基ファイル入れるディレクトリを hoge に作っておきます。<br>
+			RTAI縺ｮ繧ｫ繝ｼ繝阪Ν縺ｨ縺九�ｮ蝓ｺ繝輔ぃ繧､繝ｫ蜈･繧後ｋ繝�繧｣繝ｬ繧ｯ繝医Μ繧� hoge 縺ｫ菴懊▲縺ｦ縺翫″縺ｾ縺吶��<br>
 			<blockquote>
 				<b>cd /hoge<br>
 				mkdir RTAI</b><br>
 			</blockquote>
-			linuxのカーネルとRTAIを落として hoge に入れておきます。
-			例えば以下からダウンロード<br>
+			linux縺ｮ繧ｫ繝ｼ繝阪Ν縺ｨRTAI繧定誠縺ｨ縺励※ hoge 縺ｫ蜈･繧後※縺翫″縺ｾ縺吶��
+			萓九∴縺ｰ莉･荳九°繧峨ム繧ｦ繝ｳ繝ｭ繝ｼ繝�<br>
 			<blockquote>
-				ココ→ <a href="http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.tar.bz2">http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.tar.bz2</a><br>
-				ココ→ <a href="https://www.rtai.org/RTAI/rtai-3.7.tar.bz2">https://www.rtai.org/RTAI/rtai-3.7.tar.bz2</a><br>
+				繧ｳ繧ｳ竊� <a href="http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.tar.bz2">http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.tar.bz2</a><br>
+				繧ｳ繧ｳ竊� <a href="https://www.rtai.org/RTAI/rtai-3.7.tar.bz2">https://www.rtai.org/RTAI/rtai-3.7.tar.bz2</a><br>
 			</blockquote>
-			その後、以下で解凍。<br>
+			縺昴�ｮ蠕後�∽ｻ･荳九〒隗｣蜃阪��<br>
 			<blockquote>
 				<b>tar jxf linux-2.6.23.tar.bz2<br>
 				tar jxf rtai-3.7.tar.bz2</b><br>
 			</blockquote>
-			解凍した内容を/usr/srcに移します。<br>
+			隗｣蜃阪＠縺溷��螳ｹ繧�/usr/src縺ｫ遘ｻ縺励∪縺吶��<br>
 			<blockquote>
 				<b>cd /usr/src<br>
 				cp -r /hoge/RTAI/rtai-3.7 ./<br>
 				cp -r /hoge/RTAI/linux-2.6.23 ./</b><br>
 			</blockquote>
-			カーネルにパッチを当てます。<br>
+			繧ｫ繝ｼ繝阪Ν縺ｫ繝代ャ繝√ｒ蠖薙※縺ｾ縺吶��<br>
 			<blockquote>
 				<b>cd /usr/src/linux-2.6.23<br>
 				patch -p1 < ../rtai-3.7/base/arch/i386/patches/hal-linux-2.6.23-i386-1.12-03.patch</b><br>
 			</blockquote>
-			menuconfig 使って設定します。<br>
+			menuconfig 菴ｿ縺｣縺ｦ險ｭ螳壹＠縺ｾ縺吶��<br>
 			<blockquote>
 				<b>make menuconfig</b><br>
 			</blockquote>
-			必須設定項目は以下の通り<br>
+			蠢�鬆郁ｨｭ螳夐��逶ｮ縺ｯ莉･荳九�ｮ騾壹ｊ<br>
 			<blockquote>
-				◆ Processor type and features
+				笳� Processor type and features
 				<blockquote>
-					◇ Processor family
+					笳� Processor family
 					<blockquote>
-						Pentium4... [SELECT] (CPUによって変更せよ)<br>
-						Symmetric multi-processing support 多コアの場合[ENABLE]  単コアの場合[DISABLE]<br>
+						Pentium4... [SELECT] (CPU縺ｫ繧医▲縺ｦ螟画峩縺帙ｈ)<br>
+						Symmetric multi-processing support 螟壹さ繧｢縺ｮ蝣ｴ蜷�[ENABLE]  蜊倥さ繧｢縺ｮ蝣ｴ蜷�[DISABLE]<br>
 						Interrupt pipeline [ENABLE]<br>
 					</blockquote>
 				</blockquote>
 				<br>
-				◆ Power management options (ACPI, APM)
+				笳� Power management options (ACPI, APM)
 				<blockquote>
 					ACPI Support (Advanced Config....) [DISABLE]<br>
-					◇ CPU Frequency scaling
+					笳� CPU Frequency scaling
 					<blockquote>
 						CPU Frequency sacaling [DISABLE]
 					</blockquote>
 				</blockquote>
 				<br>
-				◆ Loadable module support
+				笳� Loadable module support
 				<blockquote>
 					Module versioning support [DISABLE]
 				</blockquote>
 			</blockquote>
 			<br>
-			コンパイルしてカーネルイメージを構築します。
+			繧ｳ繝ｳ繝代う繝ｫ縺励※繧ｫ繝ｼ繝阪Ν繧､繝｡繝ｼ繧ｸ繧呈ｧ狗ｯ峨＠縺ｾ縺吶��
 			<blockquote>
 				<b>
 				make all<br>
@@ -120,19 +120,19 @@
 				make install
 				</b>
 			</blockquote>
-			どうやら勝手に /boot/vmlinuz を書き換えるようである。
-			バックアップを事前に取っておいた方が良いかもしれないが、男ならバックアップは必要ない。
-			ここで再起動。
+			縺ｩ縺�繧�繧牙享謇九↓ /boot/vmlinuz 繧呈嶌縺肴鋤縺医ｋ繧医≧縺ｧ縺ゅｋ縲�
+			繝舌ャ繧ｯ繧｢繝�繝励ｒ莠句燕縺ｫ蜿悶▲縺ｦ縺翫＞縺滓婿縺瑚憶縺�縺九ｂ縺励ｌ縺ｪ縺�縺後�∫塙縺ｪ繧峨ヰ繝�繧ｯ繧｢繝�繝励�ｯ蠢�隕√↑縺�縲�
+			縺薙％縺ｧ蜀崎ｵｷ蜍輔��
 			<blockquote>
 				<b>shutdown -r now</b>
 			</blockquote>
-			起動後に画面が出ない場合は，liloconf で vga=normal にしてLILOを再構築しましょう。<br>
-			起動したらカーネルの名前を尋ねてみましょう。<br>
+			襍ｷ蜍募ｾ後↓逕ｻ髱｢縺悟�ｺ縺ｪ縺�蝣ｴ蜷医�ｯ�ｼ畦iloconf 縺ｧ vga=normal 縺ｫ縺励※LILO繧貞�肴ｧ狗ｯ峨＠縺ｾ縺励ｇ縺�縲�<br>
+			襍ｷ蜍輔＠縺溘ｉ繧ｫ繝ｼ繝阪Ν縺ｮ蜷榊燕繧貞ｰ九�ｭ縺ｦ縺ｿ縺ｾ縺励ｇ縺�縲�<br>
 			<blockquote>
 				<b>uname -r</b>
 			</blockquote>
-			ここで、2.6.23 と返ってくればちゃんと入ってます。
-			RTAIをぶち込みます。(二行目は元からあるリンクを念のため一度削除している。)
+			縺薙％縺ｧ縲�2.6.23 縺ｨ霑斐▲縺ｦ縺上ｌ縺ｰ縺｡繧�繧薙→蜈･縺｣縺ｦ縺ｾ縺吶��
+			RTAI繧偵�ｶ縺｡霎ｼ縺ｿ縺ｾ縺吶��(莠瑚｡檎岼縺ｯ蜈�縺九ｉ縺ゅｋ繝ｪ繝ｳ繧ｯ繧貞ｿｵ縺ｮ縺溘ａ荳�蠎ｦ蜑企勁縺励※縺�繧九��)
 			<blockquote>
 				<b>cd /usr/src/<br>
 				rm linux<br>
@@ -140,33 +140,33 @@
 				cd rtai-3.7<br>
 				make menuconfig</b>
 			</blockquote>
-			menuconfigはデフォルトのままでいけるようです。(ただしRTnetを使う場合は要設定)
-			In-kernel C++ support をチェックしたらエラー。2.6.x ではだめだそうです。
-			残念。仕方ないのでカーネル内でのC++は諦めますか。
-			コンパイルしてインスコします。
+			menuconfig縺ｯ繝�繝輔か繝ｫ繝医�ｮ縺ｾ縺ｾ縺ｧ縺�縺代ｋ繧医≧縺ｧ縺吶��(縺溘□縺由Tnet繧剃ｽｿ縺�蝣ｴ蜷医�ｯ隕∬ｨｭ螳�)
+			In-kernel C++ support 繧偵メ繧ｧ繝�繧ｯ縺励◆繧峨お繝ｩ繝ｼ縲�2.6.x 縺ｧ縺ｯ縺�繧√□縺昴≧縺ｧ縺吶��
+			谿句ｿｵ縲ゆｻ墓婿縺ｪ縺�縺ｮ縺ｧ繧ｫ繝ｼ繝阪Ν蜀�縺ｧ縺ｮC++縺ｯ隲ｦ繧√∪縺吶°縲�
+			繧ｳ繝ｳ繝代う繝ｫ縺励※繧､繝ｳ繧ｹ繧ｳ縺励∪縺吶��
 			<blockquote>
 				<b>make all<br>
 				make install</b><br>
 			</blockquote>
-			エラーが出なければおｋ。
-			/etc/rc.d/rc.localの最後に以下を追加してモジュールが自動的に入るようにする
-			必要に応じてモジュールを入れること。
+			繧ｨ繝ｩ繝ｼ縺悟�ｺ縺ｪ縺代ｌ縺ｰ縺奇ｽ九��
+			/etc/rc.d/rc.local縺ｮ譛�蠕後↓莉･荳九ｒ霑ｽ蜉�縺励※繝｢繧ｸ繝･繝ｼ繝ｫ縺瑚�ｪ蜍慕噪縺ｫ蜈･繧九ｈ縺�縺ｫ縺吶ｋ
+			蠢�隕√↓蠢懊§縺ｦ繝｢繧ｸ繝･繝ｼ繝ｫ繧貞�･繧後ｋ縺薙→縲�
 			<blockquote>
 				<b>insmod /usr/realtime/modules/rtai_hal.ko<br>
-				insmod /usr/realtime/modules/rtai_sched.ko	# カーネルモードで動かすとき<br>
-				insmod /usr/realtime/modules/rtai_lxrt.ko	# ユーザーモードで動かすとき</b><br>
+				insmod /usr/realtime/modules/rtai_sched.ko	# 繧ｫ繝ｼ繝阪Ν繝｢繝ｼ繝峨〒蜍輔°縺吶→縺�<br>
+				insmod /usr/realtime/modules/rtai_lxrt.ko	# 繝ｦ繝ｼ繧ｶ繝ｼ繝｢繝ｼ繝峨〒蜍輔°縺吶→縺�</b><br>
 			</blockquote>
-			/etc/profileに追加
+			/etc/profile縺ｫ霑ｽ蜉�
 			<blockquote>
 				<b>export PATH=/usr/realtime/bin:$PATH</b>
 			</blockquote>
-			これをしないと制御プログラムがmakeできないので注意。
-			以下を打ってRTAIの動作を確かめましょう。
+			縺薙ｌ繧偵＠縺ｪ縺�縺ｨ蛻ｶ蠕｡繝励Ο繧ｰ繝ｩ繝�縺稽ake縺ｧ縺阪↑縺�縺ｮ縺ｧ豕ｨ諢上��
+			莉･荳九ｒ謇薙▲縺ｦRTAI縺ｮ蜍穂ｽ懊ｒ遒ｺ縺九ａ縺ｾ縺励ｇ縺�縲�
 			<blockquote>
 				<b>cd /usr/realtime/testsuite/user/latency<br>
 				./run</b>
 			</blockquote>
-			なんか動いていそうなメッセージが出たらおｋ。
+			縺ｪ繧薙°蜍輔＞縺ｦ縺�縺昴≧縺ｪ繝｡繝�繧ｻ繝ｼ繧ｸ縺悟�ｺ縺溘ｉ縺奇ｽ九��
 <pre>
 	*
 	*
@@ -198,14 +198,14 @@
 	
 	>>> S = 98.696, EXECTIME = 0.0287159
 </pre>
-			「overruns」が零であれば問題なく動いてるはずです。
-			以上でインストール完了です。
+			縲経verruns縲阪′髮ｶ縺ｧ縺ゅｌ縺ｰ蝠城｡後↑縺丞虚縺�縺ｦ繧九�ｯ縺壹〒縺吶��
+			莉･荳翫〒繧､繝ｳ繧ｹ繝医�ｼ繝ｫ螳御ｺ�縺ｧ縺吶��
 			<br><br><br><br><br><br>
 		<center>
 			<font size=2>
 				- <?php include('./counter/count.php'); ?> -<br>
 				<br>
-				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				遐皮ｩｶ螳､縺ｮ讓ｪ縺ｮ蛟牙ｺｫ - Side Warehouse of Laboratory<br>
 				Copyright(C), Side Warehouse, All rights reserved.
 			</font>
 		</center>

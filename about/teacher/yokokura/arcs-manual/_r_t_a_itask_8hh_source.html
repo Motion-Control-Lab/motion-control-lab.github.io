@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
@@ -47,10 +47,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lib/RTAItask.hh</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// RTAIタスク＆実時間マルチスレッド生成・破棄クラス</span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// RTAI繧ｿ繧ｹ繧ｯ�ｼ�螳滓凾髢薙�槭Ν繝√せ繝ｬ繝�繝臥函謌舌�ｻ遐ｴ譽�繧ｯ繝ｩ繧ｹ</span>
 <a name="l00002"></a>00002 <span class="comment">// 2011/02/14 Yuki YOKOKURA</span>
 <a name="l00003"></a>00003 <span class="comment">//</span>
-<a name="l00004"></a>00004 <span class="comment">// RTAIタスクと複数個の実時間スレッドを生成・破棄する</span>
+<a name="l00004"></a>00004 <span class="comment">// RTAI繧ｿ繧ｹ繧ｯ縺ｨ隍�謨ｰ蛟九�ｮ螳滓凾髢薙せ繝ｬ繝�繝峨ｒ逕滓�舌�ｻ遐ｴ譽�縺吶ｋ</span>
 <a name="l00005"></a>00005 <span class="comment">//</span>
 <a name="l00006"></a>00006 <span class="comment">// Copyright (C) 2011 Yuki YOKOKURA</span>
 <a name="l00007"></a>00007 <span class="comment">// This program is free software;</span>
@@ -70,45 +70,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00021"></a>00021 <span class="preprocessor">#include &quot;RTAIthread.hh&quot;</span>
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 <span class="keyword">typedef</span> void (**FuncPtrs)(<span class="keywordtype">void</span>*);       <span class="comment">// 関数ポインタ配列キャスト用</span>
+<a name="l00024"></a>00024 <span class="keyword">typedef</span> void (**FuncPtrs)(<span class="keywordtype">void</span>*);       <span class="comment">// 髢｢謨ｰ繝昴う繝ｳ繧ｿ驟榊�励く繝｣繧ｹ繝育畑</span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="keyword">namespace </span>ARCS {        <span class="comment">// ARCS名前空間</span>
-<a name="l00027"></a>00027         <span class="comment">// 動作状態の定義</span>
+<a name="l00026"></a>00026 <span class="keyword">namespace </span>ARCS {        <span class="comment">// ARCS蜷榊燕遨ｺ髢�</span>
+<a name="l00027"></a>00027         <span class="comment">// 蜍穂ｽ懃憾諷九�ｮ螳夂ｾｩ</span>
 <a name="l00028"></a>00028         <span class="keyword">enum</span> TaskState {
-<a name="l00029"></a>00029                 RTID_TASK_NORMAL,       <span class="comment">// 正常</span>
-<a name="l00030"></a>00030                 RTID_TASK_ERR,          <span class="comment">// タスク内エラー検出</span>
-<a name="l00031"></a>00031                 RTID_THRD_ERR           <span class="comment">// スレッド内エラー検出</span>
+<a name="l00029"></a>00029                 RTID_TASK_NORMAL,       <span class="comment">// 豁｣蟶ｸ</span>
+<a name="l00030"></a>00030                 RTID_TASK_ERR,          <span class="comment">// 繧ｿ繧ｹ繧ｯ蜀�繧ｨ繝ｩ繝ｼ讀懷�ｺ</span>
+<a name="l00031"></a>00031                 RTID_THRD_ERR           <span class="comment">// 繧ｹ繝ｬ繝�繝牙��繧ｨ繝ｩ繝ｼ讀懷�ｺ</span>
 <a name="l00032"></a>00032         };
 <a name="l00033"></a>00033         
 <a name="l00034"></a><a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">00034</a>         <span class="keyword">class </span><a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a> {
 <a name="l00035"></a>00035                 <span class="keyword">private</span>:
-<a name="l00036"></a>00036                         <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>(<span class="keyword">const</span> <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>&amp;);                                      <span class="comment">// コピーコンストラクタ使用禁止</span>
-<a name="l00037"></a>00037                         <span class="keyword">const</span> <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>&amp;);     <span class="comment">// 代入演算子使用禁止</span>
+<a name="l00036"></a>00036                         <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>(<span class="keyword">const</span> <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>&amp;);                                      <span class="comment">// 繧ｳ繝斐�ｼ繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ菴ｿ逕ｨ遖∵ｭ｢</span>
+<a name="l00037"></a>00037                         <span class="keyword">const</span> <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>&amp;);     <span class="comment">// 莉｣蜈･貍皮ｮ怜ｭ蝉ｽｿ逕ｨ遖∵ｭ｢</span>
 <a name="l00038"></a>00038                         
-<a name="l00039"></a>00039                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>       MAX_THREAD                      = 128;  <span class="comment">// スレッド最大数 (動的追従はあとで)</span>
-<a name="l00040"></a>00040                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>                        STACK_SIZE                      = 4096; <span class="comment">// RTAIスレッドスタックサイズ</span>
-<a name="l00041"></a>00041                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>      THREAD_EXIT_WAIT        = 50000;<span class="comment">// [us] スレッド終了処理待機時間</span>
+<a name="l00039"></a>00039                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>       MAX_THREAD                      = 128;  <span class="comment">// 繧ｹ繝ｬ繝�繝画怙螟ｧ謨ｰ (蜍慕噪霑ｽ蠕薙�ｯ縺ゅ→縺ｧ)</span>
+<a name="l00040"></a>00040                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>                        STACK_SIZE                      = 4096; <span class="comment">// RTAI繧ｹ繝ｬ繝�繝峨せ繧ｿ繝�繧ｯ繧ｵ繧､繧ｺ</span>
+<a name="l00041"></a>00041                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>      THREAD_EXIT_WAIT        = 50000;<span class="comment">// [us] 繧ｹ繝ｬ繝�繝臥ｵゆｺ�蜃ｦ逅�蠕�讖滓凾髢�</span>
 <a name="l00042"></a>00042                         
-<a name="l00043"></a>00043                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumOfThread;                 <span class="comment">// 動作させるスレッドの数</span>
-<a name="l00044"></a>00044                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> MinPeriodicTime;    <span class="comment">// [ns] 一番速いスレッドの制御周期</span>
-<a name="l00045"></a>00045                         <span class="keyword">volatile</span> <span class="keywordtype">int</span> StateFlag;                                 <span class="comment">// 動作状態フラグ</span>
-<a name="l00046"></a>00046                         RT_TASK *RTtaskID;                                              <span class="comment">// 実時間タスク識別子</span>
-<a name="l00047"></a>00047                         <a class="code" href="class_a_r_c_s_1_1_r_t_a_ithread.html">RTAIthread</a>* pRTthread[MAX_THREAD];              <span class="comment">// 実時間スレッド 0 ～ MAX_THREAD へのポインタ</span>
+<a name="l00043"></a>00043                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumOfThread;                 <span class="comment">// 蜍穂ｽ懊＆縺帙ｋ繧ｹ繝ｬ繝�繝峨�ｮ謨ｰ</span>
+<a name="l00044"></a>00044                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> MinPeriodicTime;    <span class="comment">// [ns] 荳�逡ｪ騾溘＞繧ｹ繝ｬ繝�繝峨�ｮ蛻ｶ蠕｡蜻ｨ譛�</span>
+<a name="l00045"></a>00045                         <span class="keyword">volatile</span> <span class="keywordtype">int</span> StateFlag;                                 <span class="comment">// 蜍穂ｽ懃憾諷九ヵ繝ｩ繧ｰ</span>
+<a name="l00046"></a>00046                         RT_TASK *RTtaskID;                                              <span class="comment">// 螳滓凾髢薙ち繧ｹ繧ｯ隴伜挨蟄�</span>
+<a name="l00047"></a>00047                         <a class="code" href="class_a_r_c_s_1_1_r_t_a_ithread.html">RTAIthread</a>* pRTthread[MAX_THREAD];              <span class="comment">// 螳滓凾髢薙せ繝ｬ繝�繝� 0 �ｽ� MAX_THREAD 縺ｸ縺ｮ繝昴う繝ｳ繧ｿ</span>
 <a name="l00048"></a>00048                         
 <a name="l00049"></a>00049                 <span class="keyword">public</span>:
-<a name="l00050"></a>00050                         <span class="comment">// コンストラクタ</span>
+<a name="l00050"></a>00050                         <span class="comment">// 繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ</span>
 <a name="l00051"></a>00051                         <a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>(
-<a name="l00052"></a>00052                                 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ThreadNum,                   <span class="comment">// 動作させるスレッドの数</span>
-<a name="l00053"></a>00053                                 <span class="keywordtype">void</span> (** <span class="keyword">const</span> PeriodicFuncs)(<span class="keywordtype">void</span>*),   <span class="comment">// 制御用周期実行関数群への関数ポインタ</span>
-<a name="l00054"></a>00054                                 <span class="keywordtype">void</span>* <span class="keyword">const</span> FuncArgs,                                   <span class="comment">// 関数ポインタ引数</span>
-<a name="l00055"></a>00055                                 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *PeriodicTime               <span class="comment">// 制御周期</span>
+<a name="l00052"></a>00052                                 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ThreadNum,                   <span class="comment">// 蜍穂ｽ懊＆縺帙ｋ繧ｹ繝ｬ繝�繝峨�ｮ謨ｰ</span>
+<a name="l00053"></a>00053                                 <span class="keywordtype">void</span> (** <span class="keyword">const</span> PeriodicFuncs)(<span class="keywordtype">void</span>*),   <span class="comment">// 蛻ｶ蠕｡逕ｨ蜻ｨ譛溷ｮ溯｡碁未謨ｰ鄒､縺ｸ縺ｮ髢｢謨ｰ繝昴う繝ｳ繧ｿ</span>
+<a name="l00054"></a>00054                                 <span class="keywordtype">void</span>* <span class="keyword">const</span> FuncArgs,                                   <span class="comment">// 髢｢謨ｰ繝昴う繝ｳ繧ｿ蠑墓焚</span>
+<a name="l00055"></a>00055                                 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *PeriodicTime               <span class="comment">// 蛻ｶ蠕｡蜻ｨ譛�</span>
 <a name="l00056"></a>00056                         );
-<a name="l00057"></a>00057                         ~<a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>();                                    <span class="comment">// デストラクタ</span>
-<a name="l00058"></a>00058                         <span class="keywordtype">void</span> Start(<span class="keywordtype">void</span>);                               <span class="comment">// 実時間スレッドを開始させる関数</span>
-<a name="l00059"></a>00059                         <span class="keywordtype">void</span> Stop(<span class="keywordtype">void</span>);                                <span class="comment">// 実時間スレッドを終了させる関数</span>
-<a name="l00060"></a>00060                         <span class="keywordtype">void</span> SendState(<span class="keyword">const</span> <span class="keywordtype">int</span> State);<span class="comment">// 動作状態を書き込む State；所望の動作状態</span>
-<a name="l00061"></a>00061                         <span class="keywordtype">int</span>  ReadState(<span class="keywordtype">void</span>);                   <span class="comment">// 動作状態を読み出す 戻り値；現在の動作状態</span>
-<a name="l00062"></a>00062                         <span class="comment">// 開始からの経過時間と計算に要した消費時間を取得する関数</span>
+<a name="l00057"></a>00057                         ~<a class="code" href="class_a_r_c_s_1_1_r_t_a_itask.html">RTAItask</a>();                                    <span class="comment">// 繝�繧ｹ繝医Λ繧ｯ繧ｿ</span>
+<a name="l00058"></a>00058                         <span class="keywordtype">void</span> Start(<span class="keywordtype">void</span>);                               <span class="comment">// 螳滓凾髢薙せ繝ｬ繝�繝峨ｒ髢句ｧ九＆縺帙ｋ髢｢謨ｰ</span>
+<a name="l00059"></a>00059                         <span class="keywordtype">void</span> Stop(<span class="keywordtype">void</span>);                                <span class="comment">// 螳滓凾髢薙せ繝ｬ繝�繝峨ｒ邨ゆｺ�縺輔○繧矩未謨ｰ</span>
+<a name="l00060"></a>00060                         <span class="keywordtype">void</span> SendState(<span class="keyword">const</span> <span class="keywordtype">int</span> State);<span class="comment">// 蜍穂ｽ懃憾諷九ｒ譖ｸ縺崎ｾｼ繧� State�ｼ帶園譛帙�ｮ蜍穂ｽ懃憾諷�</span>
+<a name="l00061"></a>00061                         <span class="keywordtype">int</span>  ReadState(<span class="keywordtype">void</span>);                   <span class="comment">// 蜍穂ｽ懃憾諷九ｒ隱ｭ縺ｿ蜃ｺ縺� 謌ｻ繧雁�､�ｼ帷樟蝨ｨ縺ｮ蜍穂ｽ懃憾諷�</span>
+<a name="l00062"></a>00062                         <span class="comment">// 髢句ｧ九°繧峨�ｮ邨碁℃譎る俣縺ｨ險育ｮ励↓隕√＠縺滓ｶ郁ｲｻ譎る俣繧貞叙蠕励☆繧矩未謨ｰ</span>
 <a name="l00063"></a>00063                         <span class="keywordtype">void</span> GetTimeValue(<span class="keyword">volatile</span> <span class="keywordtype">double</span> *Time, <span class="keyword">volatile</span> <span class="keywordtype">long</span> *PeriodicTime, <span class="keyword">volatile</span> <span class="keywordtype">long</span> *ComputationTime);
 <a name="l00064"></a>00064         };
 <a name="l00065"></a>00065 }

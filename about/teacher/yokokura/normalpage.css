@@ -1,17 +1,17 @@
-
-	/* ƒŠƒ“ƒN */
+ï»¿
+	/* ãƒªãƒ³ã‚¯ */
 	A{
 		text-decoration:none;
 		color: #FFFFFF;
 		background-color: #333333;
 	}
-	/* ƒŠƒ“ƒN ƒzƒo[ */
+	/* ãƒªãƒ³ã‚¯ ãƒ›ãƒãƒ¼ */
 	A:hover{
 		color: #FFFFFF;
 		background-color: #666666;
 	}
 	
-	/* ƒŠƒ“ƒNƒ{ƒ^ƒ“ */
+	/* ãƒªãƒ³ã‚¯ãƒœã‚¿ãƒ³ */
 	div.Linkage{
 		position: absolute;
 		font-size: 0.9em;
@@ -20,14 +20,14 @@
 		height: 16px;
 		width: 180px;
 	}
-	/* ƒŠƒ“ƒNƒ{ƒ^ƒ“ ƒzƒo[ */
+	/* ãƒªãƒ³ã‚¯ãƒœã‚¿ãƒ³ ãƒ›ãƒãƒ¼ */
 	div.Linkage:hover{
 		position: absolute;
 		color: #000000;
 		background-color:#FFFFFF;
 	}
 
-	/* •\‘èƒŒƒCƒ„[ */
+	/* è¡¨é¡Œãƒ¬ã‚¤ãƒ¤ãƒ¼ */
 	.toplayer {
 		position: absolute;
 		top: 0px;
@@ -42,7 +42,7 @@
 		vertical-align: bottom;
 	}
 	
-	/* ‰¡‘ÑƒŒƒCƒ„[ */
+	/* æ¨ªå¸¯ãƒ¬ã‚¤ãƒ¤ãƒ¼ */
 	.sidelayer {
 		position: absolute;
 		top: 0px;
@@ -56,7 +56,7 @@
 		text-align: center;
 	}
 	
-	/* –{•¶ƒŒƒCƒ„[ */
+	/* æœ¬æ–‡ãƒ¬ã‚¤ãƒ¤ãƒ¼ */
 	.mainlayer {
 		position: absolute;
 		top: 50px;
@@ -70,7 +70,7 @@
 		text-align: left;
 	}
 	
-	/* ŒºŠÖƒ{ƒ^ƒ“ */
+	/* ç„é–¢ãƒœã‚¿ãƒ³ */
 	.frontpagebutton {
 		position: absolute;
 		font-size: 0.9em;
@@ -83,7 +83,7 @@
 		text-align: center;
 	}
 	
-	/* ŒºŠÖƒ{ƒ^ƒ“ ƒzƒo[*/
+	/* ç„é–¢ãƒœã‚¿ãƒ³ ãƒ›ãƒãƒ¼*/
 	.frontpagebutton:hover{
 		position: absolute;
 		color: #000000;

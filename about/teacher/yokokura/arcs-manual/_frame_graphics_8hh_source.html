@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
@@ -47,10 +47,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lib/FrameGraphics.hh</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// フレームバッファグラフィックスクラス</span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// 繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ繧ｰ繝ｩ繝輔ぅ繝�繧ｯ繧ｹ繧ｯ繝ｩ繧ｹ</span>
 <a name="l00002"></a>00002 <span class="comment">// 2011/02/07 Yuki YOKOKURA</span>
 <a name="l00003"></a>00003 <span class="comment">//</span>
-<a name="l00004"></a>00004 <span class="comment">// 画面上に図等の描画を行います。ただし，/dev/fb* が必要。</span>
+<a name="l00004"></a>00004 <span class="comment">// 逕ｻ髱｢荳翫↓蝗ｳ遲峨�ｮ謠冗判繧定｡後＞縺ｾ縺吶�ゅ◆縺�縺暦ｼ�/dev/fb* 縺悟ｿ�隕√��</span>
 <a name="l00005"></a>00005 <span class="comment">//</span>
 <a name="l00006"></a>00006 <span class="comment">// Copyright (C) 2011 Yuki YOKOKURA</span>
 <a name="l00007"></a>00007 <span class="comment">// This program is free software;</span>
@@ -75,48 +75,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00026"></a>00026 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="comment">// 色の定義 (色深度16bitモード用)</span>
-<a name="l00030"></a>00030 <span class="comment">// ビットパターン MSB RRRRRGGGGGGBBBBB LSB (赤：ビット15～11 緑：ビット10～5 青：ビット4～0)</span>
-<a name="l00031"></a>00031 <span class="comment">// 実は赤青に比べ緑の分解能が1bit分だけ多い</span>
-<a name="l00032"></a>00032 <span class="comment">// 以下は基本色の定義  この他にも勝手に好きな色を作れる</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#define FG_COLOR_RED            0xF800  // 赤</span>
-<a name="l00034"></a>00034 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_GREEN          0x07E0  // 緑</span>
-<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_BLUE           0x001F  // 青</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_CYAN           FG_COLOR_GREEN | FG_COLOR_BLUE  // 水 (シアン)              // ORを取ると色が足せるよ～!</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_MAGENTA        FG_COLOR_RED | FG_COLOR_BLUE    // 紫 (マゼンタ)</span>
-<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_YELLOW         FG_COLOR_RED | FG_COLOR_GREEN   // 黄 (イエロー)</span>
-<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_BLACK          0x0000  // 黒</span>
-<a name="l00040"></a>00040 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_WHITE          0xFFFF  // 白</span>
-<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_GRAY50         0x7BEF  // 灰 輝度50％</span>
-<a name="l00042"></a>00042 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_GRAY25         0x39E7  // 灰 輝度25％</span>
+<a name="l00029"></a>00029 <span class="comment">// 濶ｲ縺ｮ螳夂ｾｩ (濶ｲ豺ｱ蠎ｦ16bit繝｢繝ｼ繝臥畑)</span>
+<a name="l00030"></a>00030 <span class="comment">// 繝薙ャ繝医ヱ繧ｿ繝ｼ繝ｳ MSB RRRRRGGGGGGBBBBB LSB (襍､�ｼ壹ン繝�繝�15�ｽ�11 邱托ｼ壹ン繝�繝�10�ｽ�5 髱抵ｼ壹ン繝�繝�4�ｽ�0)</span>
+<a name="l00031"></a>00031 <span class="comment">// 螳溘�ｯ襍､髱偵↓豈斐∋邱代�ｮ蛻�隗｣閭ｽ縺�1bit蛻�縺�縺大､壹＞</span>
+<a name="l00032"></a>00032 <span class="comment">// 莉･荳九�ｯ蝓ｺ譛ｬ濶ｲ縺ｮ螳夂ｾｩ  縺薙�ｮ莉悶↓繧ょ享謇九↓螂ｽ縺阪↑濶ｲ繧剃ｽ懊ｌ繧�</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#define FG_COLOR_RED            0xF800  // 襍､</span>
+<a name="l00034"></a>00034 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_GREEN          0x07E0  // 邱�</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_BLUE           0x001F  // 髱�</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_CYAN           FG_COLOR_GREEN | FG_COLOR_BLUE  // 豌ｴ (繧ｷ繧｢繝ｳ)              // OR繧貞叙繧九→濶ｲ縺瑚ｶｳ縺帙ｋ繧茨ｽ�!</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_MAGENTA        FG_COLOR_RED | FG_COLOR_BLUE    // 邏ｫ (繝槭ぞ繝ｳ繧ｿ)</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_YELLOW         FG_COLOR_RED | FG_COLOR_GREEN   // 鮟� (繧､繧ｨ繝ｭ繝ｼ)</span>
+<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_BLACK          0x0000  // 鮟�</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_WHITE          0xFFFF  // 逋ｽ</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_GRAY50         0x7BEF  // 轣ｰ 霈晏ｺｦ50�ｼ�</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span><span class="preprocessor">#define FG_COLOR_GRAY25         0x39E7  // 轣ｰ 霈晏ｺｦ25�ｼ�</span>
 <a name="l00043"></a>00043 <span class="preprocessor"></span>
 <a name="l00044"></a><a class="code" href="class_frame_graphics.html">00044</a> <span class="keyword">class </span><a class="code" href="class_frame_graphics.html">FrameGraphics</a> {
-<a name="l00045"></a>00045         <span class="comment">// フレームバッファクラス</span>
+<a name="l00045"></a>00045         <span class="comment">// 繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ繧ｯ繝ｩ繧ｹ</span>
 <a name="l00046"></a>00046         <span class="keyword">private</span>:
-<a name="l00047"></a>00047                 <a class="code" href="class_frame_graphics.html">FrameGraphics</a>(<span class="keyword">const</span> <a class="code" href="class_frame_graphics.html">FrameGraphics</a>&amp;);                                    <span class="comment">// コピーコンストラクタ使用禁止</span>
-<a name="l00048"></a>00048                 <span class="keyword">const</span> <a class="code" href="class_frame_graphics.html">FrameGraphics</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_frame_graphics.html">FrameGraphics</a>&amp;);   <span class="comment">// 代入演算子使用禁止</span>
-<a name="l00049"></a>00049                 <span class="keywordtype">int</span> FBfd;               <span class="comment">// フレームバッファ ファイルディスクリプタ</span>
-<a name="l00050"></a>00050                 <span class="keywordtype">short</span> *FBptr;   <span class="comment">// フレームバッファ ポインタ</span>
-<a name="l00051"></a>00051                 <span class="keyword">struct </span>fb_fix_screeninfo finfo; <span class="comment">// 固定情報構造体</span>
-<a name="l00052"></a>00052                 <span class="keyword">struct </span>fb_var_screeninfo vinfo; <span class="comment">// 可変情報構造体</span>
-<a name="l00053"></a>00053                 <span class="keywordtype">int</span> width;              <span class="comment">// [px]         横幅</span>
-<a name="l00054"></a>00054                 <span class="keywordtype">int</span> height;             <span class="comment">// [px]         高さ</span>
-<a name="l00055"></a>00055                 <span class="keywordtype">int</span> depth;              <span class="comment">// [bits]       色深度</span>
-<a name="l00056"></a>00056                 <span class="keywordtype">int</span> size;               <span class="comment">// [bytes]      画面の大きさ</span>
-<a name="l00057"></a>00057                 <span class="keywordtype">int</span> length;             <span class="comment">//                      フレームバッファポインタの長さ</span>
+<a name="l00047"></a>00047                 <a class="code" href="class_frame_graphics.html">FrameGraphics</a>(<span class="keyword">const</span> <a class="code" href="class_frame_graphics.html">FrameGraphics</a>&amp;);                                    <span class="comment">// 繧ｳ繝斐�ｼ繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ菴ｿ逕ｨ遖∵ｭ｢</span>
+<a name="l00048"></a>00048                 <span class="keyword">const</span> <a class="code" href="class_frame_graphics.html">FrameGraphics</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_frame_graphics.html">FrameGraphics</a>&amp;);   <span class="comment">// 莉｣蜈･貍皮ｮ怜ｭ蝉ｽｿ逕ｨ遖∵ｭ｢</span>
+<a name="l00049"></a>00049                 <span class="keywordtype">int</span> FBfd;               <span class="comment">// 繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ 繝輔ぃ繧､繝ｫ繝�繧｣繧ｹ繧ｯ繝ｪ繝励ち</span>
+<a name="l00050"></a>00050                 <span class="keywordtype">short</span> *FBptr;   <span class="comment">// 繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ 繝昴う繝ｳ繧ｿ</span>
+<a name="l00051"></a>00051                 <span class="keyword">struct </span>fb_fix_screeninfo finfo; <span class="comment">// 蝗ｺ螳壽ュ蝣ｱ讒矩��菴�</span>
+<a name="l00052"></a>00052                 <span class="keyword">struct </span>fb_var_screeninfo vinfo; <span class="comment">// 蜿ｯ螟画ュ蝣ｱ讒矩��菴�</span>
+<a name="l00053"></a>00053                 <span class="keywordtype">int</span> width;              <span class="comment">// [px]         讓ｪ蟷�</span>
+<a name="l00054"></a>00054                 <span class="keywordtype">int</span> height;             <span class="comment">// [px]         鬮倥＆</span>
+<a name="l00055"></a>00055                 <span class="keywordtype">int</span> depth;              <span class="comment">// [bits]       濶ｲ豺ｱ蠎ｦ</span>
+<a name="l00056"></a>00056                 <span class="keywordtype">int</span> size;               <span class="comment">// [bytes]      逕ｻ髱｢縺ｮ螟ｧ縺阪＆</span>
+<a name="l00057"></a>00057                 <span class="keywordtype">int</span> length;             <span class="comment">//                      繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ繝昴う繝ｳ繧ｿ縺ｮ髟ｷ縺�</span>
 <a name="l00058"></a>00058         
 <a name="l00059"></a>00059         <span class="keyword">public</span>:
-<a name="l00060"></a>00060                 <a class="code" href="class_frame_graphics.html">FrameGraphics</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* device);                                                      <span class="comment">// コンストラクタ フレームバッファ初期化</span>
-<a name="l00061"></a>00061                 ~<a class="code" href="class_frame_graphics.html">FrameGraphics</a>(<span class="keywordtype">void</span>);                                                                           <span class="comment">// デストラクタ   フレームバッファ開放</span>
-<a name="l00062"></a>00062                 <span class="keywordtype">void</span> ShowParam(<span class="keywordtype">void</span>);                                                                           <span class="comment">// 画面情報の表示</span>
-<a name="l00063"></a>00063                 <span class="keywordtype">void</span> DrawPoint(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">short</span> color);                                      <span class="comment">// 点の描画</span>
-<a name="l00064"></a>00064                 <span class="keywordtype">void</span> DrawLine(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2, <span class="keywordtype">short</span> color);     <span class="comment">// 直線の描画</span>
-<a name="l00065"></a>00065                 <span class="keywordtype">void</span> DrawRect(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">short</span> color);         <span class="comment">// 長方形の描画(色は塗らない)</span>
-<a name="l00066"></a>00066                 <span class="keywordtype">void</span> DrawRectFill(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">short</span> color);     <span class="comment">// 長方形の描画(色を塗る)</span>
-<a name="l00067"></a>00067                 <span class="keywordtype">void</span> ClearScreen(<span class="keywordtype">void</span>);                                                                         <span class="comment">// 画面の消去</span>
-<a name="l00068"></a>00068                 <span class="keywordtype">void</span> ClearRect(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);                                     <span class="comment">// 長方形の範囲内を消去</span>
-<a name="l00069"></a>00069                 <span class="keywordtype">int</span> GetWidth(<span class="keywordtype">void</span>);                                                                                     <span class="comment">// 画面の幅の取得</span>
-<a name="l00070"></a>00070                 <span class="keywordtype">int</span> GetHeight(<span class="keywordtype">void</span>);                                                                            <span class="comment">// 画面の高さの取得</span>
+<a name="l00060"></a>00060                 <a class="code" href="class_frame_graphics.html">FrameGraphics</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* device);                                                      <span class="comment">// 繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ 繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ蛻晄悄蛹�</span>
+<a name="l00061"></a>00061                 ~<a class="code" href="class_frame_graphics.html">FrameGraphics</a>(<span class="keywordtype">void</span>);                                                                           <span class="comment">// 繝�繧ｹ繝医Λ繧ｯ繧ｿ   繝輔Ξ繝ｼ繝�繝舌ャ繝輔ぃ髢区叛</span>
+<a name="l00062"></a>00062                 <span class="keywordtype">void</span> ShowParam(<span class="keywordtype">void</span>);                                                                           <span class="comment">// 逕ｻ髱｢諠�蝣ｱ縺ｮ陦ｨ遉ｺ</span>
+<a name="l00063"></a>00063                 <span class="keywordtype">void</span> DrawPoint(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">short</span> color);                                      <span class="comment">// 轤ｹ縺ｮ謠冗判</span>
+<a name="l00064"></a>00064                 <span class="keywordtype">void</span> DrawLine(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2, <span class="keywordtype">short</span> color);     <span class="comment">// 逶ｴ邱壹�ｮ謠冗判</span>
+<a name="l00065"></a>00065                 <span class="keywordtype">void</span> DrawRect(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">short</span> color);         <span class="comment">// 髟ｷ譁ｹ蠖｢縺ｮ謠冗判(濶ｲ縺ｯ蝪励ｉ縺ｪ縺�)</span>
+<a name="l00066"></a>00066                 <span class="keywordtype">void</span> DrawRectFill(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">short</span> color);     <span class="comment">// 髟ｷ譁ｹ蠖｢縺ｮ謠冗判(濶ｲ繧貞｡励ｋ)</span>
+<a name="l00067"></a>00067                 <span class="keywordtype">void</span> ClearScreen(<span class="keywordtype">void</span>);                                                                         <span class="comment">// 逕ｻ髱｢縺ｮ豸亥悉</span>
+<a name="l00068"></a>00068                 <span class="keywordtype">void</span> ClearRect(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);                                     <span class="comment">// 髟ｷ譁ｹ蠖｢縺ｮ遽�蝗ｲ蜀�繧呈ｶ亥悉</span>
+<a name="l00069"></a>00069                 <span class="keywordtype">int</span> GetWidth(<span class="keywordtype">void</span>);                                                                                     <span class="comment">// 逕ｻ髱｢縺ｮ蟷�縺ｮ蜿門ｾ�</span>
+<a name="l00070"></a>00070                 <span class="keywordtype">int</span> GetHeight(<span class="keywordtype">void</span>);                                                                            <span class="comment">// 逕ｻ髱｢縺ｮ鬮倥＆縺ｮ蜿門ｾ�</span>
 <a name="l00071"></a>00071         
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073 };

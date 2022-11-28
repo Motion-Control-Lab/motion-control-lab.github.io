@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
@@ -47,10 +47,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lib/PCI-6205.hh</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// PCI-6205入出力クラス</span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// PCI-6205蜈･蜃ｺ蜉帙け繝ｩ繧ｹ</span>
 <a name="l00002"></a>00002 <span class="comment">// 2011/02/09 Yuki YOKOKURA</span>
 <a name="l00003"></a>00003 <span class="comment">//</span>
-<a name="l00004"></a>00004 <span class="comment">// Interface社製PCI-6205のための入出力機能を提供します。</span>
+<a name="l00004"></a>00004 <span class="comment">// Interface遉ｾ陬ｽPCI-6205縺ｮ縺溘ａ縺ｮ蜈･蜃ｺ蜉帶ｩ溯�ｽ繧呈署萓帙＠縺ｾ縺吶��</span>
 <a name="l00005"></a>00005 <span class="comment">//</span>
 <a name="l00006"></a>00006 <span class="comment">// Copyright (C) 2011 Yuki YOKOKURA</span>
 <a name="l00007"></a>00007 <span class="comment">// This program is free software;</span>
@@ -69,24 +69,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
 <a name="l00021"></a>00021 <span class="preprocessor">#include &lt;algorithm&gt;</span>
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keyword">namespace </span>ARCS {        <span class="comment">// ARCS名前空間</span>
+<a name="l00023"></a>00023 <span class="keyword">namespace </span>ARCS {        <span class="comment">// ARCS蜷榊燕遨ｺ髢�</span>
 <a name="l00024"></a><a class="code" href="class_a_r_c_s_1_1_e_n_c6205.html">00024</a>         <span class="keyword">class </span><a class="code" href="class_a_r_c_s_1_1_e_n_c6205.html">ENC6205</a> {
 <a name="l00025"></a>00025                 <span class="keyword">private</span>:
-<a name="l00026"></a>00026                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> MAX_CH=8;                             <span class="comment">// チャネル最大値</span>
-<a name="l00027"></a>00027                         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> BaseAddr[4];                                               <span class="comment">// 先頭アドレス</span>
-<a name="l00028"></a>00028                         <span class="keywordtype">double</span> Resolutions[MAX_CH];                                             <span class="comment">// [m] エンコーダ分解能</span>
-<a name="l00029"></a>00029                         <span class="keywordtype">void</span> Settings(<span class="keywordtype">void</span>);                                                    <span class="comment">// エンコーダカウンタの設定を行う関数</span>
-<a name="l00030"></a>00030                         <span class="keywordtype">void</span> Input(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ENCdata[MAX_CH]);              <span class="comment">// エンコーダカウンタからカウント値を読み込む関数</span>
-<a name="l00031"></a>00031                         <span class="keywordtype">void</span> Zero(<span class="keywordtype">void</span>);                                                                <span class="comment">// エンコーダカウンタの値を零(0x800000)にする関数</span>
-<a name="l00032"></a>00032                         <span class="comment">// エンコーダカウンタ値から位置[m]へ変換する関数</span>
+<a name="l00026"></a>00026                         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> MAX_CH=8;                             <span class="comment">// 繝√Ε繝阪Ν譛�螟ｧ蛟､</span>
+<a name="l00027"></a>00027                         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> BaseAddr[4];                                               <span class="comment">// 蜈磯�ｭ繧｢繝峨Ξ繧ｹ</span>
+<a name="l00028"></a>00028                         <span class="keywordtype">double</span> Resolutions[MAX_CH];                                             <span class="comment">// [m] 繧ｨ繝ｳ繧ｳ繝ｼ繝�蛻�隗｣閭ｽ</span>
+<a name="l00029"></a>00029                         <span class="keywordtype">void</span> Settings(<span class="keywordtype">void</span>);                                                    <span class="comment">// 繧ｨ繝ｳ繧ｳ繝ｼ繝�繧ｫ繧ｦ繝ｳ繧ｿ縺ｮ險ｭ螳壹ｒ陦後≧髢｢謨ｰ</span>
+<a name="l00030"></a>00030                         <span class="keywordtype">void</span> Input(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ENCdata[MAX_CH]);              <span class="comment">// 繧ｨ繝ｳ繧ｳ繝ｼ繝�繧ｫ繧ｦ繝ｳ繧ｿ縺九ｉ繧ｫ繧ｦ繝ｳ繝亥�､繧定ｪｭ縺ｿ霎ｼ繧�髢｢謨ｰ</span>
+<a name="l00031"></a>00031                         <span class="keywordtype">void</span> Zero(<span class="keywordtype">void</span>);                                                                <span class="comment">// 繧ｨ繝ｳ繧ｳ繝ｼ繝�繧ｫ繧ｦ繝ｳ繧ｿ縺ｮ蛟､繧帝峺(0x800000)縺ｫ縺吶ｋ髢｢謨ｰ</span>
+<a name="l00032"></a>00032                         <span class="comment">// 繧ｨ繝ｳ繧ｳ繝ｼ繝�繧ｫ繧ｦ繝ｳ繧ｿ蛟､縺九ｉ菴咲ｽｮ[m]縺ｸ螟画鋤縺吶ｋ髢｢謨ｰ</span>
 <a name="l00033"></a>00033                         <span class="keywordtype">double</span> EncDataToPosition(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> EncData, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ch);
-<a name="l00034"></a>00034                         <span class="comment">// 上位、中位、下位に分かれている各々1バイトのデータを、3バイトのデータに結合する関数</span>
+<a name="l00034"></a>00034                         <span class="comment">// 荳贋ｽ阪�∽ｸｭ菴阪�∽ｸ倶ｽ阪↓蛻�縺九ｌ縺ｦ縺�繧句推縲�1繝舌う繝医�ｮ繝�繝ｼ繧ｿ繧偵��3繝舌う繝医�ｮ繝�繝ｼ繧ｿ縺ｫ邨仙粋縺吶ｋ髢｢謨ｰ</span>
 <a name="l00035"></a>00035                         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> IIIbyteCat(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> High, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> Middle, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> Low);
 <a name="l00036"></a>00036                 
 <a name="l00037"></a>00037                 <span class="keyword">public</span>:
-<a name="l00038"></a>00038                         <a class="code" href="class_a_r_c_s_1_1_e_n_c6205.html">ENC6205</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> Base[4], <span class="keyword">const</span> <span class="keywordtype">double</span> EncResolutions[MAX_CH]);        <span class="comment">// コンストラクタ(ENC初期化＆設定)</span>
-<a name="l00039"></a>00039                         ~<a class="code" href="class_a_r_c_s_1_1_e_n_c6205.html">ENC6205</a>();                                                                                                                     <span class="comment">// デストラクタ(ENC終了処理)</span>
-<a name="l00040"></a>00040                         <span class="keywordtype">void</span> GetPositionRes(<span class="keyword">volatile</span> <span class="keywordtype">double</span> Xres[MAX_CH]);                                      <span class="comment">// 位置応答値をカウンタから入力</span>
+<a name="l00038"></a>00038                         <a class="code" href="class_a_r_c_s_1_1_e_n_c6205.html">ENC6205</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> Base[4], <span class="keyword">const</span> <span class="keywordtype">double</span> EncResolutions[MAX_CH]);        <span class="comment">// 繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ(ENC蛻晄悄蛹厄ｼ�險ｭ螳�)</span>
+<a name="l00039"></a>00039                         ~<a class="code" href="class_a_r_c_s_1_1_e_n_c6205.html">ENC6205</a>();                                                                                                                     <span class="comment">// 繝�繧ｹ繝医Λ繧ｯ繧ｿ(ENC邨ゆｺ�蜃ｦ逅�)</span>
+<a name="l00040"></a>00040                         <span class="keywordtype">void</span> GetPositionRes(<span class="keyword">volatile</span> <span class="keywordtype">double</span> Xres[MAX_CH]);                                      <span class="comment">// 菴咲ｽｮ蠢懃ｭ泌�､繧偵き繧ｦ繝ｳ繧ｿ縺九ｉ蜈･蜉�</span>
 <a name="l00041"></a>00041         };
 <a name="l00042"></a>00042 }
 <a name="l00043"></a>00043 

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <title>Side Warehouse of Laboratory</title>
 <head>
@@ -6,184 +6,184 @@
 </head>
 <body>
 
-	<!---// 表題レイヤー //--->
+	<!---// 陦ｨ鬘後Ξ繧､繝､繝ｼ //--->
 	<DIV class="toplayer">
-		<font size=6><b>RTAI3.9＋Fedora17 64bit</b></font>
+		<font size=6><b>RTAI3.9�ｼ祈edora17 64bit</b></font>
 		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
 	</DIV>
 
-	<!---// 横帯レイヤー //--->
+	<!---// 讓ｪ蟶ｯ繝ｬ繧､繝､繝ｼ //--->
 	<DIV class="sidelayer"></DIV>
 
-	<!---// 本文レイヤー //--->
+	<!---// 譛ｬ譁�繝ｬ繧､繝､繝ｼ //--->
 	<DIV class="mainlayer">
 		<br>
-		<font size=4><b>コレは何？</b></font><br>
-			　RTAIを64bitで動かせるかどうか試してみます。
-			ここでは 64bit版 Fedora 17 をRTAIでリアルタイム化します。
-			やっぱりすんなりは行かないようです。
-			重要なポイントがあります。<br>
-			(下記は，沼津高専 山之内先生にご協力を頂きました 感謝!)<br>
+		<font size=4><b>繧ｳ繝ｬ縺ｯ菴包ｼ�</b></font><br>
+			縲�RTAI繧�64bit縺ｧ蜍輔°縺帙ｋ縺九←縺�縺玖ｩｦ縺励※縺ｿ縺ｾ縺吶��
+			縺薙％縺ｧ縺ｯ 64bit迚� Fedora 17 繧坦TAI縺ｧ繝ｪ繧｢繝ｫ繧ｿ繧､繝�蛹悶＠縺ｾ縺吶��
+			繧�縺｣縺ｱ繧翫☆繧薙↑繧翫�ｯ陦後°縺ｪ縺�繧医≧縺ｧ縺吶��
+			驥崎ｦ√↑繝昴う繝ｳ繝医′縺ゅｊ縺ｾ縺吶��<br>
+			(荳玖ｨ倥�ｯ�ｼ梧ｲｼ豢･鬮伜ｰ� 螻ｱ荵句��蜈育函縺ｫ縺泌鵠蜉帙ｒ鬆ゅ″縺ｾ縺励◆ 諢溯ｬ�!)<br>
 		<br>
 		<br>
-		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
-			　今回使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+		<font size=4><b>繝上�ｼ繝峨え繧ｧ繧｢/繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�蝉ｾ�</b></font><br>
+			縲�莉雁屓菴ｿ逕ｨ縺励◆繝代た繧ｳ繝ｳ縺ｮ繝上�ｼ繝峨え繧ｧ繧｢縺翫ｈ縺ｳ繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�舌�ｯ莉･荳九�ｮ騾壹ｊ縺ｧ縺吶��<br>
 			<blockquote>
-				ハードウェア構成：Intel Core i7 870 @ 2.93 GHz  ＋ Gigabyte P55-UD3R ＋ Intel SSD X25-M<br>
-				ソフトウェア構成：Fedora 17 64bit ＋ kernel-2.6.38.8 ＋ rtai-3.9-test2<br>
+				繝上�ｼ繝峨え繧ｧ繧｢讒区�撰ｼ唔ntel Core i7 870 @ 2.93 GHz  �ｼ� Gigabyte P55-UD3R �ｼ� Intel SSD X25-M<br>
+				繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�撰ｼ哥edora 17 64bit �ｼ� kernel-2.6.38.8 �ｼ� rtai-3.9-test2<br>
 			</blockquote>
-			上記で動作を確認しています。<br>
+			荳願ｨ倥〒蜍穂ｽ懊ｒ遒ｺ隱阪＠縺ｦ縺�縺ｾ縺吶��<br>
 		<br>
 		<br>
-		<font size=4><b>１．Fedora 17 のインストール</b></font><br>
-			　64 bit版 Fedora 17 (x86_64) を普通にインストールします。<br>
+		<font size=4><b>�ｼ托ｼ薩edora 17 縺ｮ繧､繝ｳ繧ｹ繝医�ｼ繝ｫ</b></font><br>
+			縲�64 bit迚� Fedora 17 (x86_64) 繧呈勸騾壹↓繧､繝ｳ繧ｹ繝医�ｼ繝ｫ縺励∪縺吶��<br>
 		<br>
 		<br>
-		<font size=4><b>２．kernel と RTAI のダウンロード</b></font><br>
-			　LinuxのkernelとRTAIのパッチを入手します。必要なのは以下のファイルです。
+		<font size=4><b>�ｼ抵ｼ嗣ernel 縺ｨ RTAI 縺ｮ繝�繧ｦ繝ｳ繝ｭ繝ｼ繝�</b></font><br>
+			縲�Linux縺ｮkernel縺ｨRTAI縺ｮ繝代ャ繝√ｒ蜈･謇九＠縺ｾ縺吶�ょｿ�隕√↑縺ｮ縺ｯ莉･荳九�ｮ繝輔ぃ繧､繝ｫ縺ｧ縺吶��
 			<blockquote>
-				linux-2.6.38.8.tar.bz2 (例えばココ→<a href="http://www.kernel.org/pub/linux/kernel/v2.6/">http://www.kernel.org/pub/linux/kernel/v2.6/</a>)<br>
-				rtai-3.9-test2.tar.bz2 (例えばココ→<a href="https://www.rtai.org/RTAI/">https://www.rtai.org/RTAI/</a>)
+				linux-2.6.38.8.tar.bz2 (萓九∴縺ｰ繧ｳ繧ｳ竊�<a href="http://www.kernel.org/pub/linux/kernel/v2.6/">http://www.kernel.org/pub/linux/kernel/v2.6/</a>)<br>
+				rtai-3.9-test2.tar.bz2 (萓九∴縺ｰ繧ｳ繧ｳ竊�<a href="https://www.rtai.org/RTAI/">https://www.rtai.org/RTAI/</a>)
 			</blockquote>
-			これをそれぞれの本家から落としてきます。<br>
-			(追記：rtai-3.9.tar.bz2 もリリースされたようです。こちらの方がいいかも。)<br>
+			縺薙ｌ繧偵◎繧後◇繧後�ｮ譛ｬ螳ｶ縺九ｉ關ｽ縺ｨ縺励※縺阪∪縺吶��<br>
+			(霑ｽ險假ｼ嗷tai-3.9.tar.bz2 繧ゅΜ繝ｪ繝ｼ繧ｹ縺輔ｌ縺溘ｈ縺�縺ｧ縺吶�ゅ％縺｡繧峨�ｮ譁ｹ縺後＞縺�縺九ｂ縲�)<br>
 		<br>
 		<br>
-		<font size=4><b>３．リアルタイムカーネルイメージの作成</b></font><br>
-			　さて早速RTAIのパッチを当てます。
-			まず落としたファイルを/usr/srcで解凍。
+		<font size=4><b>�ｼ難ｼ弱Μ繧｢繝ｫ繧ｿ繧､繝�繧ｫ繝ｼ繝阪Ν繧､繝｡繝ｼ繧ｸ縺ｮ菴懈��</b></font><br>
+			縲�縺輔※譌ｩ騾欒TAI縺ｮ繝代ャ繝√ｒ蠖薙※縺ｾ縺吶��
+			縺ｾ縺夊誠縺ｨ縺励◆繝輔ぃ繧､繝ｫ繧�/usr/src縺ｧ隗｣蜃阪��
 			<blockquote><b>
 				tar jxf linux-2.6.38.8.tar.bz2<br>
 				tar jxf rtai-3.9-test2.tar.bz2
 			</b></blockquote>
-			次に，パッチ当てます。
+			谺｡縺ｫ�ｼ後ヱ繝�繝∝ｽ薙※縺ｾ縺吶��
 			<blockquote><b>
 				cd /usr/src/linux-2.6.38.8<br>
 				patch -p1 < ../rtai-3.9-test2/base/arch/x86/patches/hal-linux-2.6.38.8-x86-2.11-01.patch
 			</b></blockquote>
-			コンパイルの設定します。
+			繧ｳ繝ｳ繝代う繝ｫ縺ｮ險ｭ螳壹＠縺ｾ縺吶��
 			<blockquote><b>
 				make menuconfig
 			</b></blockquote>
-			設定画面が出てきますが，いつも通りです。
+			險ｭ螳夂判髱｢縺悟�ｺ縺ｦ縺阪∪縺吶′�ｼ後＞縺､繧る�壹ｊ縺ｧ縺吶��
 			<blockquote>
-			◆ Enable loadable module support
+			笳� Enable loadable module support
 				<blockquote>
-					Module versioning support → DISABLE	(デフォでDisableだが念のため確認)
+					Module versioning support 竊� DISABLE	(繝�繝輔か縺ｧDisable縺�縺悟ｿｵ縺ｮ縺溘ａ遒ｺ隱�)
 				</blockquote> 
-			◆ Processor type and features
+			笳� Processor type and features
 				<blockquote>
-					Processor family → Generic-x86-64
+					Processor family 竊� Generic-x86-64
 				</blockquote>
-			◆ Power management options
+			笳� Power management options
 				<blockquote>
-					CPU Frequency scaling → DISABLE
+					CPU Frequency scaling 竊� DISABLE
 				</blockquote>
 			</blockquote>
-			終了して保存。
-			その後メイクしたいところだが，
+			邨ゆｺ�縺励※菫晏ｭ倥��
+			縺昴�ｮ蠕後Γ繧､繧ｯ縺励◆縺�縺ｨ縺薙ｍ縺�縺鯉ｼ�
 			<blockquote><b>
 				make all
 			</b></blockquote>
-			とすると，相変わらず，
+			縺ｨ縺吶ｋ縺ｨ�ｼ檎嶌螟峨ｏ繧峨★�ｼ�
 			<blockquote><i>
 				CONFIG_NR_CPUS is too large
 			</i></blockquote>
-			というエラーが出るので，「/usr/src/linux-2.6.38.8/.config」ファイルを開いて書き換えます。
+			縺ｨ縺�縺�繧ｨ繝ｩ繝ｼ縺悟�ｺ繧九�ｮ縺ｧ�ｼ後��/usr/src/linux-2.6.38.8/.config縲阪ヵ繧｡繧､繝ｫ繧帝幕縺�縺ｦ譖ｸ縺肴鋤縺医∪縺吶��
 			<blockquote><b>
 				vi .config<br>
-				CONFIG_NR_CPUS=256 の行を探して，CONFIG_NR_CPUS=16 (テキトーに多め)に書き換え。
+				CONFIG_NR_CPUS=256 縺ｮ陦後ｒ謗｢縺励※�ｼ靴ONFIG_NR_CPUS=16 (繝�繧ｭ繝医�ｼ縺ｫ螟壹ａ)縺ｫ譖ｸ縺肴鋤縺医��
 			</b></blockquote>
-			さらに書き換え。
+			縺輔ｉ縺ｫ譖ｸ縺肴鋤縺医��
 			<blockquote><b>
-				CONFIG_SPARSE_IRQ=y の行を探して，CONFIG_SPARSE_IRQ=n に書き換え。
+				CONFIG_SPARSE_IRQ=y 縺ｮ陦後ｒ謗｢縺励※�ｼ靴ONFIG_SPARSE_IRQ=n 縺ｫ譖ｸ縺肴鋤縺医��
 			</b></blockquote>
-			その後にコンパイルします。
+			縺昴�ｮ蠕後↓繧ｳ繝ｳ繝代う繝ｫ縺励∪縺吶��
 			<blockquote><b>
 				make all
 			</b></blockquote>
-			たまに警告がちらほら出ますが，問題ないようです。
-			続いてインストール。
+			縺溘∪縺ｫ隴ｦ蜻翫′縺｡繧峨⊇繧牙�ｺ縺ｾ縺吶′�ｼ悟撫鬘後↑縺�繧医≧縺ｧ縺吶��
+			邯壹＞縺ｦ繧､繝ｳ繧ｹ繝医�ｼ繝ｫ縲�
 			<blockquote><b>
 				make modules_install<br>
 				make install
 			</b></blockquote>
-			これでイメージ作成完了<br>
+			縺薙ｌ縺ｧ繧､繝｡繝ｼ繧ｸ菴懈�仙ｮ御ｺ�<br>
 		<br>
 		<br>
-		<font size=4><b>４．GRUBの設定</b></font><br>
-			ブートローダの設定をします。
-			おそらく自動でRTAI＋Fedoraのための設定がされているはずですが，一部書き換えます。
+		<font size=4><b>�ｼ費ｼ雑RUB縺ｮ險ｭ螳�</b></font><br>
+			繝悶�ｼ繝医Ο繝ｼ繝�縺ｮ險ｭ螳壹ｒ縺励∪縺吶��
+			縺翫◎繧峨￥閾ｪ蜍輔〒RTAI�ｼ祈edora縺ｮ縺溘ａ縺ｮ險ｭ螳壹′縺輔ｌ縺ｦ縺�繧九�ｯ縺壹〒縺吶′�ｼ御ｸ�驛ｨ譖ｸ縺肴鋤縺医∪縺吶��
 			<blockquote><b>
 				vi /boot/grub2/grub.conf<br>
-				default=1 を default=0 に変更(デフォルトでRTAIが起動するように各自で設定)<br>
-				timeout=0 を timeout=10 に変更<br>
-				hiddenmenu をコメントアウト
+				default=1 繧� default=0 縺ｫ螟画峩(繝�繝輔か繝ｫ繝医〒RTAI縺瑚ｵｷ蜍輔☆繧九ｈ縺�縺ｫ蜷�閾ｪ縺ｧ險ｭ螳�)<br>
+				timeout=0 繧� timeout=10 縺ｫ螟画峩<br>
+				hiddenmenu 繧偵さ繝｡繝ｳ繝医い繧ｦ繝�
 			</b></blockquote>
-			ここで再起動します。<br>
+			縺薙％縺ｧ蜀崎ｵｷ蜍輔＠縺ｾ縺吶��<br>
 		<br>
 		<br>
-		<font size=4><b>５．RTAIのインストール</b></font><br>
-			再起動が完了したら，
+		<font size=4><b>�ｼ包ｼ山TAI縺ｮ繧､繝ｳ繧ｹ繝医�ｼ繝ｫ</b></font><br>
+			蜀崎ｵｷ蜍輔′螳御ｺ�縺励◆繧会ｼ�
 			<blockquote><b>
 				uname -r
 			</b></blockquote>
-			と打ってみます。
-			2.6.38.8 になってればおｋ。
-			RTAIをコンパイルしてぶち込みます。
+			縺ｨ謇薙▲縺ｦ縺ｿ縺ｾ縺吶��
+			2.6.38.8 縺ｫ縺ｪ縺｣縺ｦ繧後�ｰ縺奇ｽ九��
+			RTAI繧偵さ繝ｳ繝代う繝ｫ縺励※縺ｶ縺｡霎ｼ縺ｿ縺ｾ縺吶��
 			<blockquote><b>
 				cd /usr/src/<br>
 				ln -s /usr/src/linux-2.6.38.8 linux<br>
 				cd rtai-3.9-test2<br>
 				make menuconfig
 			</b></blockquote>
-			設定画面が出てきます。
-			ここで何も設定せずにmake＆insmodすると，<i>insmod: error inserting 'rtai_hal.ko': -1 Operation not permitted</i>
-			というエラーが出る場合があるので，メニューから，
+			險ｭ螳夂判髱｢縺悟�ｺ縺ｦ縺阪∪縺吶��
+			縺薙％縺ｧ菴輔ｂ險ｭ螳壹○縺壹↓make�ｼ�insmod縺吶ｋ縺ｨ�ｼ�<i>insmod: error inserting 'rtai_hal.ko': -1 Operation not permitted</i>
+			縺ｨ縺�縺�繧ｨ繝ｩ繝ｼ縺悟�ｺ繧句�ｴ蜷医′縺ゅｋ縺ｮ縺ｧ�ｼ後Γ繝九Η繝ｼ縺九ｉ�ｼ�
 			<blockquote>
-			◆ Machine (x86_64)
+			笳� Machine (x86_64)
 				<blockquote>
-					Number of CPUs → 16
+					Number of CPUs 竊� 16
 				</blockquote> 
 			</blockquote>
-			と設定して，保存して終了。
-			そしてコンパイル＆インストール。
+			縺ｨ險ｭ螳壹＠縺ｦ�ｼ御ｿ晏ｭ倥＠縺ｦ邨ゆｺ�縲�
+			縺昴＠縺ｦ繧ｳ繝ｳ繝代う繝ｫ�ｼ�繧､繝ｳ繧ｹ繝医�ｼ繝ｫ縲�
 			<blockquote><b>
 				make all<br>
 				make install<br>
 			</b></blockquote>
-			はい、エラー発生。ダメー。
-			<i>base/include/rtai_lxrt.h:655: </i> いろいろ未定義だとのたまうので，
+			縺ｯ縺�縲√お繝ｩ繝ｼ逋ｺ逕溘�ゅム繝｡繝ｼ縲�
+			<i>base/include/rtai_lxrt.h:655: </i> 縺�繧阪＞繧肴悴螳夂ｾｩ縺�縺ｨ縺ｮ縺溘∪縺�縺ｮ縺ｧ�ｼ�
 			<blockquote><b>
 				<font color="CC0000">
-				「/usr/src/rtai-3.9-test2/base/include/rtai_lxrt.h」の冒頭に「#include &lt;linux/sched.h&gt;」をぶち込む
+				縲�/usr/src/rtai-3.9-test2/base/include/rtai_lxrt.h縲阪�ｮ蜀帝�ｭ縺ｫ縲�#include &lt;linux/sched.h&gt;縲阪ｒ縺ｶ縺｡霎ｼ繧�
 				</font>
 			</b></blockquote>
-			これが今回の重要ポイント。
-			もう一度，
+			縺薙ｌ縺御ｻ雁屓縺ｮ驥崎ｦ√�昴う繝ｳ繝医��
+			繧ゅ≧荳�蠎ｦ�ｼ�
 			<blockquote><b>
 				make all<br>
 				make install<br>
 			</b></blockquote>
-			そんでもって，
+			縺昴ｓ縺ｧ繧ゅ▲縺ｦ�ｼ�
 			<blockquote><b>
 				insmod /usr/realtime/modules/rtai_hal.ko<br>
 				insmod /usr/realtime/modules/rtai_lxrt.ko
 			</b></blockquote>
-			おｋ。
-			以下を入力して動作確認を実施。
+			縺奇ｽ九��
+			莉･荳九ｒ蜈･蜉帙＠縺ｦ蜍穂ｽ懃｢ｺ隱阪ｒ螳滓命縲�
 			<blockquote><b>
 				cd /usr/realtime/testsuite/user/latency<br>
 				./run
 			</b></blockquote>
-			稼働確認。<br>
+			遞ｼ蜒咲｢ｺ隱阪��<br>
 			
 			<br><br><br><br><br><br>
 		<center>
 			<font size=2>
 				- <?php include('./counter/count.php'); ?> -<br>
 				<br>
-				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				遐皮ｩｶ螳､縺ｮ讓ｪ縺ｮ蛟牙ｺｫ - Side Warehouse of Laboratory<br>
 				Copyright(C), Side Warehouse, All rights reserved.
 			</font>
 		</center>

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
@@ -47,10 +47,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lib/GraphPlot2D.hh</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// X-Tグラフ描画クラス</span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// X-T繧ｰ繝ｩ繝墓緒逕ｻ繧ｯ繝ｩ繧ｹ</span>
 <a name="l00002"></a>00002 <span class="comment">// 2011/02/07 Yuki YOKOKURA</span>
 <a name="l00003"></a>00003 <span class="comment">//</span>
-<a name="l00004"></a>00004 <span class="comment">// 画面上にグラフの描画を行います。</span>
+<a name="l00004"></a>00004 <span class="comment">// 逕ｻ髱｢荳翫↓繧ｰ繝ｩ繝輔�ｮ謠冗判繧定｡後＞縺ｾ縺吶��</span>
 <a name="l00005"></a>00005 <span class="comment">//</span>
 <a name="l00006"></a>00006 <span class="comment">// Copyright (C) 2011 Yuki YOKOKURA</span>
 <a name="l00007"></a>00007 <span class="comment">// This program is free software;</span>
@@ -70,46 +70,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00021"></a>00021 <span class="preprocessor">#include &quot;FrameGraphics.hh&quot;</span>
 <a name="l00022"></a>00022 
 <a name="l00023"></a><a class="code" href="class_graph_plot2_d.html">00023</a> <span class="keyword">class </span><a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a> {
-<a name="l00024"></a>00024         <span class="comment">// ２次元グラフ描画クラス</span>
+<a name="l00024"></a>00024         <span class="comment">// �ｼ呈ｬ｡蜈�繧ｰ繝ｩ繝墓緒逕ｻ繧ｯ繝ｩ繧ｹ</span>
 <a name="l00025"></a>00025         <span class="keyword">private</span>:
-<a name="l00026"></a>00026                 <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>(<span class="keyword">const</span> <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>&amp;);                                        <span class="comment">// コピーコンストラクタ使用禁止</span>
-<a name="l00027"></a>00027                 <span class="keyword">const</span> <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>&amp;);       <span class="comment">// 代入演算子使用禁止</span>
-<a name="l00028"></a>00028                 <a class="code" href="class_frame_graphics.html">FrameGraphics</a> *pFG;                     <span class="comment">// フレームグラフィックスクラスへのポインタ</span>
-<a name="l00029"></a>00029                 <span class="keyword">const</span> <span class="keywordtype">char</span> *Name;                       <span class="comment">// 縦軸の名前</span>
-<a name="l00030"></a>00030                 <span class="keywordtype">int</span> Xcur, Ycur;                         <span class="comment">// グラフ左上のカーソル座標</span>
-<a name="l00031"></a>00031                 <span class="keywordtype">int</span> Hcur, Wcur;                         <span class="comment">// グラフの幅と高さ(カーソル座標)</span>
-<a name="l00032"></a>00032                 <span class="keywordtype">int</span> X, Y;                                       <span class="comment">// グラフ左上の座標(ピクセル)</span>
-<a name="l00033"></a>00033                 <span class="keywordtype">int</span> H, W;                                       <span class="comment">// グラフの高さと幅(ピクセル)</span>
-<a name="l00034"></a>00034                 <span class="keywordtype">int</span> Ymax, Ymid, Ymin;           <span class="comment">// 縦軸の最大値，縦軸の真ん中の値，縦軸の最小値</span>
-<a name="l00035"></a>00035                 <span class="keywordtype">int</span> YmaxLab, YminLab;           <span class="comment">// 縦軸の最大値のラベル，縦軸の最小値のラベル</span>
-<a name="l00036"></a>00036                 <span class="keywordtype">int</span> NumOfVar;                           <span class="comment">// 変数の大きさ</span>
-<a name="l00037"></a>00037                 <span class="keywordtype">int</span> x1[8],y1[8],x2[8],y2[8];<span class="comment">// グラフ描画用 座標格納変数</span>
-<a name="l00038"></a>00038                 <span class="keywordtype">int</span> VerMax;                                     <span class="comment">// 縦軸最大値ラベルのカーソル縦位置</span>
-<a name="l00039"></a>00039                 <span class="keywordtype">int</span> VerMid;                                     <span class="comment">// 縦軸中央値ラベルのカーソル縦位置</span>
-<a name="l00040"></a>00040                 <span class="keywordtype">int</span> VerMin;                                     <span class="comment">// 縦軸最小値ラベルのカーソル縦位置</span>
-<a name="l00041"></a>00041                 <span class="keywordtype">int</span> HorMax;                                     <span class="comment">// 横軸最大値ラベルのカーソル横位置</span>
-<a name="l00042"></a>00042                 <span class="keywordtype">int</span> HorMid;                                     <span class="comment">// 横軸中央値ラベルのカーソル横位置</span>
-<a name="l00043"></a>00043                 <span class="keywordtype">int</span> HorMin;                                     <span class="comment">// 横軸最小値ラベルのカーソル横位置</span>
-<a name="l00044"></a>00044                 <span class="keywordtype">short</span> LineColor[8];                     <span class="comment">// グラフの線の色の設定用</span>
-<a name="l00045"></a>00045                 <span class="keywordtype">double</span> Ax;                                      <span class="comment">// RealXTOX用の換算係数</span>
-<a name="l00046"></a>00046                 <span class="keywordtype">double</span> Ay,By;                           <span class="comment">// RealYToY用の換算係数</span>
-<a name="l00047"></a>00047                 <span class="keywordtype">int</span> Hlaboffset;                         <span class="comment">// 横軸ラベルオフセット</span>
-<a name="l00048"></a>00048                 <span class="keywordtype">void</span> DrawAxis(<span class="keywordtype">int</span> Hoffset);     <span class="comment">// 縦軸と横軸の描画を行う関数</span>
-<a name="l00049"></a>00049                 <span class="keywordtype">int</span> Round(<span class="keywordtype">double</span> x);            <span class="comment">// 四捨五入をする関数</span>
-<a name="l00050"></a>00050                 <span class="keywordtype">int</span> RealXToX(<span class="keywordtype">double</span> u);         <span class="comment">// 横軸の実数値から画面座標(ピクセル)に変換する関数</span>
-<a name="l00051"></a>00051                 <span class="keywordtype">int</span> RealYToY(<span class="keywordtype">double</span> u);         <span class="comment">// 縦軸の実数値から画面座標(ピクセル)に変換する関数</span>
-<a name="l00052"></a>00052                 <span class="keywordtype">int</span> YLimitter(<span class="keywordtype">int</span> y);           <span class="comment">// 縦軸プロットリミッタ (画面座標) グラフ領域をはみ出ないようにするための関数</span>
+<a name="l00026"></a>00026                 <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>(<span class="keyword">const</span> <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>&amp;);                                        <span class="comment">// 繧ｳ繝斐�ｼ繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ菴ｿ逕ｨ遖∵ｭ｢</span>
+<a name="l00027"></a>00027                 <span class="keyword">const</span> <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>&amp;);       <span class="comment">// 莉｣蜈･貍皮ｮ怜ｭ蝉ｽｿ逕ｨ遖∵ｭ｢</span>
+<a name="l00028"></a>00028                 <a class="code" href="class_frame_graphics.html">FrameGraphics</a> *pFG;                     <span class="comment">// 繝輔Ξ繝ｼ繝�繧ｰ繝ｩ繝輔ぅ繝�繧ｯ繧ｹ繧ｯ繝ｩ繧ｹ縺ｸ縺ｮ繝昴う繝ｳ繧ｿ</span>
+<a name="l00029"></a>00029                 <span class="keyword">const</span> <span class="keywordtype">char</span> *Name;                       <span class="comment">// 邵ｦ霆ｸ縺ｮ蜷榊燕</span>
+<a name="l00030"></a>00030                 <span class="keywordtype">int</span> Xcur, Ycur;                         <span class="comment">// 繧ｰ繝ｩ繝募ｷｦ荳翫�ｮ繧ｫ繝ｼ繧ｽ繝ｫ蠎ｧ讓�</span>
+<a name="l00031"></a>00031                 <span class="keywordtype">int</span> Hcur, Wcur;                         <span class="comment">// 繧ｰ繝ｩ繝輔�ｮ蟷�縺ｨ鬮倥＆(繧ｫ繝ｼ繧ｽ繝ｫ蠎ｧ讓�)</span>
+<a name="l00032"></a>00032                 <span class="keywordtype">int</span> X, Y;                                       <span class="comment">// 繧ｰ繝ｩ繝募ｷｦ荳翫�ｮ蠎ｧ讓�(繝斐け繧ｻ繝ｫ)</span>
+<a name="l00033"></a>00033                 <span class="keywordtype">int</span> H, W;                                       <span class="comment">// 繧ｰ繝ｩ繝輔�ｮ鬮倥＆縺ｨ蟷�(繝斐け繧ｻ繝ｫ)</span>
+<a name="l00034"></a>00034                 <span class="keywordtype">int</span> Ymax, Ymid, Ymin;           <span class="comment">// 邵ｦ霆ｸ縺ｮ譛�螟ｧ蛟､�ｼ檎ｸｦ霆ｸ縺ｮ逵溘ｓ荳ｭ縺ｮ蛟､�ｼ檎ｸｦ霆ｸ縺ｮ譛�蟆丞�､</span>
+<a name="l00035"></a>00035                 <span class="keywordtype">int</span> YmaxLab, YminLab;           <span class="comment">// 邵ｦ霆ｸ縺ｮ譛�螟ｧ蛟､縺ｮ繝ｩ繝吶Ν�ｼ檎ｸｦ霆ｸ縺ｮ譛�蟆丞�､縺ｮ繝ｩ繝吶Ν</span>
+<a name="l00036"></a>00036                 <span class="keywordtype">int</span> NumOfVar;                           <span class="comment">// 螟画焚縺ｮ螟ｧ縺阪＆</span>
+<a name="l00037"></a>00037                 <span class="keywordtype">int</span> x1[8],y1[8],x2[8],y2[8];<span class="comment">// 繧ｰ繝ｩ繝墓緒逕ｻ逕ｨ 蠎ｧ讓呎�ｼ邏榊､画焚</span>
+<a name="l00038"></a>00038                 <span class="keywordtype">int</span> VerMax;                                     <span class="comment">// 邵ｦ霆ｸ譛�螟ｧ蛟､繝ｩ繝吶Ν縺ｮ繧ｫ繝ｼ繧ｽ繝ｫ邵ｦ菴咲ｽｮ</span>
+<a name="l00039"></a>00039                 <span class="keywordtype">int</span> VerMid;                                     <span class="comment">// 邵ｦ霆ｸ荳ｭ螟ｮ蛟､繝ｩ繝吶Ν縺ｮ繧ｫ繝ｼ繧ｽ繝ｫ邵ｦ菴咲ｽｮ</span>
+<a name="l00040"></a>00040                 <span class="keywordtype">int</span> VerMin;                                     <span class="comment">// 邵ｦ霆ｸ譛�蟆丞�､繝ｩ繝吶Ν縺ｮ繧ｫ繝ｼ繧ｽ繝ｫ邵ｦ菴咲ｽｮ</span>
+<a name="l00041"></a>00041                 <span class="keywordtype">int</span> HorMax;                                     <span class="comment">// 讓ｪ霆ｸ譛�螟ｧ蛟､繝ｩ繝吶Ν縺ｮ繧ｫ繝ｼ繧ｽ繝ｫ讓ｪ菴咲ｽｮ</span>
+<a name="l00042"></a>00042                 <span class="keywordtype">int</span> HorMid;                                     <span class="comment">// 讓ｪ霆ｸ荳ｭ螟ｮ蛟､繝ｩ繝吶Ν縺ｮ繧ｫ繝ｼ繧ｽ繝ｫ讓ｪ菴咲ｽｮ</span>
+<a name="l00043"></a>00043                 <span class="keywordtype">int</span> HorMin;                                     <span class="comment">// 讓ｪ霆ｸ譛�蟆丞�､繝ｩ繝吶Ν縺ｮ繧ｫ繝ｼ繧ｽ繝ｫ讓ｪ菴咲ｽｮ</span>
+<a name="l00044"></a>00044                 <span class="keywordtype">short</span> LineColor[8];                     <span class="comment">// 繧ｰ繝ｩ繝輔�ｮ邱壹�ｮ濶ｲ縺ｮ險ｭ螳夂畑</span>
+<a name="l00045"></a>00045                 <span class="keywordtype">double</span> Ax;                                      <span class="comment">// RealXTOX逕ｨ縺ｮ謠帷ｮ嶺ｿよ焚</span>
+<a name="l00046"></a>00046                 <span class="keywordtype">double</span> Ay,By;                           <span class="comment">// RealYToY逕ｨ縺ｮ謠帷ｮ嶺ｿよ焚</span>
+<a name="l00047"></a>00047                 <span class="keywordtype">int</span> Hlaboffset;                         <span class="comment">// 讓ｪ霆ｸ繝ｩ繝吶Ν繧ｪ繝輔そ繝�繝�</span>
+<a name="l00048"></a>00048                 <span class="keywordtype">void</span> DrawAxis(<span class="keywordtype">int</span> Hoffset);     <span class="comment">// 邵ｦ霆ｸ縺ｨ讓ｪ霆ｸ縺ｮ謠冗判繧定｡後≧髢｢謨ｰ</span>
+<a name="l00049"></a>00049                 <span class="keywordtype">int</span> Round(<span class="keywordtype">double</span> x);            <span class="comment">// 蝗帶昏莠泌�･繧偵☆繧矩未謨ｰ</span>
+<a name="l00050"></a>00050                 <span class="keywordtype">int</span> RealXToX(<span class="keywordtype">double</span> u);         <span class="comment">// 讓ｪ霆ｸ縺ｮ螳滓焚蛟､縺九ｉ逕ｻ髱｢蠎ｧ讓�(繝斐け繧ｻ繝ｫ)縺ｫ螟画鋤縺吶ｋ髢｢謨ｰ</span>
+<a name="l00051"></a>00051                 <span class="keywordtype">int</span> RealYToY(<span class="keywordtype">double</span> u);         <span class="comment">// 邵ｦ霆ｸ縺ｮ螳滓焚蛟､縺九ｉ逕ｻ髱｢蠎ｧ讓�(繝斐け繧ｻ繝ｫ)縺ｫ螟画鋤縺吶ｋ髢｢謨ｰ</span>
+<a name="l00052"></a>00052                 <span class="keywordtype">int</span> YLimitter(<span class="keywordtype">int</span> y);           <span class="comment">// 邵ｦ霆ｸ繝励Ο繝�繝医Μ繝溘ャ繧ｿ (逕ｻ髱｢蠎ｧ讓�) 繧ｰ繝ｩ繝暮�伜沺繧偵�ｯ縺ｿ蜃ｺ縺ｪ縺�繧医≧縺ｫ縺吶ｋ縺溘ａ縺ｮ髢｢謨ｰ</span>
 <a name="l00053"></a>00053                 
 <a name="l00054"></a>00054         <span class="keyword">public</span>:
-<a name="l00055"></a>00055                 <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>();                  <span class="comment">// コンストラクタ</span>
-<a name="l00056"></a>00056                 ~<a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>();                 <span class="comment">// デストラクタ</span>
-<a name="l00057"></a>00057                 <span class="comment">// グラフ軸の設定を行う関数 FG フレームグラフィックスクラスへのポインタ，AxisName 表示名，</span>
-<a name="l00058"></a>00058                 <span class="comment">// PositionX グラフの横位置(カーソル座標)，PositionY グラフの縦位置(カーソル座標)</span>
-<a name="l00059"></a>00059                 <span class="comment">// Height 高さ(カーソル座標)，Width 幅(カーソル座標)，縦軸最大値，縦軸最小値，プロットする変数の数</span>
+<a name="l00055"></a>00055                 <a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>();                  <span class="comment">// 繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ</span>
+<a name="l00056"></a>00056                 ~<a class="code" href="class_graph_plot2_d.html">GraphPlot2D</a>();                 <span class="comment">// 繝�繧ｹ繝医Λ繧ｯ繧ｿ</span>
+<a name="l00057"></a>00057                 <span class="comment">// 繧ｰ繝ｩ繝戊ｻｸ縺ｮ險ｭ螳壹ｒ陦後≧髢｢謨ｰ FG 繝輔Ξ繝ｼ繝�繧ｰ繝ｩ繝輔ぅ繝�繧ｯ繧ｹ繧ｯ繝ｩ繧ｹ縺ｸ縺ｮ繝昴う繝ｳ繧ｿ�ｼ窟xisName 陦ｨ遉ｺ蜷搾ｼ�</span>
+<a name="l00058"></a>00058                 <span class="comment">// PositionX 繧ｰ繝ｩ繝輔�ｮ讓ｪ菴咲ｽｮ(繧ｫ繝ｼ繧ｽ繝ｫ蠎ｧ讓�)�ｼ訓ositionY 繧ｰ繝ｩ繝輔�ｮ邵ｦ菴咲ｽｮ(繧ｫ繝ｼ繧ｽ繝ｫ蠎ｧ讓�)</span>
+<a name="l00059"></a>00059                 <span class="comment">// Height 鬮倥＆(繧ｫ繝ｼ繧ｽ繝ｫ蠎ｧ讓�)�ｼ係idth 蟷�(繧ｫ繝ｼ繧ｽ繝ｫ蠎ｧ讓�)�ｼ檎ｸｦ霆ｸ譛�螟ｧ蛟､�ｼ檎ｸｦ霆ｸ譛�蟆丞�､�ｼ後�励Ο繝�繝医☆繧句､画焚縺ｮ謨ｰ</span>
 <a name="l00060"></a>00060                 <span class="keywordtype">void</span> SetAxis(<a class="code" href="class_frame_graphics.html">FrameGraphics</a> &amp;FG,<span class="keyword">const</span> <span class="keywordtype">char</span> *AxisName, <span class="keywordtype">int</span> PositionX, <span class="keywordtype">int</span> PositionY, <span class="keywordtype">int</span> Height, <span class="keywordtype">int</span> Width, <span class="keywordtype">int</span> YmaxLabel, <span class="keywordtype">int</span> YminLabel, <span class="keywordtype">int</span> NumOfVariables);
-<a name="l00061"></a>00061                 <span class="comment">// 波形の描画を行う関数 t；時刻，Var；プロットする変数</span>
+<a name="l00061"></a>00061                 <span class="comment">// 豕｢蠖｢縺ｮ謠冗判繧定｡後≧髢｢謨ｰ t�ｼ帶凾蛻ｻ�ｼ祁ar�ｼ帙�励Ο繝�繝医☆繧句､画焚</span>
 <a name="l00062"></a>00062                 <span class="keywordtype">void</span> DrawWave(<span class="keyword">volatile</span> <span class="keywordtype">double</span> t, <span class="keywordtype">double</span> Var[8]);        
-<a name="l00063"></a>00063                 <span class="comment">// 凡例を描画する関数 N0～7；変数名</span>
+<a name="l00063"></a>00063                 <span class="comment">// 蜃｡萓九ｒ謠冗判縺吶ｋ髢｢謨ｰ N0�ｽ�7�ｼ帛､画焚蜷�</span>
 <a name="l00064"></a>00064                 <span class="keywordtype">void</span> Legend(<span class="keyword">const</span> std::string VarName[8]);
 <a name="l00065"></a>00065 };
 <a name="l00066"></a>00066 

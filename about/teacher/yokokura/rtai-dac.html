@@ -1,242 +1,242 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<title>Side Warehouse of Laboratory - 研究室の横の倉庫</title>
+<title>Side Warehouse of Laboratory - 遐皮ｩｶ螳､縺ｮ讓ｪ縺ｮ蛟牙ｺｫ</title>
 <head>
 	<link rel=stylesheet type="text/css" href="normalpage.css" />
 </head>
 <body>
 
-	<!---// 表題レイヤー //--->
+	<!---// 陦ｨ鬘後Ξ繧､繝､繝ｼ //--->
 	<DIV class="toplayer">
-		<font size=6><b>D/A変換ボードの使い方</b></font>
+		<font size=6><b>D/A螟画鋤繝懊�ｼ繝峨�ｮ菴ｿ縺�譁ｹ</b></font>
 		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
 	</DIV>
 
-	<!---// 横帯レイヤー //--->
+	<!---// 讓ｪ蟶ｯ繝ｬ繧､繝､繝ｼ //--->
 	<DIV class="sidelayer"></DIV>
 
-	<!---// 本文レイヤー //--->
+	<!---// 譛ｬ譁�繝ｬ繧､繝､繝ｼ //--->
 	<DIV class="mainlayer">
 		<br>
-		<font size=4><b>コレは何？</b></font><br>
-			　RTAIでD/A変換ボードを使うための解説です。
-			RTAIでモータ，ロボットを制御するためにDACボードは必須です。
-			ここでは，Interface社製の PCI-3340 (8ch 16bit) をRTAI上で動作させることを考えます。
-			本節では PCI-3340 について述べますが，他の型番についても少しいじれば応用可能と思われます。
+		<font size=4><b>繧ｳ繝ｬ縺ｯ菴包ｼ�</b></font><br>
+			縲�RTAI縺ｧD/A螟画鋤繝懊�ｼ繝峨ｒ菴ｿ縺�縺溘ａ縺ｮ隗｣隱ｬ縺ｧ縺吶��
+			RTAI縺ｧ繝｢繝ｼ繧ｿ�ｼ後Ο繝懊ャ繝医ｒ蛻ｶ蠕｡縺吶ｋ縺溘ａ縺ｫDAC繝懊�ｼ繝峨�ｯ蠢�鬆医〒縺吶��
+			縺薙％縺ｧ縺ｯ�ｼ栗nterface遉ｾ陬ｽ縺ｮ PCI-3340 (8ch 16bit) 繧坦TAI荳翫〒蜍穂ｽ懊＆縺帙ｋ縺薙→繧定��縺医∪縺吶��
+			譛ｬ遽�縺ｧ縺ｯ PCI-3340 縺ｫ縺､縺�縺ｦ霑ｰ縺ｹ縺ｾ縺吶′�ｼ御ｻ悶�ｮ蝙狗分縺ｫ縺､縺�縺ｦ繧ょｰ代＠縺�縺倥ｌ縺ｰ蠢懃畑蜿ｯ閭ｽ縺ｨ諤昴ｏ繧後∪縺吶��
 		<br>
 		<br>
 		<center>
 			<img src="pci3340.png"><br>
 			<br>
-			D/A変換ボードの外観
+			D/A螟画鋤繝懊�ｼ繝峨�ｮ螟冶ｦｳ
 		</center>
 		<br>
 		<br>
-		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
-			　使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+		<font size=4><b>繝上�ｼ繝峨え繧ｧ繧｢/繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�蝉ｾ�</b></font><br>
+			縲�菴ｿ逕ｨ縺励◆繝代た繧ｳ繝ｳ縺ｮ繝上�ｼ繝峨え繧ｧ繧｢縺翫ｈ縺ｳ繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�舌�ｯ莉･荳九�ｮ騾壹ｊ縺ｧ縺吶��<br>
 			<blockquote>
-				ハードウェア構成：Pentium4 ＋ 845G ＋ Intel EtherExpressPro ＋ <b>PCI-3340</b><br>
-				ソフトウェア構成：kernel-2.6.23 ＋ Slackware-12.2 ＋ rtai-3.7<br>
+				繝上�ｼ繝峨え繧ｧ繧｢讒区�撰ｼ啀entium4 �ｼ� 845G �ｼ� Intel EtherExpressPro �ｼ� <b>PCI-3340</b><br>
+				繧ｽ繝輔ヨ繧ｦ繧ｧ繧｢讒区�撰ｼ嗅ernel-2.6.23 �ｼ� Slackware-12.2 �ｼ� rtai-3.7<br>
 			</blockquote>
-			上記で動作を確認しています。<br>
+			荳願ｨ倥〒蜍穂ｽ懊ｒ遒ｺ隱阪＠縺ｦ縺�縺ｾ縺吶��<br>
 		<br>
 		<br>
 		<font size=4><b>PCI-3340</b></font><br>
-			　PCI-3340はインターフェース社が出荷しているD/Aコンバータボードであり，
-			一般的なPCのPCIに刺すことで，自作プログラムから好きな電圧を自由に出力できるようになります。
-			このDACによってモータの電流指令値もしくはトルク指令値を与えてモータの制御が行えます。
-			実際の制御には位置センサや速度センサ，加速度センサ等々も必要ですので，
-			A/Dコンバータボードやエンコーダカウンタボードも一緒に使うことになりますが，これらについては別の項目で述べます。<br>
+			縲�PCI-3340縺ｯ繧､繝ｳ繧ｿ繝ｼ繝輔ぉ繝ｼ繧ｹ遉ｾ縺悟�ｺ闕ｷ縺励※縺�繧汽/A繧ｳ繝ｳ繝舌�ｼ繧ｿ繝懊�ｼ繝峨〒縺ゅｊ�ｼ�
+			荳�闊ｬ逧�縺ｪPC縺ｮPCI縺ｫ蛻ｺ縺吶％縺ｨ縺ｧ�ｼ瑚�ｪ菴懊�励Ο繧ｰ繝ｩ繝�縺九ｉ螂ｽ縺阪↑髮ｻ蝨ｧ繧定�ｪ逕ｱ縺ｫ蜃ｺ蜉帙〒縺阪ｋ繧医≧縺ｫ縺ｪ繧翫∪縺吶��
+			縺薙�ｮDAC縺ｫ繧医▲縺ｦ繝｢繝ｼ繧ｿ縺ｮ髮ｻ豬∵欠莉､蛟､繧ゅ＠縺上�ｯ繝医Ν繧ｯ謖�莉､蛟､繧剃ｸ弱∴縺ｦ繝｢繝ｼ繧ｿ縺ｮ蛻ｶ蠕｡縺瑚｡後∴縺ｾ縺吶��
+			螳滄圀縺ｮ蛻ｶ蠕｡縺ｫ縺ｯ菴咲ｽｮ繧ｻ繝ｳ繧ｵ繧�騾溷ｺｦ繧ｻ繝ｳ繧ｵ�ｼ悟刈騾溷ｺｦ繧ｻ繝ｳ繧ｵ遲峨��繧ょｿ�隕√〒縺吶�ｮ縺ｧ�ｼ�
+			A/D繧ｳ繝ｳ繝舌�ｼ繧ｿ繝懊�ｼ繝峨ｄ繧ｨ繝ｳ繧ｳ繝ｼ繝�繧ｫ繧ｦ繝ｳ繧ｿ繝懊�ｼ繝峨ｂ荳�邱偵↓菴ｿ縺�縺薙→縺ｫ縺ｪ繧翫∪縺吶′�ｼ後％繧後ｉ縺ｫ縺､縺�縺ｦ縺ｯ蛻･縺ｮ鬆�逶ｮ縺ｧ霑ｰ縺ｹ縺ｾ縺吶��<br>
 		<br>
 		<br>
-		<font size=4><b>アドレスを調べる</b></font><br>
-			　まずPCIバスに刺したPCI-3340がどの番地に居るのか，「scanpci」若しくは「lspci」を使って調べます。
+		<font size=4><b>繧｢繝峨Ξ繧ｹ繧定ｪｿ縺ｹ繧�</b></font><br>
+			縲�縺ｾ縺啀CI繝舌せ縺ｫ蛻ｺ縺励◆PCI-3340縺後←縺ｮ逡ｪ蝨ｰ縺ｫ螻�繧九�ｮ縺具ｼ後�茎canpci縲崎凶縺励￥縺ｯ縲畦spci縲阪ｒ菴ｿ縺｣縺ｦ隱ｿ縺ｹ縺ｾ縺吶��
 			<blockquote>
 				<b>scanpci -v</b><br>
 			</blockquote>
-			上のを打ち込むと以下のような画面が出てきます。(scanpciがなければlspci)<br>
+			荳翫�ｮ繧呈遠縺｡霎ｼ繧�縺ｨ莉･荳九�ｮ繧医≧縺ｪ逕ｻ髱｢縺悟�ｺ縺ｦ縺阪∪縺吶��(scanpci縺後↑縺代ｌ縺ｰlspci)<br>
 		<br>
 		<center>
 			<img src="scanpci.png"><br>
 			<br>
-			scanpci -v の実行結果
+			scanpci -v 縺ｮ螳溯｡檎ｵ先棡
 		</center>
 		<br>
-		刺さってるデバイスごとにずらずら上記の結果が出てくるはずです。
-		その中で，黄色い線が引いてある部分に注目して， Interface Corp，vendor ID 0x1147， device ID 0x0d0c のものを探します。
-		0x1147はインターフェース社を意味し，0x0d0cはPCI-3340を意味しています。(0x0d0cを10進数にするとなんと3340！)<br>
-		　ここで，BASE0の欄のaddrの後の数字(緑で囲った部分)がベースアドレスなので，これをどこかにメモします。
-		このアドレスを基にしてin/out関数で叩いていきます。
+		蛻ｺ縺輔▲縺ｦ繧九ョ繝舌う繧ｹ縺斐→縺ｫ縺壹ｉ縺壹ｉ荳願ｨ倥�ｮ邨先棡縺悟�ｺ縺ｦ縺上ｋ縺ｯ縺壹〒縺吶��
+		縺昴�ｮ荳ｭ縺ｧ�ｼ碁ｻ�濶ｲ縺�邱壹′蠑輔＞縺ｦ縺ゅｋ驛ｨ蛻�縺ｫ豕ｨ逶ｮ縺励※�ｼ� Interface Corp�ｼ計endor ID 0x1147�ｼ� device ID 0x0d0c 縺ｮ繧ゅ�ｮ繧呈爾縺励∪縺吶��
+		0x1147縺ｯ繧､繝ｳ繧ｿ繝ｼ繝輔ぉ繝ｼ繧ｹ遉ｾ繧呈э蜻ｳ縺暦ｼ�0x0d0c縺ｯPCI-3340繧呈э蜻ｳ縺励※縺�縺ｾ縺吶��(0x0d0c繧�10騾ｲ謨ｰ縺ｫ縺吶ｋ縺ｨ縺ｪ繧薙→3340�ｼ�)<br>
+		縲�縺薙％縺ｧ�ｼ沓ASE0縺ｮ谺�縺ｮaddr縺ｮ蠕後�ｮ謨ｰ蟄�(邱代〒蝗ｲ縺｣縺滄Κ蛻�)縺後�吶�ｼ繧ｹ繧｢繝峨Ξ繧ｹ縺ｪ縺ｮ縺ｧ�ｼ後％繧後ｒ縺ｩ縺薙°縺ｫ繝｡繝｢縺励∪縺吶��
+		縺薙�ｮ繧｢繝峨Ξ繧ｹ繧貞渕縺ｫ縺励※in/out髢｢謨ｰ縺ｧ蜿ｩ縺�縺ｦ縺�縺阪∪縺吶��
 		<br>
 		<br>
 		<br>
-		<font size=4><b>DACsettings関数 (D/A変換ボード設定用)</b></font><br>
-			　D/A変換ボードの初期設定用関数を以下に置いておきます。
-			この関数は PCI-3340用です。
-			そのまま使えるはずです。
-			他の型番のD/A変換ボードでもちょっとした改造で使えると思われますが，IF社のI/O公開資料を参照してください。
-			これを参考にして好きなように改良，新造してください。<br>
+		<font size=4><b>DACsettings髢｢謨ｰ (D/A螟画鋤繝懊�ｼ繝芽ｨｭ螳夂畑)</b></font><br>
+			縲�D/A螟画鋤繝懊�ｼ繝峨�ｮ蛻晄悄險ｭ螳夂畑髢｢謨ｰ繧剃ｻ･荳九↓鄂ｮ縺�縺ｦ縺翫″縺ｾ縺吶��
+			縺薙�ｮ髢｢謨ｰ縺ｯ PCI-3340逕ｨ縺ｧ縺吶��
+			縺昴�ｮ縺ｾ縺ｾ菴ｿ縺医ｋ縺ｯ縺壹〒縺吶��
+			莉悶�ｮ蝙狗分縺ｮD/A螟画鋤繝懊�ｼ繝峨〒繧ゅ■繧�縺｣縺ｨ縺励◆謾ｹ騾�縺ｧ菴ｿ縺医ｋ縺ｨ諤昴ｏ繧後∪縺吶′�ｼ栗F遉ｾ縺ｮI/O蜈ｬ髢玖ｳ�譁吶ｒ蜿ら�ｧ縺励※縺上□縺輔＞縲�
+			縺薙ｌ繧貞盾閠�縺ｫ縺励※螂ｽ縺阪↑繧医≧縺ｫ謾ｹ濶ｯ�ｼ梧眠騾�縺励※縺上□縺輔＞縲�<br>
 			<font size=2><blockquote><pre>
 
 <font color=#0000EE>void</font> DACsettings(<font color=#0000EE>unsigned int</font> BASE0){
-	<font color=#008000>// DACの設定を行う関数</font>
+	<font color=#008000>// DAC縺ｮ險ｭ螳壹ｒ陦後≧髢｢謨ｰ</font>
 	
-	iopl(3);		<font color=#008000>// I/O全アドレス空間にアクセス許可</font>
-	<font color=#008000>//------- DAC 設定</font>
-	<font color=#008000>// DAC チャネル 1</font>
-	outb(0x00,BASE0+0x07);	<font color=#008000>// CH1 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 2</font>
-	outb(0x01,BASE0+0x07);	<font color=#008000>// CH2 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 3</font>
-	outb(0x02,BASE0+0x07);	<font color=#008000>// CH3 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 4</font>
-	outb(0x03,BASE0+0x07);	<font color=#008000>// CH4 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 5</font>
-	outb(0x04,BASE0+0x07);	<font color=#008000>// CH5 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 6</font>
-	outb(0x05,BASE0+0x07);	<font color=#008000>// CH6 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 7</font>
-	outb(0x06,BASE0+0x07);	<font color=#008000>// CH7 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
-	<font color=#008000>// DAC チャネル 8</font>
-	outb(0x07,BASE0+0x07);	<font color=#008000>// CH8 設定</font>
-	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
-	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	iopl(3);		<font color=#008000>// I/O蜈ｨ繧｢繝峨Ξ繧ｹ遨ｺ髢薙↓繧｢繧ｯ繧ｻ繧ｹ險ｱ蜿ｯ</font>
+	<font color=#008000>//------- DAC 險ｭ螳�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 1</font>
+	outb(0x00,BASE0+0x07);	<font color=#008000>// CH1 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 2</font>
+	outb(0x01,BASE0+0x07);	<font color=#008000>// CH2 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 3</font>
+	outb(0x02,BASE0+0x07);	<font color=#008000>// CH3 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 4</font>
+	outb(0x03,BASE0+0x07);	<font color=#008000>// CH4 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 5</font>
+	outb(0x04,BASE0+0x07);	<font color=#008000>// CH5 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 6</font>
+	outb(0x05,BASE0+0x07);	<font color=#008000>// CH6 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 7</font>
+	outb(0x06,BASE0+0x07);	<font color=#008000>// CH7 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 8</font>
+	outb(0x07,BASE0+0x07);	<font color=#008000>// CH8 險ｭ螳�</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 蜃ｺ蜉幃崕蝨ｧ遽�蝗ｲ繧陳ｱ10V縺ｫ險ｭ螳�</font>
+	usleep(100);		<font color=#008000>// 險ｭ螳壼ｾ後↓蠢�隕√↑100ﾎｼs縺ｮ蠕�讖�</font>
 	
-	outb(0x03,BASE0+0x05);	<font color=#008000>// 全チャネル同時出力設定</font>
+	outb(0x03,BASE0+0x05);	<font color=#008000>// 蜈ｨ繝√Ε繝阪Ν蜷梧凾蜃ｺ蜉幄ｨｭ螳�</font>
 	
 	<font color=#0000EE>return</font>;
 }
 			</pre></blockquote></font>
-			設定後に100μsの待機がありますが，これはIO公開資料に「出力レンジを設定した後に、最低100μsのウェイトが必要です。」
-			と書いてあるのでusleepが挿入してあります。
-			(とはいうものの，各々のチャネルのレンジの設定後に待機するのか？全チャネルのレンジの設定後に待機するのか？よく分かりません…)<br>
+			險ｭ螳壼ｾ後↓100ﾎｼs縺ｮ蠕�讖溘′縺ゅｊ縺ｾ縺吶′�ｼ後％繧後�ｯIO蜈ｬ髢玖ｳ�譁吶↓縲悟�ｺ蜉帙Ξ繝ｳ繧ｸ繧定ｨｭ螳壹＠縺溷ｾ後↓縲∵怙菴�100ﾎｼs縺ｮ繧ｦ繧ｧ繧､繝医′蠢�隕√〒縺吶�ゅ��
+			縺ｨ譖ｸ縺�縺ｦ縺ゅｋ縺ｮ縺ｧusleep縺梧諺蜈･縺励※縺ゅｊ縺ｾ縺吶��
+			(縺ｨ縺ｯ縺�縺�繧ゅ�ｮ縺ｮ�ｼ悟推縲�縺ｮ繝√Ε繝阪Ν縺ｮ繝ｬ繝ｳ繧ｸ縺ｮ險ｭ螳壼ｾ後↓蠕�讖溘☆繧九�ｮ縺具ｼ溷�ｨ繝√Ε繝阪Ν縺ｮ繝ｬ繝ｳ繧ｸ縺ｮ險ｭ螳壼ｾ後↓蠕�讖溘☆繧九�ｮ縺具ｼ溘ｈ縺丞�縺九ｊ縺ｾ縺帙ｓ窶ｦ)<br>
 		<br>
 		<br>
-		<font size=4><b>DACout関数 (電圧出力用)</b></font><br>
-			　D/A変換ボードから指定した電圧を出力する関数を下に置いておきます。<br>
+		<font size=4><b>DACout髢｢謨ｰ (髮ｻ蝨ｧ蜃ｺ蜉帷畑)</b></font><br>
+			縲�D/A螟画鋤繝懊�ｼ繝峨°繧画欠螳壹＠縺滄崕蝨ｧ繧貞�ｺ蜉帙☆繧矩未謨ｰ繧剃ｸ九↓鄂ｮ縺�縺ｦ縺翫″縺ｾ縺吶��<br>
 			<font size=2><blockquote><pre>
 
 <font color=#0000EE>void</font> DACout(<font color=#0000EE>unsigned int</font> BASE0, <font color=#0000EE>unsigned short</font> DACdata[8]){
-	<font color=#008000>// DACから指定した電圧を出力する関数</font>
+	<font color=#008000>// DAC縺九ｉ謖�螳壹＠縺滄崕蝨ｧ繧貞�ｺ蜉帙☆繧矩未謨ｰ</font>
 	
-	<font color=#008000>//------- DAC 出力</font>
-	<font color=#008000>// DAC チャネル 1</font>
-	outb(0x00,BASE0+0x02);			<font color=#008000>// CH1 設定</font>
-	outb(IIbyteLo(DACdata[0]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[0]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 2</font>
-	outb(0x01,BASE0+0x02);			<font color=#008000>// CH2 設定</font>
-	outb(IIbyteLo(DACdata[1]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[1]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 3</font>
-	outb(0x02,BASE0+0x02);			<font color=#008000>// CH3 設定</font>
-	outb(IIbyteLo(DACdata[2]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[2]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 4</font>
-	outb(0x03,BASE0+0x02);			<font color=#008000>// CH4 設定</font>
-	outb(IIbyteLo(DACdata[3]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[3]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 5</font>
-	outb(0x04,BASE0+0x02);			<font color=#008000>// CH5 設定</font>
-	outb(IIbyteLo(DACdata[4]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[4]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 6</font>
-	outb(0x05,BASE0+0x02);			<font color=#008000>// CH6 設定</font>
-	outb(IIbyteLo(DACdata[5]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[5]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 7</font>
-	outb(0x06,BASE0+0x02);			<font color=#008000>// CH7 設定</font>
-	outb(IIbyteLo(DACdata[6]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[6]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
-	<font color=#008000>// DAC チャネル 8</font>
-	outb(0x07,BASE0+0x02);			<font color=#008000>// CH8 設定</font>
-	outb(IIbyteLo(DACdata[7]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
-	outb(IIbyteHi(DACdata[7]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>//------- DAC 蜃ｺ蜉�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 1</font>
+	outb(0x00,BASE0+0x02);			<font color=#008000>// CH1 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[0]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[0]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 2</font>
+	outb(0x01,BASE0+0x02);			<font color=#008000>// CH2 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[1]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[1]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 3</font>
+	outb(0x02,BASE0+0x02);			<font color=#008000>// CH3 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[2]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[2]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 4</font>
+	outb(0x03,BASE0+0x02);			<font color=#008000>// CH4 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[3]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[3]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 5</font>
+	outb(0x04,BASE0+0x02);			<font color=#008000>// CH5 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[4]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[4]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 6</font>
+	outb(0x05,BASE0+0x02);			<font color=#008000>// CH6 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[5]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[5]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 7</font>
+	outb(0x06,BASE0+0x02);			<font color=#008000>// CH7 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[6]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[6]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
+	<font color=#008000>// DAC 繝√Ε繝阪Ν 8</font>
+	outb(0x07,BASE0+0x02);			<font color=#008000>// CH8 險ｭ螳�</font>
+	outb(IIbyteLo(DACdata[7]),BASE0+0x00);	<font color=#008000>// DAC蜃ｺ蜉� 荳倶ｽ�</font>
+	outb(IIbyteHi(DACdata[7]),BASE0+0x01);	<font color=#008000>// DAC蜃ｺ蜉� 荳贋ｽ�</font>
 	
-	outb(0x01,BASE0+0x05);			<font color=#008000>// 全チャネル同時出力実行</font>
+	outb(0x01,BASE0+0x05);			<font color=#008000>// 蜈ｨ繝√Ε繝阪Ν蜷梧凾蜃ｺ蜉帛ｮ溯｡�</font>
 	
 	<font color=#0000EE>return</font>;
 }
 			</pre></blockquote></font>
-		ここで「IIbyteHi」と「IIbyteLo」の二つの関数がありますが，これは２バイトデータの上位および下位１バイト分を抽出して出力する関数です。
-		この関数は以下のように実装します。
+		縺薙％縺ｧ縲栗IbyteHi縲阪→縲栗IbyteLo縲阪�ｮ莠後▽縺ｮ髢｢謨ｰ縺後≠繧翫∪縺吶′�ｼ後％繧後�ｯ�ｼ偵ヰ繧､繝医ョ繝ｼ繧ｿ縺ｮ荳贋ｽ阪♀繧医�ｳ荳倶ｽ搾ｼ代ヰ繧､繝亥�繧呈歓蜃ｺ縺励※蜃ｺ蜉帙☆繧矩未謨ｰ縺ｧ縺吶��
+		縺薙�ｮ髢｢謨ｰ縺ｯ莉･荳九�ｮ繧医≧縺ｫ螳溯｣�縺励∪縺吶��
 			<font size=2><blockquote><pre>
 			
 <font color=#0000EE>unsigned short</font> IIbyteLo(<font color=#0000EE>unsigned short</font> in){
-	<font color=#008000>// 2byteデータの下位1byteを抽出して出力</font>
+	<font color=#008000>// 2byte繝�繝ｼ繧ｿ縺ｮ荳倶ｽ�1byte繧呈歓蜃ｺ縺励※蜃ｺ蜉�</font>
 	<font color=#0000EE>return</font> 0x00FF & in;
 }
 
 <font color=#0000EE>unsigned short</font> IIbyteHi(<font color=#0000EE>unsigned short</font> in){
-	<font color=#008000>// 2byteデータの上位1byteを抽出して出力</font>
+	<font color=#008000>// 2byte繝�繝ｼ繧ｿ縺ｮ荳贋ｽ�1byte繧呈歓蜃ｺ縺励※蜃ｺ蜉�</font>
 	<font color=#0000EE>return</font> 0x00FF & (in >> 8);
 }
 			</pre></blockquote></font>
-		この関数で上位と下位に分けてからDACに放り込んでいます。<br>
+		縺薙�ｮ髢｢謨ｰ縺ｧ荳贋ｽ阪→荳倶ｽ阪↓蛻�縺代※縺九ｉDAC縺ｫ謾ｾ繧願ｾｼ繧薙〒縺�縺ｾ縺吶��<br>
 		<br>
 		<br>
-		<font size=4><b>使い方</b></font><br>
-			　上記の関数の実際の使い方について説明します。
-			まずscanpciで調べたBASE0の値をどこかに定義しておきます。
-			次にRTAIの制御ループに入る前の部分で，DACsettings関数を実行します。
-			その次に，制御ループの中でDACout関数で所望の電圧を出力します。
-			ということで以下のような感じになります。
+		<font size=4><b>菴ｿ縺�譁ｹ</b></font><br>
+			縲�荳願ｨ倥�ｮ髢｢謨ｰ縺ｮ螳滄圀縺ｮ菴ｿ縺�譁ｹ縺ｫ縺､縺�縺ｦ隱ｬ譏弱＠縺ｾ縺吶��
+			縺ｾ縺嘖canpci縺ｧ隱ｿ縺ｹ縺檻ASE0縺ｮ蛟､繧偵←縺薙°縺ｫ螳夂ｾｩ縺励※縺翫″縺ｾ縺吶��
+			谺｡縺ｫRTAI縺ｮ蛻ｶ蠕｡繝ｫ繝ｼ繝励↓蜈･繧句燕縺ｮ驛ｨ蛻�縺ｧ�ｼ轡ACsettings髢｢謨ｰ繧貞ｮ溯｡後＠縺ｾ縺吶��
+			縺昴�ｮ谺｡縺ｫ�ｼ悟宛蠕｡繝ｫ繝ｼ繝励�ｮ荳ｭ縺ｧDACout髢｢謨ｰ縺ｧ謇�譛帙�ｮ髮ｻ蝨ｧ繧貞�ｺ蜉帙＠縺ｾ縺吶��
+			縺ｨ縺�縺�縺薙→縺ｧ莉･荳九�ｮ繧医≧縺ｪ諢溘§縺ｫ縺ｪ繧翫∪縺吶��
 			<font size=2><blockquote><pre>
 
-<font color=#0000EE>#define</font> BASE0 <font color=#DD7700>ここにscanpciの値</font>
+<font color=#0000EE>#define</font> BASE0 <font color=#DD7700>縺薙％縺ｫscanpci縺ｮ蛟､</font>
 
-RTAI実時間スレッド{
+RTAI螳滓凾髢薙せ繝ｬ繝�繝閲
 	<font color=#0000EE>unsigned short</font> data[8]={0};
 	
-	DACsettings(BASE0);		<font color=#008000>// DACの設定</font>
+	DACsettings(BASE0);		<font color=#008000>// DAC縺ｮ險ｭ螳�</font>
 	
 	<font color=#0000EE>while</font>(1){
-		<font color=#DD7700>なにかの制御プログラム</font>
+		<font color=#DD7700>縺ｪ縺ｫ縺九�ｮ蛻ｶ蠕｡繝励Ο繧ｰ繝ｩ繝�</font>
 		
-		data[0]=<font color=#DD7700>CH1の所望の電圧</font>
-		data[1]=<font color=#DD7700>CH2の所望の電圧</font>
-		data[2]=<font color=#DD7700>CH3の所望の電圧</font>
-			・
-			・
-			・
-		DACout(BASE0, data);	<font color=#008000>// 電圧出力実行</font>
+		data[0]=<font color=#DD7700>CH1縺ｮ謇�譛帙�ｮ髮ｻ蝨ｧ</font>
+		data[1]=<font color=#DD7700>CH2縺ｮ謇�譛帙�ｮ髮ｻ蝨ｧ</font>
+		data[2]=<font color=#DD7700>CH3縺ｮ謇�譛帙�ｮ髮ｻ蝨ｧ</font>
+			繝ｻ
+			繝ｻ
+			繝ｻ
+		DACout(BASE0, data);	<font color=#008000>// 髮ｻ蝨ｧ蜃ｺ蜉帛ｮ溯｡�</font>
 
 	}
 }
 			</pre></blockquote></font>
-			電圧は 0x0000で－10V，0xFFFFで＋10Vになります。
-			なので実際に使うときは換算ゲインを掛けましょう。
-			また，下位の制御系(例えばどこかのメーカ製のサーボアンプ/ドライバ)で電流制御やトルク制御を行っている場合は，
-			電流指令値やトルク指令値から出力電圧値に変換する必要もあります。
-			この換算ゲインについては他で説明したいと思います。
-			それからioplとin/out関数を使うにはroot権限が必要なので注意して下さい。<br>
-			　ということで，上記の手法によりRTAI上でも非常に簡単にDACが使えるようになります。
+			髮ｻ蝨ｧ縺ｯ 0x0000縺ｧ�ｼ�10V�ｼ�0xFFFF縺ｧ�ｼ�10V縺ｫ縺ｪ繧翫∪縺吶��
+			縺ｪ縺ｮ縺ｧ螳滄圀縺ｫ菴ｿ縺�縺ｨ縺阪�ｯ謠帷ｮ励ご繧､繝ｳ繧呈寺縺代∪縺励ｇ縺�縲�
+			縺ｾ縺滂ｼ御ｸ倶ｽ阪�ｮ蛻ｶ蠕｡邉ｻ(萓九∴縺ｰ縺ｩ縺薙°縺ｮ繝｡繝ｼ繧ｫ陬ｽ縺ｮ繧ｵ繝ｼ繝懊い繝ｳ繝�/繝峨Λ繧､繝�)縺ｧ髮ｻ豬∝宛蠕｡繧�繝医Ν繧ｯ蛻ｶ蠕｡繧定｡後▲縺ｦ縺�繧句�ｴ蜷医�ｯ�ｼ�
+			髮ｻ豬∵欠莉､蛟､繧�繝医Ν繧ｯ謖�莉､蛟､縺九ｉ蜃ｺ蜉幃崕蝨ｧ蛟､縺ｫ螟画鋤縺吶ｋ蠢�隕√ｂ縺ゅｊ縺ｾ縺吶��
+			縺薙�ｮ謠帷ｮ励ご繧､繝ｳ縺ｫ縺､縺�縺ｦ縺ｯ莉悶〒隱ｬ譏弱＠縺溘＞縺ｨ諤昴＞縺ｾ縺吶��
+			縺昴ｌ縺九ｉiopl縺ｨin/out髢｢謨ｰ繧剃ｽｿ縺�縺ｫ縺ｯroot讓ｩ髯舌′蠢�隕√↑縺ｮ縺ｧ豕ｨ諢上＠縺ｦ荳九＆縺�縲�<br>
+			縲�縺ｨ縺�縺�縺薙→縺ｧ�ｼ御ｸ願ｨ倥�ｮ謇区ｳ輔↓繧医ｊRTAI荳翫〒繧る撼蟶ｸ縺ｫ邁｡蜊倥↓DAC縺御ｽｿ縺医ｋ繧医≧縺ｫ縺ｪ繧翫∪縺吶��
 		<br>
 		<br>
-		<font size=4><b>コーディング例</b></font><br>
-			　具体的なコーディング例は，<a href="rtai-arcs.html">ARCS</a> のソースコードを参照して下さい。
-			C++のクラスにする場合は，<a href="arcs-manual/_p_c_i-3340_8hh_source.html">こんな感じ</a>にしておくと便利です。
-			(2012/01/25追記)
+		<font size=4><b>繧ｳ繝ｼ繝�繧｣繝ｳ繧ｰ萓�</b></font><br>
+			縲�蜈ｷ菴鍋噪縺ｪ繧ｳ繝ｼ繝�繧｣繝ｳ繧ｰ萓九�ｯ�ｼ�<a href="rtai-arcs.html">ARCS</a> 縺ｮ繧ｽ繝ｼ繧ｹ繧ｳ繝ｼ繝峨ｒ蜿ら�ｧ縺励※荳九＆縺�縲�
+			C++縺ｮ繧ｯ繝ｩ繧ｹ縺ｫ縺吶ｋ蝣ｴ蜷医�ｯ�ｼ�<a href="arcs-manual/_p_c_i-3340_8hh_source.html">縺薙ｓ縺ｪ諢溘§</a>縺ｫ縺励※縺翫￥縺ｨ萓ｿ蛻ｩ縺ｧ縺吶��
+			(2012/01/25霑ｽ險�)
 			<br><br><br><br><br><br>
 		<center>
 			<font size=2>
 				- <?php include('./counter/count.php'); ?> -<br>
 				<br>
-				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				遐皮ｩｶ螳､縺ｮ讓ｪ縺ｮ蛟牙ｺｫ - Side Warehouse of Laboratory<br>
 				Copyright(C), Side Warehouse, All rights reserved.
 			</font>
 		</center>
