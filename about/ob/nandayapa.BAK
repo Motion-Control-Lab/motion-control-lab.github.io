@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-style-type" content="text/css">
+<title>モーションコントロール研究室 大石研究室</title>
+<link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+<body>
+<div id="all">
+<!--///////////////* 　ヘッダー ここから　 *///////////////-->
+<div id="header">
+
+<h1>モーションコントロール研究室 大石研究室</h1>
+<!-- <h2>★ あなたのサイトについての簡単な説明文 ★</h2> -->
+
+</div>
+<!--///////////////* 　ヘッダー ここまで　 *///////////////-->
+
+
+<!--///////////////* 　メニュー ここから　 *///////////////-->
+<div id="menu">
+
+<p class="bk"><a href="../../index.html">TOP</a></p>
+<p class="bksel"><a href="../../about/about.html">研究室の紹介</a></p>
+<p class="bk"><a href="../../research/research.html">研究内容</a></p>
+<p class="bk"><a href="../../link/link.html">LINK</a></p>
+<p class="bk"><a href="../../mail/mail.html">お問い合わせ</a></p>
+
+</div>
+
+<div id="menuline">
+
+<p class="bk3"></p>
+
+</div>
+<!--///////////////* 　メニュー ここまで　 *///////////////-->
+
+
+<div id="main">
+
+
+<!--///////////////* 　左記事 ここから　　　 *///////////////-->
+<div id="kizi">
+
+
+<!--///////////////* 　ページタイトル ここから　 *///////////////-->
+<div id="pagetitle">
+
+<h3> Nandayapa Alfaro Manuel de Jesus <h3>
+
+</div>
+<hr>
+<br>
+<!--///////////////* 　ページタイトル ここまで　 *///////////////-->
+
+
+<h4 class="h43">プロフィール</h4>
+<center>
+<table class="table1">
+	<tr>
+		<td>
+			<center>
+				<img src="image/nandayapa.jpg" alt="nandayapa" height="180">
+			</center>
+		</td>
+		<td>
+			学年：<br>
+			趣味：<br>
+			出身高専：<br>
+			実務訓練先：<br>
+		</td>
+		<td>
+			Doctoral Student, D3<br>
+			Photography <br>
+			National Center for Research and Technological Development<br>
+			Autonomous University of Ciudad Juarez<br>
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<br>
+<h4 class="h45">研究内容</h4>
+<center>
+<table class="table2">
+	<tr>
+		<td>研究テーマ<br></td>
+		<td>Algorithms for Motion Control based on FPGA programming</td>
+	</tr>
+	<tr>
+		<td>原著論文<br></td>
+		<td>
+		[1] Osslan Osiris Vergara Villegas, Manuel de Jesus Nandayapa Alfaro and Vianey Guadalupe Cruz Sanchez. 「A Novel Edge Preserving Lossy Image Coder 」. Proceeding of the European Computing Conference, Volume 1, Springer Verlag,  Series: Lecture Notes in Electrical Engineering, Vol. 27, pp 113-121, 2009, ISBN: 978-0-387-84813-62<br>
+		[2] M. Nandayapa, C. Mitsantisuk, and K. Ohishi. 「High Performance Velocity Estimation for Controllers with Short Processing Time by FPGA」. IEEJ Journal of Industry Applications, Vol. 1, No. 1, pp 55-61, 2012 <br>
+		[3] M. Nandayapa, C. Mitsantisuk, and K. Ohishi. 「Enhance Transparency on Ball Screw Teleoperation Robot System using Novel Velocity Estimation Method in FPGA」.  Advanced Robotics, (Under review process) <br>
+		</td>
+	</tr>
+	<tr>
+		<td>国際会議<br></td>
+		<td>
+		[1] Osslan Osiris Vergara Villegas, Manuel de Jesus Nandayapa Alfaro and Vianey Guadalupe Cruz Sanchez. 「 A Novel Edge Preserving Lossy Image Coder」. WSEAS International Conference on European Computing Conference (ECC'07), Voliagmeni, Athens, Greece. Septiembre 2007<br>
+		[2] Angel Flores Abad, Manuel de Jesus Nandayapa Alfaro and Osslan Osiris Vergara Villegas. 「Modeling of a Flexible Manufacturing Cell by Means of Colored Petri Nets」. First International Conference on Industrial, Mechatronics and Manufacturing Engineering (CIIMM 2007). pp. 185-192. <br>
+		</td>
+	</tr>
+	<tr>
+		<td>国内学会<br></td>
+		<td>
+		[1] Claudio, J. Ruiz. A. Hernandez, M. Nandayapa. 「Banco de Pruebas para Sistemas de Propulsion Electrica con Regeneracion de Energia (Work bech for electric propulsion systems with energy regeneration) 」, 9a. Conferencia de Ingenieria Electrica - CIE03, Septiembre 2003, pp. 247-252<br>
+		[2] Raul Neco Caberta, Nestor Ramirez Morales and Manuel de Jesus Nandayapa Alfaro, 「Caracterizacion Matematica para la obtencion del modelo dinamico del robot Scorbot-ER V Plus (Characterization Mathematics for obtaining the dynamic model of the Scorbot-ER V Plus robot) 」. Proceedings of the XIII Engineering Week ISBN: 978-968-9305-13-2. Vol 1 pag. 87-98. <br>
+		[3] M. D. J. Nandayapa Alfaro, C. Mitsantisuk, and K. Ohishi. 「Velocity Control Based on A Wide Range of Velocity Estimation in FPGA」.  Proceedings of the 2011 IEE Japan Technical Meeting on Industrial Instrumentation and Control, IEE Japan, Chiba, Japan, Mar. 2011. <br>
+		[4] M. Nandayapa, C. Mitsantisuk, and K. Ohishi. 「High Feedback Force Sensation in Bilateral Ball-Screw System Based on FPGA with a Novel Velocity Estimation Method」. The 29th Annual Conference of the Robotics Society of Japan, Tokyo, Japan, Sep. 2011. <br>
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<br>
+<h4 class="h46">何か一言</h4>
+<br>
+
+</div>
+<!--///////////////* 　左記事 ここまで　　　 *///////////////-->
+
+
+<!--///////////////* 　右ナビ部 ここから　 *///////////////-->
+<div id="navi">
+
+<p class="nbut"><a href="../member.html">メンバーの紹介</a></p>
+<p class="nbutsel"><a href="../ob.html">大石研OB・OG一覧</p>
+<p class="nbut"><a href="../map.html">研究室の場所</a></p>
+<p class="nbut"><a href="../memory.html">研究室の思い出</a></p>
+
+<br>
+
+<!--<div class="nbox">
+<p class="ntit">INFORMATION</p>
+<p class="ntxt">あいうえおテキストあいうえおテキストあいうえおテキストあいうえおテキスト</p>
+</div>
+<br>
+<ul>
+	<li>3カラム</li>
+	<li>同封画像1枚</li>
+	<li>背景画像の変更可</li>
+</ul>-->
+
+</div>
+<!--///////////////* 　右ナビ部 ここまで　 *///////////////-->
+
+<br style="clear:both"><!--/* 　← Firefoxで表示　削除不可　 */-->
+</div>
+
+<!--///////////////* 　フッター ここから　　　 *///////////////-->
+<div id="footer">
+
+<div>Copyright&nbsp;(C)&nbsp;Ohishi Laboratory&nbsp;All Rights Reserved.</div>
+
+</div>
+<!--///////////////* 　フッター ここまで　　　 *///////////////-->
+
+<!--/* 　テンプレートの著作権表示。削除変更不可　　 */-->
+<div id="copy">Designed by <a href="http://www.chocoto.com/">chocoto</a></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory - 研究室の横の倉庫</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>RTAIのインストール方法</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？</b></font><br>
+			　RTAIの導入手順書です。
+			一般的なLinuxディストリビューションにおいてリアルタイム動作を可能とするものです。
+			カーネルモジュールを実時間で動かすことだけでなく，ユーザ空間においてスレッドを実時間で動作させることも可能になります。
+			Ｃ/Ｃ++のライブラリをそのまま利用できますし，ディスプレイ，マウス，NIC等々も使用できるので便利です。
+			実験結果をそのままfprintfでHDDにファイルとして書き込むこともできます。
+			速度の面ではDSPやFPGAには敵いませんが，便利さでは圧倒的にこちらの方が上でしょう。<br>
+			<p align="right">(09/06/10改訂)</p>
+			<u>ここの内容は少々古いので，<a href="rtai-inst64bit.html"> RTAI＋Fedora12 64bit </a>
+			もしくは <a href="rtai-inst64bit-3.9test2.html"> RTAI3.9＋Fedora17 64bit </a>
+			 を試した方が良いかもしれません。</u>(12/07/26追記)<br>
+		<br>
+		<br>
+		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
+			　使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+			<blockquote>
+				ハードウェア構成：Pentium4 ＋ 845G ＋ Intel EtherExpressPro<br>
+				ソフトウェア構成：kernel-2.6.23 ＋ Slackware-12.2 ＋ rtai-3.7<br>
+			</blockquote>
+			上記で動作を確認しています。<br>
+		<br>
+		<br>
+		<font size=4><b>導入方法</b></font><br>
+			　まず普通に slackware12.2 を入れます。
+			注意点として，slackwareインストール時に画面設定を Normal (default) にすること。
+			画面が表示できなくなります。<br>
+			<br>
+			インストールが終わったら、
+			研究室で共有するディレクトリをどっかに作っちゃいましょう。<br>
+			<blockquote>
+				<b>mkdir /hoge</b><br>
+			</blockquote>
+			hogeの権限を変えます。<br>
+			<blockquote>
+				<b>chmod 777 /hoge</b><br>
+			</blockquote>
+			RTAIのカーネルとかの基ファイル入れるディレクトリを hoge に作っておきます。<br>
+			<blockquote>
+				<b>cd /hoge<br>
+				mkdir RTAI</b><br>
+			</blockquote>
+			linuxのカーネルとRTAIを落として hoge に入れておきます。
+			例えば以下からダウンロード<br>
+			<blockquote>
+				ココ→ <a href="http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.tar.bz2">http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.23.tar.bz2</a><br>
+				ココ→ <a href="https://www.rtai.org/RTAI/rtai-3.7.tar.bz2">https://www.rtai.org/RTAI/rtai-3.7.tar.bz2</a><br>
+			</blockquote>
+			その後、以下で解凍。<br>
+			<blockquote>
+				<b>tar jxf linux-2.6.23.tar.bz2<br>
+				tar jxf rtai-3.7.tar.bz2</b><br>
+			</blockquote>
+			解凍した内容を/usr/srcに移します。<br>
+			<blockquote>
+				<b>cd /usr/src<br>
+				cp -r /hoge/RTAI/rtai-3.7 ./<br>
+				cp -r /hoge/RTAI/linux-2.6.23 ./</b><br>
+			</blockquote>
+			カーネルにパッチを当てます。<br>
+			<blockquote>
+				<b>cd /usr/src/linux-2.6.23<br>
+				patch -p1 < ../rtai-3.7/base/arch/i386/patches/hal-linux-2.6.23-i386-1.12-03.patch</b><br>
+			</blockquote>
+			menuconfig 使って設定します。<br>
+			<blockquote>
+				<b>make menuconfig</b><br>
+			</blockquote>
+			必須設定項目は以下の通り<br>
+			<blockquote>
+				◆ Processor type and features
+				<blockquote>
+					◇ Processor family
+					<blockquote>
+						Pentium4... [SELECT] (CPUによって変更せよ)<br>
+						Symmetric multi-processing support 多コアの場合[ENABLE]  単コアの場合[DISABLE]<br>
+						Interrupt pipeline [ENABLE]<br>
+					</blockquote>
+				</blockquote>
+				<br>
+				◆ Power management options (ACPI, APM)
+				<blockquote>
+					ACPI Support (Advanced Config....) [DISABLE]<br>
+					◇ CPU Frequency scaling
+					<blockquote>
+						CPU Frequency sacaling [DISABLE]
+					</blockquote>
+				</blockquote>
+				<br>
+				◆ Loadable module support
+				<blockquote>
+					Module versioning support [DISABLE]
+				</blockquote>
+			</blockquote>
+			<br>
+			コンパイルしてカーネルイメージを構築します。
+			<blockquote>
+				<b>
+				make all<br>
+				make modules_install<br>
+				make install
+				</b>
+			</blockquote>
+			どうやら勝手に /boot/vmlinuz を書き換えるようである。
+			バックアップを事前に取っておいた方が良いかもしれないが、男ならバックアップは必要ない。
+			ここで再起動。
+			<blockquote>
+				<b>shutdown -r now</b>
+			</blockquote>
+			起動後に画面が出ない場合は，liloconf で vga=normal にしてLILOを再構築しましょう。<br>
+			起動したらカーネルの名前を尋ねてみましょう。<br>
+			<blockquote>
+				<b>uname -r</b>
+			</blockquote>
+			ここで、2.6.23 と返ってくればちゃんと入ってます。
+			RTAIをぶち込みます。(二行目は元からあるリンクを念のため一度削除している。)
+			<blockquote>
+				<b>cd /usr/src/<br>
+				rm linux<br>
+				ln -s /usr/src/linux-2.6.23 linux<br>
+				cd rtai-3.7<br>
+				make menuconfig</b>
+			</blockquote>
+			menuconfigはデフォルトのままでいけるようです。(ただしRTnetを使う場合は要設定)
+			In-kernel C++ support をチェックしたらエラー。2.6.x ではだめだそうです。
+			残念。仕方ないのでカーネル内でのC++は諦めますか。
+			コンパイルしてインスコします。
+			<blockquote>
+				<b>make all<br>
+				make install</b><br>
+			</blockquote>
+			エラーが出なければおｋ。
+			/etc/rc.d/rc.localの最後に以下を追加してモジュールが自動的に入るようにする
+			必要に応じてモジュールを入れること。
+			<blockquote>
+				<b>insmod /usr/realtime/modules/rtai_hal.ko<br>
+				insmod /usr/realtime/modules/rtai_sched.ko	# カーネルモードで動かすとき<br>
+				insmod /usr/realtime/modules/rtai_lxrt.ko	# ユーザーモードで動かすとき</b><br>
+			</blockquote>
+			/etc/profileに追加
+			<blockquote>
+				<b>export PATH=/usr/realtime/bin:$PATH</b>
+			</blockquote>
+			これをしないと制御プログラムがmakeできないので注意。
+			以下を打ってRTAIの動作を確かめましょう。
+			<blockquote>
+				<b>cd /usr/realtime/testsuite/user/latency<br>
+				./run</b>
+			</blockquote>
+			なんか動いていそうなメッセージが出たらおｋ。
+<pre>
+	*
+	*
+	* Type ^C to stop this application.
+	*
+	*
+	
+	## RTAI latency calibration tool ##
+	# period = 100000 (ns)
+	# average time = 1 (s)
+	# use the FPU
+	# start the timer
+	# timer_mode is oneshot
+	
+	RTAI Testsuite - USER latency (all data in nanoseconds)
+	2009/06/8 23:16:02
+	RTH|    lat min|    ovl min|    lat avg|    lat max|    ovl max|   overruns
+	RTD|       -440|       -440|       -292|       1985|       1985|          0
+	RTD|       -415|       -440|       -262|       6791|       6791|          0
+	RTD|       -383|       -440|       -313|       5841|       6791|          0
+	RTD|       -396|       -440|       -306|       1743|       6791|          0
+	RTD|       -383|       -440|       -285|       7255|       7255|          0
+	RTD|       -402|       -440|       -301|       1323|       7255|          0
+	RTD|       -383|       -440|       -302|       7042|       7255|          0
+	RTD|       -379|       -440|       -282|       1394|       7255|          0
+	RTD|       -359|       -440|       -284|       1130|       7255|          0
+	RTD|       -383|       -440|       -300|       7165|       7255|          0
+	RTD|       -383|       -440|       -300|       7165|       7255|          0
+	
+	>>> S = 98.696, EXECTIME = 0.0287159
+</pre>
+			「overruns」が零であれば問題なく動いてるはずです。
+			以上でインストール完了です。
+			<br><br><br><br><br><br>
+		<center>
+			<font size=2>
+				- <?php include('./counter/count.php'); ?> -<br>
+				<br>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>

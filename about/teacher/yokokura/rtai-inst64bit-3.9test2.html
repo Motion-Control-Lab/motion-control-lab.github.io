@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>RTAI3.9＋Fedora17 64bit</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？</b></font><br>
+			　RTAIを64bitで動かせるかどうか試してみます。
+			ここでは 64bit版 Fedora 17 をRTAIでリアルタイム化します。
+			やっぱりすんなりは行かないようです。
+			重要なポイントがあります。<br>
+			(下記は，沼津高専 山之内先生にご協力を頂きました 感謝!)<br>
+		<br>
+		<br>
+		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
+			　今回使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+			<blockquote>
+				ハードウェア構成：Intel Core i7 870 @ 2.93 GHz  ＋ Gigabyte P55-UD3R ＋ Intel SSD X25-M<br>
+				ソフトウェア構成：Fedora 17 64bit ＋ kernel-2.6.38.8 ＋ rtai-3.9-test2<br>
+			</blockquote>
+			上記で動作を確認しています。<br>
+		<br>
+		<br>
+		<font size=4><b>１．Fedora 17 のインストール</b></font><br>
+			　64 bit版 Fedora 17 (x86_64) を普通にインストールします。<br>
+		<br>
+		<br>
+		<font size=4><b>２．kernel と RTAI のダウンロード</b></font><br>
+			　LinuxのkernelとRTAIのパッチを入手します。必要なのは以下のファイルです。
+			<blockquote>
+				linux-2.6.38.8.tar.bz2 (例えばココ→<a href="http://www.kernel.org/pub/linux/kernel/v2.6/">http://www.kernel.org/pub/linux/kernel/v2.6/</a>)<br>
+				rtai-3.9-test2.tar.bz2 (例えばココ→<a href="https://www.rtai.org/RTAI/">https://www.rtai.org/RTAI/</a>)
+			</blockquote>
+			これをそれぞれの本家から落としてきます。<br>
+			(追記：rtai-3.9.tar.bz2 もリリースされたようです。こちらの方がいいかも。)<br>
+		<br>
+		<br>
+		<font size=4><b>３．リアルタイムカーネルイメージの作成</b></font><br>
+			　さて早速RTAIのパッチを当てます。
+			まず落としたファイルを/usr/srcで解凍。
+			<blockquote><b>
+				tar jxf linux-2.6.38.8.tar.bz2<br>
+				tar jxf rtai-3.9-test2.tar.bz2
+			</b></blockquote>
+			次に，パッチ当てます。
+			<blockquote><b>
+				cd /usr/src/linux-2.6.38.8<br>
+				patch -p1 < ../rtai-3.9-test2/base/arch/x86/patches/hal-linux-2.6.38.8-x86-2.11-01.patch
+			</b></blockquote>
+			コンパイルの設定します。
+			<blockquote><b>
+				make menuconfig
+			</b></blockquote>
+			設定画面が出てきますが，いつも通りです。
+			<blockquote>
+			◆ Enable loadable module support
+				<blockquote>
+					Module versioning support → DISABLE	(デフォでDisableだが念のため確認)
+				</blockquote> 
+			◆ Processor type and features
+				<blockquote>
+					Processor family → Generic-x86-64
+				</blockquote>
+			◆ Power management options
+				<blockquote>
+					CPU Frequency scaling → DISABLE
+				</blockquote>
+			</blockquote>
+			終了して保存。
+			その後メイクしたいところだが，
+			<blockquote><b>
+				make all
+			</b></blockquote>
+			とすると，相変わらず，
+			<blockquote><i>
+				CONFIG_NR_CPUS is too large
+			</i></blockquote>
+			というエラーが出るので，「/usr/src/linux-2.6.38.8/.config」ファイルを開いて書き換えます。
+			<blockquote><b>
+				vi .config<br>
+				CONFIG_NR_CPUS=256 の行を探して，CONFIG_NR_CPUS=16 (テキトーに多め)に書き換え。
+			</b></blockquote>
+			さらに書き換え。
+			<blockquote><b>
+				CONFIG_SPARSE_IRQ=y の行を探して，CONFIG_SPARSE_IRQ=n に書き換え。
+			</b></blockquote>
+			その後にコンパイルします。
+			<blockquote><b>
+				make all
+			</b></blockquote>
+			たまに警告がちらほら出ますが，問題ないようです。
+			続いてインストール。
+			<blockquote><b>
+				make modules_install<br>
+				make install
+			</b></blockquote>
+			これでイメージ作成完了<br>
+		<br>
+		<br>
+		<font size=4><b>４．GRUBの設定</b></font><br>
+			ブートローダの設定をします。
+			おそらく自動でRTAI＋Fedoraのための設定がされているはずですが，一部書き換えます。
+			<blockquote><b>
+				vi /boot/grub2/grub.conf<br>
+				default=1 を default=0 に変更(デフォルトでRTAIが起動するように各自で設定)<br>
+				timeout=0 を timeout=10 に変更<br>
+				hiddenmenu をコメントアウト
+			</b></blockquote>
+			ここで再起動します。<br>
+		<br>
+		<br>
+		<font size=4><b>５．RTAIのインストール</b></font><br>
+			再起動が完了したら，
+			<blockquote><b>
+				uname -r
+			</b></blockquote>
+			と打ってみます。
+			2.6.38.8 になってればおｋ。
+			RTAIをコンパイルしてぶち込みます。
+			<blockquote><b>
+				cd /usr/src/<br>
+				ln -s /usr/src/linux-2.6.38.8 linux<br>
+				cd rtai-3.9-test2<br>
+				make menuconfig
+			</b></blockquote>
+			設定画面が出てきます。
+			ここで何も設定せずにmake＆insmodすると，<i>insmod: error inserting 'rtai_hal.ko': -1 Operation not permitted</i>
+			というエラーが出る場合があるので，メニューから，
+			<blockquote>
+			◆ Machine (x86_64)
+				<blockquote>
+					Number of CPUs → 16
+				</blockquote> 
+			</blockquote>
+			と設定して，保存して終了。
+			そしてコンパイル＆インストール。
+			<blockquote><b>
+				make all<br>
+				make install<br>
+			</b></blockquote>
+			はい、エラー発生。ダメー。
+			<i>base/include/rtai_lxrt.h:655: </i> いろいろ未定義だとのたまうので，
+			<blockquote><b>
+				<font color="CC0000">
+				「/usr/src/rtai-3.9-test2/base/include/rtai_lxrt.h」の冒頭に「#include &lt;linux/sched.h&gt;」をぶち込む
+				</font>
+			</b></blockquote>
+			これが今回の重要ポイント。
+			もう一度，
+			<blockquote><b>
+				make all<br>
+				make install<br>
+			</b></blockquote>
+			そんでもって，
+			<blockquote><b>
+				insmod /usr/realtime/modules/rtai_hal.ko<br>
+				insmod /usr/realtime/modules/rtai_lxrt.ko
+			</b></blockquote>
+			おｋ。
+			以下を入力して動作確認を実施。
+			<blockquote><b>
+				cd /usr/realtime/testsuite/user/latency<br>
+				./run
+			</b></blockquote>
+			稼働確認。<br>
+			
+			<br><br><br><br><br><br>
+		<center>
+			<font size=2>
+				- <?php include('./counter/count.php'); ?> -<br>
+				<br>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>

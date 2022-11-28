@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory - 研究室の横の倉庫</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>LaTeX＋SakuraEditorマクロ</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？</b></font><br>
+			<br>
+			　サクラエディタでTeXを快適に使うためのマクロ群。
+			サクラエディタ上でキー一発でコンパイルしてDvioutで表示したり，PDFに変換してAcrobatで表示したりすることができる様になります。
+		<br>
+		<br>
+		<br>
+		<font size=4><b>Download</b></font><br>
+			<br>
+			<a href="LaTeXandSakura.zip">サクラエディタ用マクロのファイル LaTeXandSakura.zip 3KB</a><br>
+			<br>
+			↑からダウンロードして下さい。
+			ファイルの中身は，<br>
+<pre>
+	・TeXmacro.js		TeX→Dviのマクロ
+	・TeXmacroPdf.js	TeX→PDFのマクロ
+	・TeXmacroFig.js	図を入れるときに便利なマクロ
+	・TeXmacroFig2.js	二段組(two column)で図を横に配置するときに便利なマクロ
+	・ColorSettings.col	サクラエディタの色設定ファイル
+</pre>
+			になってます。
+			上二つが本題で，下三つはおまけです。
+			コンパイラはデフォルトで「platex」，DVI表示は「dviout」を使うようになってますので，各自で好きなように変えてください。<br>
+			　「TeXmacroFig.js」は　\begin{figure}～\end{figure}　を，「TeXmacroFig2.js」は　\begin{figure*}\begin{minipage}～・・・\end{figure*}　を
+			キー一発で自動入力してくれます。
+			自動入力後はEPSファイル名とキャプションを書き換えるだけです。
+			このファイルを応用すれば他にも，equationとかeqnarrayとかtableとか良く使うものを自動入力できるようになるでしょう。
+			好きなようにカスタマイズしてください。
+			WinShellを使え？それもいいかもしれません。<br>
+		<br>
+		<br>
+		<br>
+		<font size=4><b>導入方法</b></font><br>
+			<br>
+			導入方法はいたって簡単。手順は以下の通りです。<br>
+			<br>
+			１．「LaTeXandSakura.zip」を解凍して中身をサクラエディタの実行ファイルと同じ階層(例：C:\Program Files\sakura)に置きます。<br>
+			２．サクラエディタを起動して，「設定」メニュー→「共通設定」メニュー→「マクロ」タブ<br>
+			３．「Id」欄を「0」にする→「名前」欄に適当な好きな名前を入れる→「File」欄に「TeXmacro.js」を選択→「設定」ボタンを押す<br>
+			４．「Id」欄を１づつ増やしながら手順３を繰り返して，「TeXmacroPdf.js」等のほかのマクロファイルを読み込んでいきます。<br>
+			<br>
+			上記手順を完了すると，以下のような感じになります。<br>
+			<br>
+			<center>
+				<img src="sakura1.png">
+			</center>
+			<br>
+			　番号２の「TeXmacroDvips.js」というのがありますが，これはTeXからEPSファイルに変換するマクロです。
+			記号や数式を図に埋め込むときに便利です。
+			これについては別の項目で説明します。<br>
+			<br>
+			５．一旦「OK」ボタンを押します。<br>
+			<br>
+			これでマクロについては設定完了です。<br>
+		<br>
+		<br>
+		<br>
+		<font size=4><b>Windows環境変数の設定</b></font><br>
+			<br>
+			TeXとDvioutとgsまでのファイルパスを入れておいてください。<br>
+			コントロールパネル→システム→詳細設定→環境変数→Path→編集→パス(例「;C:\usr\local\bin;C:\gs\gs7.07\bin;C:\dviout」)を追加。<br>
+		<br>
+		<br>
+		<br>
+		<font size=4><b>ショートカットキーの割り当て</b></font><br>
+			<br>
+			　ボタン一発で変換＆表示できるようにします。手順は以下の通りです。<br>
+			<br>
+			１．「設定」メニュー→「共通設定」メニュー→「キー割り当て」タブ<br>
+			２．「種別」欄を「外部マクロ」にする→「機能」欄をさっき登録した名前を選択→「キー」欄で好きなキーを選択→「割付」ボタンを押す<br>
+			３．手順２を他のマクロについてもやる<br>
+			<br>
+			これでキー一発で DVI or PDF に変換＆表示できます。
+			私の場合はF5でDVI，F6でPDF，F1とF2でfigureの自動入力に設定しています。
+			自動入力は以下のような感じです。<br>
+			<br>
+			<b>～TeXmacroFig.js～</b>
+<pre>
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\hsize,clip]{FILENAME.eps}
+	\caption{CAPTION}
+	\label{fig:LABEL}
+\end{figure}
+</pre>
+			<br>
+			<b>～TeXmacroFig2.js～</b>
+<pre>
+\begin{figure*}[t]
+	\begin{minipage}{0.5 \hsize}
+		\centering
+		\includegraphics[width=\hsize,clip]{FILENAME.eps}
+		\caption{CAPTION}
+		\label{fig:LABEL}
+	\end{minipage}
+	\begin{minipage}{0.5 \hsize}
+		\centering
+		\includegraphics[width=\hsize,clip]{FILENAME.eps}
+		\caption{CAPTION}
+		\label{fig:LABEL}
+	\end{minipage}
+\end{figure*}
+</pre>
+			キー一発で↑を入れた後に，FILENAMEとCAPTIONとLABELを変更するだけです。
+			論文作成時間の高速化に貢献できると思います。
+			<br><br><br><br><br><br>
+		<center>
+			<font size=2>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>

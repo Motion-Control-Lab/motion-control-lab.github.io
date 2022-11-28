@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>RTAI＋Fedora12 64bit</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？</b></font><br>
+			　RTAIを64bitで動かせるかどうか試してみます。
+			ここでは，64bit版 Fedora 12 をRTAIでリアルタイム化します。<br>
+			<br>
+			<u>ここの内容は少々古いので，<a href="rtai-inst64bit-3.9test2.html"> RTAI3.9＋Fedora17 64bit </a>
+			 を試した方が良いかもしれません。</u>(12/07/26追記)<br>
+		<br>
+		<br>
+		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
+			　今回使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+			<blockquote>
+				ハードウェア構成：Intel Core i7 870 @ 2.93 GHz  ＋ Gigabyte P55-UD3R ＋ Intel SSD X25-M<br>
+				ソフトウェア構成：Fedora 12 64bit ＋ kernel-2.6.32.2 ＋ rtai-3.8<br>
+			</blockquote>
+			上記で動作を確認しています。
+			64bitでメモリ使いたい放題。
+			Core i7 のコア数は4，ハイパースレッディングで8なので，制御プログラムをマルチスレッド化すれば制御周期が一気に縮められるかもしれません。
+			しかも64bit。<br>
+			<br>
+			注意１：<u>当方の環境でFedora13～15を試して見ましたが，どうも起動にやたら時間がかかったり，sleeping forever.. などと表示され起動に失敗します。
+			今のところFedora12で且つ最新版へのアップデートをしない方が安定するようです。(initrd→initramfsが怪しい？) </u> (12/01/25追記)<br>
+			<br>
+			注意２：<u>ランレベル5(GUI)ではなく，ランレベル3(CUI)で起動して下さい。正常起動しても画面表示が出なかったりするようです。<br>
+			/etc/inittab の id:5:initdefault: を id:3:initdefault: に変更 </u> (12/06/22追記)<br>
+			（どうしてもX-windowを使いたいときは nouveau を無効にし，機体に適合するグラフィックドライバ(nVidia等々)を入れて下さい）<br>
+		<br>
+		<br>
+		<font size=4><b>１．Fedora 12 のインストール</b></font><br>
+			　64 bit版 Fedora 12 を普通にインストールします。
+			SSDがシステムになるようにしておくと実験が快適になります。<br>
+		<br>
+		<br>
+		<font size=4><b>２．mkinitrdのインストール</b></font><br>
+			　なぜかデフォルトで入っていないので，mkinitrdをインストールします。
+			これがないとRTAIを入れられません。以下を入力。
+			<blockquote><b>
+				yum -y install mkinitrd
+			</b></blockquote>
+			問題がなければ次に行きます。<br>
+		<br>
+		<br>
+		<font size=4><b>３．kernel と RTAI のダウンロード</b></font><br>
+			　LinuxのkernelとRTAIのパッチを入手します。必要なのは以下のファイルです。
+			<blockquote>
+				linux-2.6.32.2.tar.bz2 <br>
+				rtai-3.8.tar.bz2
+			</blockquote>
+			これをそれぞれの本家から落としてきます。<br>
+		<br>
+		<br>
+		<font size=4><b>４．リアルタイムカーネルイメージの作成</b></font><br>
+			　さて早速RTAIのパッチを当てます。
+			まず落としたファイルを/usr/srcで解凍。
+			<blockquote><b>
+				tar jxf linux-2.6.32.2.tar.bz2<br>
+				tar jxf rtai-3.8.tar.bz2
+			</b></blockquote>
+			次に，パッチ当てます。
+			<blockquote><b>
+				cd /usr/src/linux-2.6.32.2<br>
+				patch -p1 < ../rtai-3.8/base/arch/x86/patches/hal-linux-2.6.32.2-x86-2.5-00.patch
+			</b></blockquote>
+			「/rtai-3.8/base/arch/x86_64/」ではないことに注意。
+			x86_64だとよく分かりませんが駄目でした。
+			「/rtai-3.8/base/arch/x86/」の場合でもちゃんと64bitになってるようです。
+			コンパイルの設定します。
+			<blockquote><b>
+				make menuconfig
+			</b></blockquote>
+			設定画面が出てきますが，大体いつも通りです。
+			違いはCPUの設定をx86にすることぐらいです。
+			そして，コンパイル。
+			<blockquote><b>
+				make all
+			</b></blockquote>
+			・・・・と・・？<font color=#DD0000>コンパイルエラー</font>。。。。メッセージは，
+			<blockquote><i>
+				CONFIG_NR_CPUS is too large
+			</i></blockquote>
+			だそうです。
+			ということで，「/usr/src/linux-2.6.32.2/.config」ファイルを開いて書き換えます。
+			<blockquote><b>
+				vi .config<br>
+				CONFIG_NR_CPUS=256 の行を探して，CONFIG_NR_CPUS=16 に書き換え。
+			</b></blockquote>
+			しかしどうもこれだけでは駄目なようです。
+			さらに書き換え。
+			<blockquote><b>
+				CONFIG_SPARSE_IRQ=y の行を探して，CONFIG_SPARSE_IRQ=n に書き換え。
+			</b></blockquote>
+			もう一度コンパイルします。
+			<blockquote><b>
+				make all
+			</b></blockquote>
+			次は問題ないようです。
+			続いてインストール。
+			<blockquote><b>
+				make modules_install<br>
+				make install
+			</b></blockquote>
+			これでイメージはおｋです。<br>
+		<br>
+		<br>
+		<font size=4><b>５．GRUBの設定</b></font><br>
+			ブートローダの設定をします。
+			おそらく自動でRTAI＋Fedoraのための設定がされているはずですが，一部書き換えます。
+			<blockquote><b>
+				vi /boot/grub/grub.conf<br>
+				default=1 を default=0 に変更(デフォルトでRTAIが起動するように各自で設定)<br>
+				timeout=0 を timeout=10 に変更<br>
+				hiddenmenu をコメントアウト
+			</b></blockquote>
+			これでおｋ。
+			ここで再起動します。<br>
+		<br>
+		<br>
+		<font size=4><b>６．RTAIのインストール</b></font><br>
+			再起動が完了したら，
+			<blockquote><b>
+				uname -r
+			</b></blockquote>
+			と打ってみます。これで，2.6.32.2 になってるはずです。
+			RTAIをコンパイルしてぶち込みます。
+			<blockquote><b>
+				cd /usr/src/<br>
+				ln -s /usr/src/linux-2.6.32.2 linux<br>
+				cd rtai-3.8<br>
+				make menuconfig
+			</b></blockquote>
+			設定画面が出てきます。
+			いつも通り特に何もせず保存して終了。
+			そしてコンパイル＆インストール。
+			<blockquote><b>
+				make all<br>
+				make install<br>
+			</b></blockquote>
+			ここまでは問題なし。
+			そして最後の関門を実施。
+			<blockquote><b>
+				insmod /usr/realtime/modules/rtai_hal.ko
+			</b></blockquote>
+			・・・・と・・？<font color=#DD0000>エラー</font>。。。。メッセージは，
+			<blockquote><i>
+				insmod: error inserting 'rtai_hal.ko': -1 Operation not permitted
+			</i></blockquote>
+			？なんのこっちゃ。こっちはroot様ですが何か。
+			そこで，
+			<blockquote><b>
+				dmesg
+			</b></blockquote>
+			を入れてdmesgでログを見てみると，
+			<blockquote><i>
+				RTAI[hal]: RTAI CONFIGURED WITH LESS THAN NUM ONLINE CPUS.
+			</i></blockquote>
+			なーるほど。なので，「make menuconfig」まで遡ってやり直し。
+			<blockquote><b>
+				make menuconfig
+			</b></blockquote>
+			設定画面が出るので，メニューから，
+			<blockquote>
+				Machine (x86_64) → Number of CPUs → 16
+			</blockquote>
+			として，CPUの数を増加。
+			再びコンパイル＆インストール。
+			<blockquote><b>
+				make all<br>
+				make install<br>
+			</b></blockquote>
+			そしてもう一度最後の関門の突破を試みる。
+			<blockquote><b>
+				insmod /usr/realtime/modules/rtai_hal.ko<br>
+				insmod /usr/realtime/modules/rtai_lxrt.ko
+			</b></blockquote>
+			お，問題ないようだ。
+			以下を入力して動作確認を実施。
+			<blockquote><b>
+				cd /usr/realtime/testsuite/user/latency<br>
+				./run
+			</b></blockquote>
+			overrunsは零。すばらしい。完璧である。
+			これで制御性能大幅に向上。<br>
+		<br>
+		<br>
+		<font size=4><b>番外編　キーボードが効かない！</b></font><br>
+			　リアルタイムカーネル上でFedoraを起動すると，なぜかPS/2キーボードが効かない。
+			それも初めのうちは使えるのだが，数文字～数十文字入力すると突然反応しなくなる。
+			Num Lockさえも反応しない。
+			RT-Linux時代のころもキーボードが効かなくなる事態があったので，その教訓から，
+			<blockquote><b>
+				chkconfig --level 2345 gpm off
+			</b></blockquote>
+			としてgpmを止めてみたが変わらず。
+			dmesgでログを見てみると，
+			<blockquote><i>
+				PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+			</i></blockquote>
+			なる一文が。
+			そこで，「/boot/grub/grub.conf」に「i8042.nopnp」を追加すればdmesgのそのログは消えるのだが，結局ダメだった。<br>
+			
+			　ということで，PS/2キーボードを使うことを諦め，USBキーボードを使います。
+			USBキーボードならなんら問題ないようです。<br>
+			
+			<br><br><br><br><br><br>
+		<center>
+			<font size=2>
+				- <?php include('./counter/count.php'); ?> -<br>
+				<br>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>

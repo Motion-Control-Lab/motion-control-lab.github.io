@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>dsPIC リアルタイム制御</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？/What is this?</b></font><br>
+			<p style="margin-left: 1em">
+				dsPICを使って，リアルタイム制御をします。
+				<b>本サイトでは<font color=#DD0000><u>アセンブラ</u></font>で行きます。</b><br>
+				dsPICのC言語の情報は大量にあるのですが，アセンブラの情報はかなり少ないので，困っている人の助けになれば幸いです。<br>
+				Cコンパイラは無償で使えても機能制限があるようですが，アセンブラならそんなことを気にする必要はありません。<br>
+				お金がなければ知恵で勝負です。<br>
+				ここで紹介するのは，タイマ割り込みと待機ルーチンでリアルタイム性を確保する簡単なコードです。
+			</p>
+		<br>
+		<br>
+		<font size=4><b>ダウンロード/Download</b></font><br>
+			<p style="margin-left: 1em">
+			dsPICのソースコードは以下からダウンロードできます。<br>
+			You can download the source code of dsPIC.<br>
+			</p>
+			<blockquote>
+				<a href="realtime.s">realtime.s</a><br>
+			</blockquote>
+			<p style="margin-left: 1em">
+			MPLAB IDE および dsPIC30F4012 実機上で動作確認済みです。<br>
+			We confirmed that this source code was normally operated in MPLAB IDE and dsPIC30F4012.<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>ソースコード/Source code</b></font> (<u>2012/01/20 より洗練されたコードに修正</u>) <br>
+			<p style="margin-left: 1em">
+			<blockquote><pre>
+<font color=#008000>;</font>
+<font color=#008000>;  dsPIC30F4012 REAL TIME CONTROL(TIMER INTERRUPT) TEST CODE</font>
+<font color=#008000>;</font>
+
+<font color=#0000EE>.include</font> "p30f4012.inc"
+
+<font color=#008000>; 設定</font>
+<font color=#0000EE>config</font> __FOSC, CSW_FSCM_OFF & EC_PLL16  <font color=#008000>; ClockSW OFF, 外部Clock PLL16倍モード</font>
+<font color=#0000EE>config</font> __FWDT, WDT_OFF                  <font color=#008000>; WatchdogTimer OFF</font>
+<font color=#0000EE>config</font> __FBORPOR, PBOR_ON & BORV20 & PWRT_16 & MCLR_EN
+<font color=#008000>; 電源投入時自動リセット有効, 自動停止電圧2.0V, 電源投入タイマ16msec, MCLRピン有効</font>
+<font color=#0000EE>config</font> __FGS, CODE_PROT_OFF             <font color=#008000>; CodeProtection OFF</font>
+
+<font color=#008000>; ルーチン</font>
+<font color=#0000EE>.global</font> __T1Interrupt       <font color=#008000>; 割り込みルーチン</font>
+<font color=#0000EE>.global</font> __reset             <font color=#008000>; 初期設定ルーチン</font>
+
+<font color=#008000>; dsPIC起動開始</font>
+<font color=#0000EE>.text</font>
+<font color=#0000EE>.org</font>    0x000000
+    <font color=#0000EE>goto</font>    __reset         <font color=#008000>; 起動開始と共に初期設定を行う</font>
+
+<font color=#008000>; タイマ割り込みベクタ</font>
+__T1Interrupt:
+    <font color=#0000EE>goto</font>    T1Interrupt
+
+<font color=#008000>; 初期設定ルーチン</font>
+__reset:
+    <font color=#008000>; I/Oポート入出力設定</font>
+    <font color=#0000EE>mov</font>     #0b0000000000000000,w0
+    <font color=#0000EE>mov</font>     w0,TRISB
+    <font color=#0000EE>mov</font>     #0b0000000000000000,w0
+    <font color=#0000EE>mov</font>     w0,TRISC
+    <font color=#0000EE>mov</font>     #0b0000000000000000,w0
+    <font color=#0000EE>mov</font>     w0,TRISD
+    <font color=#0000EE>mov</font>     #0b0000000000000000,w0
+    <font color=#0000EE>mov</font>     w0,TRISE
+    <font color=#0000EE>mov</font>     #0b0000000000000000,w0
+    <font color=#0000EE>mov</font>     w0,TRISF
+    
+    <font color=#008000>; タイマ1割り込み設定</font>
+    <font color=#0000EE>clr</font>     T1CON           <font color=#008000>; 制御レジスタ設定</font>
+    <font color=#0000EE>clr</font>     TMR1            <font color=#008000>; タイマレジスタクリア</font>
+    <font color=#0000EE>mov</font>     <font color=#DD0000><u>#0x0BB7</u></font>, w0     <font color=#008000>; 周期レジスタの設定 0x0BB7=100μs (120MHz)</font>
+    <font color=#0000EE>mov</font>     w0,     PR1     <font color=#008000>; </font>
+    <font color=#0000EE>bset</font>    IPC0,   #T1IP0  <font color=#008000>; タイマ1割り込み設定</font>
+    <font color=#0000EE>bclr</font>    IPC0,   #T1IP1  <font color=#008000>; 優先度を</font>
+    <font color=#0000EE>bclr</font>    IPC0,   #T1IP2  <font color=#008000>; 最高に設定</font>
+    <font color=#0000EE>bclr</font>    IFS0,   #T1IF   <font color=#008000>; タイマ割り込みフラグをクリア</font>
+    <font color=#0000EE>bset</font>    IEC0,   #T1IE   <font color=#008000>; タイマ割り込みを許可</font>
+    <font color=#0000EE>bset</font>    T1CON,  #TON    <font color=#008000>; タイマ1始動</font>
+    
+    
+<font color=#008000>; タイマ割り込み待機ルーチン</font>
+<font color=#008000>; このルーチンはタイマ割り込みが発生するまで待機するルーチン</font>
+INT_WAIT:
+    <font color=#0000EE>nop</font>
+    <font color=#0000EE>goto</font>    INT_WAIT        <font color=#008000>; 主ルーチン先頭に戻る</font>
+
+<font color=#008000>; タイマ割り込みルーチン</font>
+T1Interrupt:
+    <font color=#0000EE>bclr</font>    IEC0,   #T1IE   <font color=#008000>; タイマ割り込みを禁止</font>
+    <font color=#0000EE>call</font>    PERIOD          <font color=#008000>; 周期ルーチン呼び出し</font>
+    <font color=#0000EE>bclr</font>    IFS0,   #T1IF   <font color=#008000>; タイマ割り込みフラグをリセット</font>
+    <font color=#0000EE>bset</font>    IEC0,   #T1IE   <font color=#008000>; タイマ割り込みを許可</font>
+    <font color=#0000EE>retfie</font>                  <font color=#008000>; タイマ割り込み終了</font>
+
+
+<font color=#008000>; 周期ルーチン</font>
+<font color=#008000>; このルーチンは100μsごとに実行される。処理は3000step以内に納めること。(120MHz)</font>
+PERIOD:
+    <font color=#008000>; ここに所望の制御コードを書く</font>
+    <font color=#0000EE>com.b</font>   PORTE           <font color=#008000>; 100μs毎にPORTEを反転</font>
+    <font color=#0000EE>return</font>
+
+<font color=#0000EE>.end</font>
+			</pre></blockquote>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>解説/Manual</b></font><br>
+			<p style="margin-left: 1em">
+				動作は概ね以下の通り。
+				<blockquote>
+					１．dsPIC起動直後にポート入出力設定とタイマ割り込みの設定を実行する<br>
+					２．待機ルーチンで無限ループに入る<br>
+					３．タイマ割り込みが掛かったら，４へ<br>
+					４．周期ルーチン(所望のコードが書いてある)を実行し，２へ戻る<br>
+				</blockquote>
+				これで周期ルーチンの処理内容・演算負荷に関わらず，指定した制御周期を守ることができます。<br>
+				ただし，制御周期以内で終わるようなステップ数にする必要があります。<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>制御周期の調整/Adjustment of Control Period</b></font><br>
+			<p style="margin-left: 1em">
+				正確な制御周期を得るために，実機を使ってパラメータの調整を行います。<br>
+				上述したソースコードでは，PORTEを制御周期ごとに反転させるようになっています。<br>
+				オシロスコープでPORTEから出力される方形波を観測し，<br>
+				ソースコードの<font color=#DD0000><u>赤線の部分</u></font> の周期レジスタの設定のところを調整します。
+				
+			</p>
+		<br>
+		<br>
+		<br><br><br><br>
+		<center>
+			<font size=2>
+				- <?php include('./counter/count.php'); ?> -<br>
+				<br>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>

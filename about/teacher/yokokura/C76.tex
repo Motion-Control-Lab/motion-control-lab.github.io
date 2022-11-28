@@ -1,0 +1,43 @@
+\documentclass[a5paper,10pt,twoside]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+
+% à íuçáÇÌÇπ
+\topmargin -30mm
+\voffset -1mm
+\hoffset -5mm
+\textwidth 115mm
+\oddsidemargin 0mm
+\evensidemargin -6mm
+\textheight 190mm
+
+% îwåiâÊëúÇÃéÊÇËçûÇ›
+\makeatletter
+\let\@@shipout\shipout
+\def\shipout\vbox{\@@shipout\vbox\bgroup\afterassignment\insertBackGround\let\reserved@a=}
+\def\insertBackGround#1{#1%
+        \iftombow
+                \copy\BackGround\kern0pt
+        \else
+                \kern-1truein\moveleft1truein\copy\BackGround\kern1truein
+        \fi}
+\newbox\BackGroundUnit
+\newbox\BackGround
+\def\@haikei#1{
+\setbox\BackGroundUnit\hbox{\includegraphics*{#1}}
+\@tempdima\paperheight
+\advance\@tempdima\ht\BackGroundUnit\advance\@tempdima\dp\BackGroundUnit
+\setbox\BackGround\vbox to \@tempdima{
+        \@tempdima=\paperwidth\advance\@tempdima\wd\BackGroundUnit
+        \leaders\hbox to\@tempdima{\leaders\copy\BackGroundUnit\hfil}\vfil
+}
+\wd\BackGround=0pt\ht\BackGround=0pt\dp\BackGround=0pt
+}
+\newcommand{\HAIKEI}[1]{\@haikei{#1}}
+\makeatother
+
+\begin{document}
+\pagestyle{empty}
+\HAIKEI{TitlePageBG.eps}
+
+\end{document}

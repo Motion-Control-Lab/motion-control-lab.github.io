@@ -1,0 +1,7 @@
+1. "cd /var/www/html/testpage/about/master(or bachelor/doctor, etc)/"でディレクトリ移動
+2. "ls -la"でパーミッションのチェック
+3．"chmod 775 ***.html"でパーミッションの変更
+4．"chown ユーザー名 ***.html"でファイル所有者を変更
+5．"chgrp グループ名 ***.html"でファイル所有グループを変更
+6．"cd /home/ユーザー名/samba/"でディレクトリ移動
+7．"ln -s /var/www/html/about/ profile"でシンボリックリンク作成

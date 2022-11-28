@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>Advanced Robot Control System 4.1</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？/What is this?</b></font><br>
+			<p style="margin-left: 1em">
+				LinuxとRTAIを使ってリアルタイム空間上でアクチュエータを制御できるソフトウェア<br>
+				CUIなのに先進を謳うロボット制御システム(ARCS <font size=1>あーくす？</font>)<br>
+				ARCSによって円滑に実験が進められるようになり，論文締切が間近に迫る貴方の強い味方になるでしょう<br>
+				This software, which is called "Advanced Robot Control System" or "ARCS", controls actuators mounted on your robots by using Linux and RTAI realtime operating system.<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>画面/Screenshot</b></font><br>
+			<br>
+			<center><a href="screen-discard.png"><img src="screen-discard.png" height=350px> 拡大</a></center><br>
+		<br>
+		<br>
+		<font size=4><b>ダウンロード/Download</b></font><br>
+			<p style="margin-left: 1em">
+			ソースコード一式は以下からダウンロードできます。<br>
+			You can download the source code of ARCS.<br>
+			</p>
+			<blockquote>
+				<a href="ARCS4.1-REV.20110721-A.zip">ARCS4.1-REV.20110721-A.zip</a><br>
+			</blockquote>
+			<p style="margin-left: 1em">
+			g++/gcc で動作確認済みです。
+			RTAIの他に，フレームバッファ，curses，math等々が必要です。
+			(事情により各種オブザーバのソースは非公開です)<br>
+			We confirmed that this source code was normally compiled and linked using g++/gcc.
+			In order to use this program, you need frame buffer, curses, and math libraries.
+			(For some reasons, we are not able to publish the source code of the observers.)<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>主な機能/Functions</b></font><br>
+			<p style="margin-left: 1em">
+			・マルチリアルタイムスレッドの生成・周期実行・破棄<br>
+			・測定データの出力(CSV形式及びTAB区切りDAT形式対応)<br>
+			・アクチュエータパラメータ(位置，電流，推力等)のリアルタイム表示（CUIでもOK）<br>
+			・任意変数のリアルタイム波形描画（CUIでもOK）<br>
+			・任意変数値のリアルタイム表示（CUIでもOK）<br>
+			・実際の制御周期の計測と表示（CUIでもOK）<br>
+			・実際の計算消費時間の計測と表示（CUIでもOK）<br>
+			・D/Aコンバータ，A/Dコンバータ，エンコーダカウンタとのインターフェースクラス<br>
+			・モーションコントロールクラス群(積分器，擬似微分器，各種制御器，補償器，フィルタ等)<br>
+			・様々なクラス(リングバッファ，統計処理等)<br>
+			- Generation, periodical execution, and disposal of multi-realtime thread.<br>
+			- Writing operation of measured data in the experiment.<br>
+			- Display of status of actuators (position, current, force, and so on) in real time.<br>
+			- Plot of waveform of optional variables in real time (you can use this function based on a CUI).<br>
+			- Display of optional variables in real time.<br>
+			- Display of actual measured control periods.<br>
+			- Display of computational time.<br>
+			- Interfaces class for DACs, ADCs, and encoder counters.<br>
+			- Motion control class (Integrators, Differentiators, Controllers and Regulators, Compensators, Filters, and so on).<br>
+			- Other class (Ring buffers, statistical operations).<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>必要環境/Hardware and Software Requirements</b></font><br>
+			<p style="margin-left: 1em">
+			必要環境は以下の通りです。<br>
+			The hardware and software requirements of ARCS are as follows:
+			</p>
+			<blockquote>
+				Hardware：Multi-Core CPU, Display(1024x768, 16bits colors)<br>
+				Software：Linux 2.6, RTAI 3.7 or 3.8, Framebuffer, C/C++ standard library.
+			</blockquote>
+		<br>
+		<font size=4><b>既知のバグ/Bug</b></font><br>
+			<p style="margin-left: 1em">
+			・一部のシングルコアのCPUにおいて，リアルタイムスレッドが一つしか立ち上がらない現象が報告されています<br>
+			- In the case of certain single core CPU, ARCS 4.1 cannot generate multiple realtime thread.<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>将来付加される予定の機能/Future work</b></font><br>
+			<p style="margin-left: 1em">
+			・Ethernet上での任意変数値のリアルタイム送受信<br>
+			・等高線グラフ，カラーマップ，3次元ワイヤフレームの描画（CUIでもOK）<br>
+			・静止画，動画データの表示（CUIでもOK）<br>
+			・画像認識クラス<br>
+			- Realtime communication for transmitting optional variables by using Ethernet (we are testing now).<br>
+			- Contour map, color map, 3D wire frames (on a CUI).<br>
+			- Picture images and video images will be projected on a CUI screen (we are testing now).<br>
+			- Implementation of image recognition class.<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>リアルタイム制御/Realtime control</b></font><br>
+			<p style="margin-left: 1em">
+ 			・RTAIを用いてユーザ空間上で計算をハードリアルタイムで実行する。<br>
+ 			・計算量やインターフェースによるが，制御周期は100μsで動作可能。<br>
+ 			- Using RTAI, your required computation is performed on user space.<br>
+ 			- In our lab, the control period is set to 100 micro seconds. (the period time depends on performances).<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>使い方/How to Use</b></font><br>
+			<p style="margin-left: 1em">
+			<b>1. 制御プログラムの実装/How to implement your tasks</b><br>
+			　・実装したいプログラムを，"ControlFunctions.cc" に書きこむ。<br>
+			　- In order to implement your tasks, you can write your C/C++ code to "ControlFunctions.cc".<br>
+			<br>
+			<b>2. コンパイル＆リンク/How to compile and link</b><br>
+			<br>
+			<center><img src="screen-make.png"></center>
+			<br>
+			　・「ControlFunctions.cc」や「Parameters.hh」を変更した場合は，「make」コマンドでコンパイル＆リンク<br>
+			　・「lib/」 以下のファイルを変更した場合は，「make all」コマンドを使用すること<br>
+			　・「警告: array subscript is above array bounds」が出るが，これはRTAIの方のソースなので問題なし<br>
+			　- If you changed "ControlFunctions.cc" and/or "Parameters.hh", you can use "make" command to compile and link.<br>
+			　- You should type "make all" when you revise the files in "lib/".<br>
+			　- You can ignore the warning text "warning: array subscript is above array bounds," because it is source code of RTAI.<br>
+			<br>
+			<b>3. 実行/How to execute</b><br>
+			<br>
+			<center><img src="screen-arcs.png"></center>
+			<br>
+			　・「./ARCS」と打つと，以下のような画面が現れる<br>
+			　- Type "./ARCS", then ARCS screen shown as the figure below appears.<br>
+			<br>
+			<center><a href="screen-start.png"><img src="screen-start.png" height=350px> 拡大</a></center>
+			<br>
+			<br>
+			<b>4. 実験開始/How to start</b><br>
+			　・「START」でエンターキーを押して実験開始！　あなたの思い通りに動くよう，健闘を祈ります！<br>
+			　- To start the experiment, you select "START" on the screen, and press enter. Good luck and God's speed !<br>
+			<br>
+			<center><img src="screen-exit2.png"></center>
+			<br>
+			　・もし何もせずに，終了したい場合は「EXIT」を選んでエンターを押す<br>
+			　- If you want to exit, you select "EXIT", and press enter.<br>
+			<br>
+			<br>
+			<b>5. 実験終了/How to stop</b><br>
+			<br>
+			<center><a href="screen-running.png"><img src="screen-running.png" height=350px> 拡大</a></center>
+			<br>
+			　・モータの作動を停止する場合は，エンターを押す<br>
+			　- To stop your robots, please press enter key.<br>
+			<br>
+			<br>
+			<b>6. 実験データの保存と終了/How to save and exit</b><br>
+			<br>
+			<center><img src="screen-save2.png"></center>
+			<br>
+			　・測定データを保存したい場合は，「SAVE and EXIT」を選ぶ<br>
+			　- Please select "SAVE and EXIT" and press enter key if you would like to store measured data to disk.<br>
+			　・CSVファイルかDATファイルが生成されるはずです<br>
+			　- The CSV/DAT file, which is measurement data in the experiment, is generated.<br>
+			<br>
+			<center><img src="screen-discard2.png"></center>
+			<br>
+			　・別に測定データを保存したくないときは，「DISCARD and EXIT」を選ぶ<br>
+			　- If you want to discard the data stored to the temporal memory, please select "DISCARD and EXIT" as shown in the above figure, and then press enter.<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>構造/Structure</b></font><br>
+			<p style="margin-left: 1em">
+			・基本的なファイル構造は以下の図の通り<br>
+			- The fundamental structure of ARCS is shown in the figure below.<br>
+			</p>
+			<br>
+			<center><img src="arcs-structure.png"></center>
+			<br>
+		<br>
+		<br>
+		<font size=4><b>クラスおよび関数一覧/List of Class and Functions</b></font><br>
+			<p style="margin-left: 1em">
+			・クラスおよび関数一覧は以下を参照<br>
+			- You can see the list of the class and functions of ARCS.
+			</p>
+			<blockquote>
+				<a href="arcs-manual/annotated.html">クラスおよび関数一覧/List of Class and Functions</a>
+			</blockquote>
+		<br>
+		<br>
+		<font size=4><b>ファイル/Files</b></font><br>
+		<br>
+			　ARCS4.1-REV.20110721-A/
+<pre>
+	ARCS			実行可能ファイル/Executable File.
+	ARCS.cc			本体(main関数を含む)/The main code including main function.
+	ARCSscreen.cc		画面表示ソースコード/The source code for projecting ARCS screen.
+	ARCSscreen.hh		画面表示ヘッダファイル/The header file for above.
+	<b>ControlFunctions.cc</b>	<font color=#DD0000><b>制御ソースコード(周期実行関数を含む)/The control source code including periodic functions.</b></font>
+				<font color=#DD0000><b>アクチュエータの制御プログラムはここに書く</b></font>
+	ControlFunctions.hh	制御ヘッダファイル/The header file for the above code.
+	Makefile		メイクファイル/Makefile
+	<b>Parameters.hh</b>		<font color=#DD0000><b>定数・変数格納用ヘッダ/The header file for storing constant or variable value.</b></font>
+				<font color=#DD0000><b>制御周期，換算ゲイン，CSV/DATファイル名，等々の設定はここに書く</b></font>
+	ReadMe.txt		私を読んで/Read Me
+	lib			色々なクラスが詰まったディレクトリ/The source and header files exist in this directory.
+	makefile.depend		依存関係記述用/For dependencies.
+</pre>
+			　ARCS4.1-REV.20110721-A/lib/
+<pre>
+	AccObsrv.cc		加速度オブザーバ(非公開)/Acceleration Observer(closed function).
+	AccObsrv.hh		上記のヘッダ/The header of the above source code.
+	ActuatorSim.cc		アクチュエータシミュレータ/Actuator Simulator.
+	ActuatorSim.hh		上記のヘッダ/The header of the above source code.
+	DataStorage.cc		測定データ保存クラス/Measurement Data Storage Class.
+	DataStorage.hh		上記のヘッダ/The header of the above source code.
+	Differentiator.cc	疑似微分器/Pseudo Differentiator.
+	Differentiator.hh	上記のヘッダ/The header of the above source code.
+	Differentiator2.cc	２次疑似微分器/2nd-order Pseudo Differentiator.
+	Differentiator2.hh	上記のヘッダ/The header of the above source code.
+	DistObsrv.cc		1次形外乱オブザーバ(非公開)/1st-order Disturbance Observer(closed function)
+	DistObsrv.hh		上記のヘッダ/The header of the above source code.
+	DistObsrv2.cc		2次形外乱オブザーバ(非公開)/2nd-order Disturbance Observer(closed function)
+	DistObsrv2.hh		上記のヘッダ/The header of the above source code.
+	FrameGraphics.cc	フレームバッファ描画クラス/Framebuffer Display Class.
+	FrameGraphics.hh	上記のヘッダ/The header of the above source code.
+	GraphPlot2D.cc		グラフ描画クラス/2D Plot Class.
+	GraphPlot2D.hh		上記のヘッダ/The header of the above source code.
+	HighPassFilter.cc	1次高域通過濾波器/1st-order HPF.
+	HighPassFilter.hh	上記のヘッダ/The header of the above source code.
+	HighPassFilter2.cc	2次高域通過濾波器/2nd-order HPF.
+	HighPassFilter2.hh	上記のヘッダ/The header of the above source code.
+	Integrator.cc		1次積分器/1st-order Integrator.
+	Integrator.hh		上記のヘッダ/The header of the above source code.
+	Integrator2.cc		2次積分器/2nd-order Integrator.
+	Integrator2.hh		上記のヘッダ/The header of the above source code.
+	kbhit.cc		キーボード押下検出/Key Detector
+	kbhit.hh		上記のヘッダ/The header of the above source code.
+	Limiter.cc		リミッタ/Limitter
+	Limiter.hh		上記のヘッダ/The header of the above source code.
+	LowPassFilter.cc	1次低域通過濾波器/1st-order LPF.
+	LowPassFilter.hh	上記のヘッダ/The header of the above source code.
+	LowPassFilter2.cc	2次低域通過濾波器/2nd-order LPF.
+	LowPassFilter2.hh	上記のヘッダ/The header of the above source code.
+	Makefile		メイクファイル/Makefile
+	makefile.depend		依存関係ファイル/The dependencies description for make.
+	NotchFilter.cc		ノッチフィルタ/Notchfilter(BEF)
+	NotchFilter.hh		上記のヘッダ/The header of the above source code.
+	PCI-3133.cc		A/Dコンバータインターフェースクラス/Interface Class for ADCs.
+	PCI-3133.hh		上記のヘッダ/The header of the above source code.
+	PCI-3340.cc		D/Aコンバータインターフェースクラス/Interface Class for DACs.
+	PCI-3340.hh		上記のヘッダ/The header of the above source code.
+	PCI-6205.cc		エンコーダカウンタインターフェースクラス/Interface Class for Encoder Counters.
+	PCI-6205.hh		上記のヘッダ/The header of the above source code.
+	PDcontroller.cc		PD制御器/PD controller.
+	PDcontroller.hh		上記のヘッダ/The header of the above source code.
+	PhaseLeadLag.cc		位相補償器/Phase compensator.
+	PhaseLeadLag.hh		上記のヘッダ/The header of the above source code.
+	PIcontroller.cc		PI制御器/PI controller.
+	PIcontroller.hh		上記のヘッダ/The header of the above source code.
+	PIDcontroller.cc	PID制御器/PID controller.
+	PIDcontroller.hh	上記のヘッダ/The header of the above source code.
+	Quarry.cc		Quarry行列/Quarry Matrix.
+	Quarry.hh		上記のヘッダ/The header of the above source code.
+	RingBuffer.cc		リングバッファ/Ring buffer.
+	RingBuffer.hh		上記のヘッダ/The header of the above source code.
+	RTAItask.cc		RTAIタスク生成クラス/RTAI Task Generation Class.
+	RTAItask.hh		上記のヘッダ/The header of the above source code.
+	RTAIthread.cc		RTAIスレッド生成クラス/RTAI Thread Generation Class.
+	RTAIthread.hh		上記のヘッダ/The header of the above source code.
+	Statistics.cc		統計処理/Statistics Functions.
+	Statistics.hh		上記のヘッダ/The header of the above source code.
+	TimeDelay.cc		遅延生成クラス/Time Delay Generation Class.
+	TimeDelay.hh		上記のヘッダ/The header of the above source code.
+</pre>
+<br>
+		<br>
+		<font size=4><b>試験環境/Experimental Setup</b></font><br>
+			<p style="margin-left: 1em">
+			試験環境は以下の通りです。<br>
+			The experimental setup in the test of ARCS is as follows:
+			</p>
+			<blockquote>
+				Hardware：Intel Core i7 870 @ 2.93 GHz, Gigabyte P55-UD3R, Intel SSD X25-M<br>
+				Software：Fedora 12 64bit, kernel-2.6.32.2, rtai-3.8<br>
+			</blockquote>
+			<p style="margin-left: 1em">
+			上記で動作を確認しています。<br>
+			We confirmed that ARCS is capable of operating normally in this situation.<br>
+			</p>
+		<br>
+		<br>
+		<font size=4><b>ライセンス/Licenses</b></font><br>
+			<p style="margin-left: 1em">
+			Copyright (C) 2011 Yuki YOKOKURA<br>
+			This program is free software;<br>
+			you can redistribute it and/or modify it under the terms of the GNU General Public License<br>
+			as published by the Free Software Foundation; either version 3 of the License, or any later version.<br>
+			This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;<br>
+			without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br>
+			See the GNU General Public License for more details &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.<br>
+			Besides, you can negotiate about other options of licenses instead of GPL.<br>
+			If you would like to get other licenses, please contact us&lt;<a href="mailto:yuki@katsura.sd.keio.ac.jp">yuki@katsura.sd.keio.ac.jp</a>&gt;.<br>
+			</p>
+			<br><br><br><br><br><br>
+		<center>
+			<font size=2>
+				- <?php include('./counter/count.php'); ?> -<br>
+				<br>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>

@@ -1,0 +1,92 @@
+
+	/* リンク */
+	A{
+		text-decoration:none;
+		color: #FFFFFF;
+		background-color: #333333;
+	}
+	/* リンク ホバー */
+	A:hover{
+		color: #FFFFFF;
+		background-color: #666666;
+	}
+	
+	/* リンクボタン */
+	div.Linkage{
+		position: absolute;
+		font-size: 0.9em;
+		color: #FFFFFF;
+		background-color:#333333;
+		height: 16px;
+		width: 180px;
+	}
+	/* リンクボタン ホバー */
+	div.Linkage:hover{
+		position: absolute;
+		color: #000000;
+		background-color:#FFFFFF;
+	}
+
+	/* 表題レイヤー */
+	.toplayer {
+		position: absolute;
+		top: 0px;
+		left: 33px;
+		height: 35px;
+		width: 95%;
+		color: #FFFFFF;
+		background: #000000;
+		border: none;
+		padding: 0px;
+		text-align: left;
+		vertical-align: bottom;
+	}
+	
+	/* 横帯レイヤー */
+	.sidelayer {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 8000px;
+		width: 33px;
+		color: #FFFFFF;
+		background: #000000 url(sidebar2.png);
+		border: none;
+		padding: 0px;
+		text-align: center;
+	}
+	
+	/* 本文レイヤー */
+	.mainlayer {
+		position: absolute;
+		top: 50px;
+		left: 60px;
+		height: 5500px;
+		width: 85%;
+		color: #000000;
+		background: #FFFFFF;
+		border: none;
+		padding: 0px;
+		text-align: left;
+	}
+	
+	/* 玄関ボタン */
+	.frontpagebutton {
+		position: absolute;
+		font-size: 0.9em;
+		color: #FFFFFF;
+		background-color:#333333;
+		height: 16px;
+		width: 110px;
+		top: 15px;
+		left: 75%;
+		text-align: center;
+	}
+	
+	/* 玄関ボタン ホバー*/
+	.frontpagebutton:hover{
+		position: absolute;
+		color: #000000;
+		background-color:#FFFFFF;
+	}
+	

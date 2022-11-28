@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-style-type" content="text/css">
+<title>モーションコントロール研究室 大石研究室</title>
+<link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+<body>
+<div id="all">
+<!--///////////////* 　ヘッダー ここから　 *///////////////-->
+<div id="header">
+
+<h1>モーションコントロール研究室 大石研究室</h1>
+<!-- <h2>★ あなたのサイトについての簡単な説明文 ★</h2> -->
+
+</div>
+<!--///////////////* 　ヘッダー ここまで　 *///////////////-->
+
+
+<!--///////////////* 　メニュー ここから　 *///////////////-->
+<div id="menu">
+
+<p class="bk"><a href="../../index.html">TOP</a></p>
+<p class="bksel"><a href="../../about/about.html">研究室の紹介</a></p>
+<p class="bk"><a href="../../research/research.html">研究内容</a></p>
+<p class="bk"><a href="../../link/link.html">LINK</a></p>
+<p class="bk"><a href="../../mail/mail.html">お問い合わせ</a></p>
+</div>
+
+<div id="menuline">
+
+<p class="bk3"></p>
+
+</div>
+<!--///////////////* 　メニュー ここまで　 *///////////////-->
+
+
+<div id="main">
+
+
+<!--///////////////* 　左記事 ここから　　　 *///////////////-->
+<div id="kizi">
+
+
+<!--///////////////* 　ページタイトル ここから　 *///////////////-->
+<div id="pagetitle">
+
+<h3>平出 敏雄</h3>
+
+</div>
+<hr>
+<br>
+<!--///////////////* 　ページタイトル ここまで　 *///////////////-->
+
+
+<h4 class="h43">プロフィール</h4>
+<center>
+<table class="table1">
+	<tr>
+		<td>
+			<center>
+				<img src="image/hiraide.jpg" alt="平出敏雄" width="150">
+			</center>
+		</td>
+		<td>
+			学年：<br>
+			部活･サークル：<br>
+			出身高専：<br>
+			実務訓練先：<br>
+		</td>
+		<td>
+			修士2年<br>
+			ロボコン(高専)<br>
+			サレジオ工業高等専門学校<br>
+			なし<br>
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<br>
+<h4 class="h45">研究内容</h4>
+<center>
+<table class="table2">
+	<tr>
+		<td>研究テーマ<br></td>
+		<td>永久磁石同期モータの空間高調波によるトルクリプル抑制法に関する研究<br></td>
+	</tr>
+	<tr>
+		<td>原著論文<br></td>
+		<td>
+		・[1] T.Hiraide  K.Takahashi, J.Nandayapa and K.Ohishi:<br>
+		”Fine Acceleration Control Method Considering Torque Ripple for Hybrid-Type Stepping Motor”<br>
+		IEEJ Jounal of IA.,Vol.2,No.4,pp.221-231 (2013.7)<br>
+		</td>
+	</tr>
+	<tr>
+		<td>国際会議<br></td>
+		<td>
+		・[1]T.Hiraide, K.Takahashi, M.Nandayapa and K.Ohishi:<br>
+		"Acceleration Control of AC servo motor Considering Cogging Torque at Low Velocities for Haptics"<br>
+		ISIE2012, pp.1668-1673 (2012.5)<br>
+		・[2]T.Hiraide, K.Ohishi and H.Haga:<br>
+		"Current Controller Design Method for Input Harmonic Current Reduction in Electrolytic Capacitor Less Inverter for IPMSM Drive System"<br>
+		IEEE Shin-etsu Section, pp.197 (2012.10) <br>
+		・[3]T.Hiraide, K.Ohishi and H.Haga:<br>
+		"Input Harmonic Current Reduction Method in Electrolytic Capacitor less Inverter for IPMSM Drive System"<br>
+		ISIE2013, TF-003492 (2013.5) <br>
+		・[4]T.Hiraide, K.Ohishi and H.Haga:<br>
+		"Current Harmonics Reduction Method of Electrolytic Capacitor-less Diode Rectifier using Inverter-controlled IPM Motor"<br>
+		IECON2013, (2013.10) <br>
+		</td>
+	</tr>
+	<tr>
+		<td>国内学会<br></td>
+		<td>
+			・[1] 平出，高橋，大石:<br>
+			　「HB型ステッピングモータの加速度制御系における速度検出法の一検討」<br>
+			　電気学会東京支部新潟支所研究発表会(2010)<br>
+			・[2] 平出，高橋，大石:<br>
+			　「コギングトルクを考慮したハイブリッド型ステッピングモータの加速度制御」<br>
+			　平成23年度電気学会産業応用部門大会, pp.263-264 (2011.9)<br>
+			・[3] 平出，高橋，ナンダヤパ，大石:<br>
+			　「低速域におけるコギングトルクを考慮したモータの加速度制御」<br>
+			　自動制御連合講演会, pp.390-395 (2011.11) <br>
+			・[4] 平出，大石，芳賀:<br>
+			　「IPMSM駆動用電解コンデンサレスインバータにおける入力電流高調波の抑制法」<br>
+			　平成24年度電気学会産業応用部門大会，pp.263-266 (2012.8)<br>
+			・[5] 平出，大石，芳賀:<br>
+			　「IPMSMを駆動するインバータの入力電流高調波を抑制する電流PI制御系」<br>
+			　電気学会東京支部新潟支所研究発表会，pp.60 (2012.11)<br>
+			・[6] 平出，大石，芳賀:<br>
+			　「IPMSM駆動用電解コンデンサレスインバータの入力電流高調波を低減する電流PI制御器」<br>
+			　電気学会モータドライブ／家電民生合同研究会， pp.7-12 (2013.3)<br>
+			・[7] 平出，阿部，大石，芳賀:<br>
+			　「IPMSM駆動用電解コンデンサレスインバータの入力電流高調波を低減する電流PI制御器」<br>
+			　平成25年度電気学会産業応用部門大会 (2013.8)<br>
+
+
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<br>
+<h4 class="h46">何か一言</h4>
+平成25年8月　大学院修士課程修了しました。<br>
+皆様，本当にありがとうございました。<br>
+<br>
+
+</div>
+<!--///////////////* 　左記事 ここまで　　　 *///////////////-->
+
+
+<!--///////////////* 　右ナビ部 ここから　 *///////////////-->
+<div id="navi">
+
+<p class="nbut"><a href="../member.html">メンバーの紹介</a></p>
+<p class="nbutsel"><a href="../ob.html">大石研OB・OG一覧</p>
+<p class="nbut"><a href="../map.html">研究室の場所</a></p>
+<p class="nbut"><a href="../memory.html">研究室の思い出</a></p>
+
+<br>
+
+<!--<div class="nbox">
+<p class="ntit">INFORMATION</p>
+<p class="ntxt">あいうえおテキストあいうえおテキストあいうえおテキストあいうえおテキスト</p>
+</div>
+<br>
+<ul>
+	<li>3カラム</li>
+	<li>同封画像1枚</li>
+	<li>背景画像の変更可</li>
+</ul>-->
+
+</div>
+<!--///////////////* 　右ナビ部 ここまで　 *///////////////-->
+
+<br style="clear:both"><!--/* 　← Firefoxで表示　削除不可　 */-->
+</div>
+
+<!--///////////////* 　フッター ここから　　　 *///////////////-->
+<div id="footer">
+
+<div>Copyright&nbsp;(C)&nbsp;Ohishi Laboratory&nbsp;All Rights Reserved.</div>
+
+</div>
+<!--///////////////* 　フッター ここまで　　　 *///////////////-->
+
+<!--/* 　テンプレートの著作権表示。削除変更不可　　 */-->
+<div id="copy">Designed by <a href="http://www.chocoto.com/">chocoto</a></div>
+
+</div>
+</body>
+</html>

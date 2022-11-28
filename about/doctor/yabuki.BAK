@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-style-type" content="text/css">
+<title>モーションコントロール研究室 大石研究室</title>
+<link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+<body>
+<div id="all">
+<!--///////////////* 　ヘッダー ここから　 *///////////////-->
+<div id="lang"><a href="yabuki_eng.html">English</a></div>
+
+<div id="header">
+
+<h1>モーションコントロール研究室 大石研究室</h1>
+<!-- <h2>★ あなたのサイトについての簡単な説明文 ★</h2> -->
+
+</div>
+<!--///////////////* 　ヘッダー ここまで　 *///////////////-->
+
+
+<!--///////////////* 　メニュー ここから　 *///////////////-->
+<div id="menu">
+
+<p class="bk"><a href="../../index.html">TOP</a></p>
+<p class="bksel"><a href="../../about/about.html">研究室の紹介</a></p>
+<p class="bk"><a href="../../research/research.html">研究内容</a></p>
+<p class="bk"><a href="../../link/link.html">LINK</a></p>
+<p class="bk"><a href="../../mail/mail.html">お問い合わせ</a></p>
+</div>
+
+<div id="menuline">
+
+<p class="bk3"></p>
+
+</div>
+<!--///////////////* 　メニュー ここまで　 *///////////////-->
+
+
+<div id="main">
+
+
+<!--///////////////* 　左記事 ここから　　　 *///////////////-->
+<div id="kizi">
+
+
+<!--///////////////* 　ページタイトル ここから　 *///////////////-->
+<div id="pagetitle">
+
+<h3>矢吹　明紀</h3>
+
+</div>
+<hr>
+<br>
+<!--///////////////* 　ページタイトル ここまで　 *///////////////-->
+
+
+<h4 class="h43">プロフィール</h4>
+<center>
+<table class="table1">
+	<tr>
+		<td>
+			<center>
+				<img src="image/yabuki.JPG" alt="矢吹明紀" height="180">
+			</center>
+		</td>
+		<td>
+			学年：<br>
+			部活･サークル：<br>
+			趣味：<br>
+			出身高校：<br>
+			実務訓練先：<br>
+		</td>
+		<td>
+			博士3年<br>
+			なし<br>
+			読書，料理<br>
+			福島工業高等専門学校<br>
+			(株)不二越<br>		
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<br>
+<h4 class="h45">研究内容</h4>
+<center>
+<table class="table2">
+	<tr>
+			<td>研究　<br>テーマ<br></td>
+			<td>
+				産業用ロボットの接触過程を含む力制御<br>
+				三慣性共振系に対する振動抑制<br>
+			</td>
+	</tr>
+	<tr>
+		<td>原著<br>論文<br></td>
+		<td>
+			なし<br>
+		</td>
+	</tr>
+	<tr>
+		<td>国際<br>会議<br></td>
+		<td>
+			[1] ◎<b>Akinori Yabuki</b>, Hien Nguyen, Takashi Yoshioka, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Profile Design Method Considering Acceleration and Speed Limits<br>
+			for Industrial Robot",<br>
+			IEEE Shin-etsu Section (2013.10)<br><br>
+			[2] ◎<b>Akinori Yabuki</b>, Hien Nguyen, Takashi Yoshioka, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Final State Control Based on High-speed Positioning Control<br>
+			Considering Acceleration and Speed Limits for Industrial Robot",<br>
+			MECATRONICS2014 (2014.11)<br><br>
+			[3] ◎<b>Akinori Yabuki</b>, Takashi Yoshioka, Thao Tran Phuong, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Robust Motion Control Using Kalman-filter-based Instantaneous State Observer<br>
+			For Industrial Robot",<br>
+			2015 JSME-IIP/ASME-ISPS Joint Conference on Micromechatronics for<br>
+			Information and Precision Equipment(MIPE2015) (2015.06)<br><br>
+			[4] ◎<b>Akinori Yabuki</b>, Takashi Yoshioka, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Design Method of Stable Force Control System <br>
+			Using New Resonance Ratio Contol and Instantaneous State Obserber",<br>
+			The 41st Annual Conference of the IEEE Industrial Electronics Society (IECON),<br>
+			pp.005310-005315 (2015.11)<br><br>
+			[5] ◎<b>Akinori Yabuki</b>, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Design Method of I-PD Force Control System Based on <br>
+			Instantaneous State Obserber for Industrial Robot",<br>
+			2016 IEEE 14th International Workshop on Advanced Motion Control (AMC),<br>
+			pp.99-104 (2016.4)<br><br>
+			[6] ◎<b>Akinori Yabuki</b>, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Force Control Including Contact Process Using Acceleration-sensor-based <br>
+			Inastantaneous State Observer for High-stiffness Gear Drive",<br>
+			2016 IEEE International Symposium on Industrial Electronics (ISIE),<br>
+			pp.651-656 (2016.6)<br><br>
+			[7] ◎<b>Akinori Yabuki</b>, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Vibration Suppression Control System Based on State Feedback Using <br>
+			Approximation Model of Two-Inertia System for Three-Inertia System",<br>
+			The IEEJ International Workshop on Sensing, Actuation, Motion Control, and Optimization (SAMCON),<br>
+			TT5-2 (2017.3)<br><br>
+			[8] ◎<b>Akinori Yabuki</b>, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Fine Vibration Suppression Control Based on <br>
+			New Two-inertia State Observer Feedback Against Three-inertia Robot Joint",<br>
+			2017 IEEE International Symposium on Industrial Electronics (ISIE),<br>
+			pp.1093-1098 (2017.6)<br><br>
+			[9] ◎<b>Akinori Yabuki</b>, Kiyoshi Ohishi, <br>
+			Toshimasa Miyazaki, Yuki Yokokura:<br>
+			"Vibration Suppression Control for Three-inertia System <br>
+			Based on Two-inertia Model Using Modal Transformation of Real Range",<br>
+			The IEEJ International Workshop on Sensing, Actuation, Motion Control, and Optimization (SAMCON),<br>
+			SS1-6 (2018.3)<br><br>
+
+		</td>
+	</tr>
+	<tr>
+		<td>国内<br>学会<br></td>
+		<td>
+			[1]◎<b>矢吹 明紀</b>，グエン ヒエン，吉岡 崇，大石 潔，横倉 勇希，丸山 章，中島 潤之:<br>
+			「産業用ロボットの加速度及び速度制限を考慮した高速位置決め制御における<br>
+			位置指令の一設計法」<br>
+			第32回ロボット学会学術講演会(2014-9)<br><br>
+			[2]◎<b>矢吹 明紀</b>，吉岡 崇，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「Anti-Resonance Ratio と瞬時状態オブザーバに基づく安定な力制御系の一設計法」<br>
+			電気学会メカトロニクス研究会(2015-8)<br><br>
+			[3]◎<b>矢吹 明紀</b>，吉岡 崇，横倉 勇希，大石 潔，宮崎敏昌:<br>
+			「新しい共振比制御と瞬時状態オブザーバによる安定な力制御系の設計法」<br>
+			平成27年電気学会産業応用部門大会(2015-9)<br><br>
+			[4]◎<b>矢吹 明紀</b>，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「接触過程を持つ瞬時状態オブザーバと反共振比制御に基づく力制御系」<br>
+			平成27年電気関係学会北陸支部連合大会(2015-9)<br><br>
+			[5]◎<b>矢吹 明紀</b>，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「二慣性系状態オブザーバを用いた三慣性共振系の振動抑制手法」<br>
+			平成28年電気関係学会全国大会(2016-3)<br><br>
+			[6]◎<b>矢吹 明紀</b>，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「ばね比に基づくI-PD力制御系の設計手法に関する検討」<br>
+			平成28年電気学会産業応用部門大会(2016-8)<br><br>
+			[7]◎<b>矢吹 明紀</b>，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「三慣性系に対する状態フィードバック構成についての考察」<br>
+			電気学会メカトロニクス研究会(2016-9)<br><br>
+			[8]◎<b>矢吹 明紀</b>，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「第二共振周波数を反映した二慣性系オブザーバによる三慣性系の振動抑制制御の検討」<br>
+			平成29年電気学会産業応用部門大会(2017-8)<br><br>
+			[9]◎<b>矢吹 明紀</b>，大石 潔，宮崎敏昌，横倉 勇希:<br>
+			「モード変換に基づく二慣性系モデルによる三慣性系のモーションコントロール」<br>
+			電気学会メカトロニクス研究会(2017-9)<br><br>
+			<br>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<td>受<br>賞<br>歴<br></td>
+		<td>
+		[1] 2016年1月　メカトロニクス制御技術委員会　優秀論文発表賞　受賞(国内学会[2])<br>
+		[2] 2016年8月　電気学会優秀論文発表賞A　受賞(国内学会[3])<br>
+		[3] 2017年12月　IEEE Shin-etsu Section 2017年学生国際会議参加奨励賞(国際会議[8])<br>
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<br>
+<h4 class="h46">何か一言</h4>
+
+
+
+
+</div>
+<!--///////////////* 　左記事 ここまで　　　 *///////////////-->
+
+
+<!--///////////////* 　右ナビ部 ここから　 *///////////////-->
+<div id="navi">
+
+<p class="nbutsel"><a href="../member.html">メンバーの紹介</a></p>
+<p class="nbut"><a href="../ob.html">卒業生の紹介</a></p>
+<p class="nbut"><a href="../map.html">研究室の場所</a></p>
+<p class="nbut"><a href="../memory_eng.html">研究室の思い出</a></p>
+
+<br>
+
+<!--<div class="nbox">
+<p class="ntit">INFORMATION</p>
+<p class="ntxt">あいうえおテキストあいうえおテキストあいうえおテキストあいうえおテキスト</p>
+</div>
+<br>
+<ul>
+	<li>3カラム</li>
+	<li>同封画像1枚</li>
+	<li>背景画像の変更可</li>
+</ul>-->
+
+</div>
+<!--///////////////* 　右ナビ部 ここまで　 *///////////////-->
+
+<br style="clear:both"><!--/* 　← Firefoxで表示　削除不可　 */-->
+</div>
+
+<!--///////////////* 　フッター ここから　　　 *///////////////-->
+<div id="footer">
+
+<div>Copyright&nbsp;(C)&nbsp;Ohishi Laboratory&nbsp;All Rights Reserved.</div>
+
+</div>
+<!--///////////////* 　フッター ここまで　　　 *///////////////-->
+
+<!--/* 　テンプレートの著作権表示。削除変更不可　　 */-->
+<div id="copy">Designed by <a href="http://www.chocoto.com/">chocoto</a></div>
+
+</div>
+</body>
+</html>

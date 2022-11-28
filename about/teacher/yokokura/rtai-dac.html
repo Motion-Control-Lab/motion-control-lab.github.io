@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Side Warehouse of Laboratory - 研究室の横の倉庫</title>
+<head>
+	<link rel=stylesheet type="text/css" href="normalpage.css" />
+</head>
+<body>
+
+	<!---// 表題レイヤー //--->
+	<DIV class="toplayer">
+		<font size=6><b>D/A変換ボードの使い方</b></font>
+		<a href="index.html"><DIV class="frontpagebutton"><b>FRONT PAGE</b></DIV></a>
+	</DIV>
+
+	<!---// 横帯レイヤー //--->
+	<DIV class="sidelayer"></DIV>
+
+	<!---// 本文レイヤー //--->
+	<DIV class="mainlayer">
+		<br>
+		<font size=4><b>コレは何？</b></font><br>
+			　RTAIでD/A変換ボードを使うための解説です。
+			RTAIでモータ，ロボットを制御するためにDACボードは必須です。
+			ここでは，Interface社製の PCI-3340 (8ch 16bit) をRTAI上で動作させることを考えます。
+			本節では PCI-3340 について述べますが，他の型番についても少しいじれば応用可能と思われます。
+		<br>
+		<br>
+		<center>
+			<img src="pci3340.png"><br>
+			<br>
+			D/A変換ボードの外観
+		</center>
+		<br>
+		<br>
+		<font size=4><b>ハードウェア/ソフトウェア構成例</b></font><br>
+			　使用したパソコンのハードウェアおよびソフトウェア構成は以下の通りです。<br>
+			<blockquote>
+				ハードウェア構成：Pentium4 ＋ 845G ＋ Intel EtherExpressPro ＋ <b>PCI-3340</b><br>
+				ソフトウェア構成：kernel-2.6.23 ＋ Slackware-12.2 ＋ rtai-3.7<br>
+			</blockquote>
+			上記で動作を確認しています。<br>
+		<br>
+		<br>
+		<font size=4><b>PCI-3340</b></font><br>
+			　PCI-3340はインターフェース社が出荷しているD/Aコンバータボードであり，
+			一般的なPCのPCIに刺すことで，自作プログラムから好きな電圧を自由に出力できるようになります。
+			このDACによってモータの電流指令値もしくはトルク指令値を与えてモータの制御が行えます。
+			実際の制御には位置センサや速度センサ，加速度センサ等々も必要ですので，
+			A/Dコンバータボードやエンコーダカウンタボードも一緒に使うことになりますが，これらについては別の項目で述べます。<br>
+		<br>
+		<br>
+		<font size=4><b>アドレスを調べる</b></font><br>
+			　まずPCIバスに刺したPCI-3340がどの番地に居るのか，「scanpci」若しくは「lspci」を使って調べます。
+			<blockquote>
+				<b>scanpci -v</b><br>
+			</blockquote>
+			上のを打ち込むと以下のような画面が出てきます。(scanpciがなければlspci)<br>
+		<br>
+		<center>
+			<img src="scanpci.png"><br>
+			<br>
+			scanpci -v の実行結果
+		</center>
+		<br>
+		刺さってるデバイスごとにずらずら上記の結果が出てくるはずです。
+		その中で，黄色い線が引いてある部分に注目して， Interface Corp，vendor ID 0x1147， device ID 0x0d0c のものを探します。
+		0x1147はインターフェース社を意味し，0x0d0cはPCI-3340を意味しています。(0x0d0cを10進数にするとなんと3340！)<br>
+		　ここで，BASE0の欄のaddrの後の数字(緑で囲った部分)がベースアドレスなので，これをどこかにメモします。
+		このアドレスを基にしてin/out関数で叩いていきます。
+		<br>
+		<br>
+		<br>
+		<font size=4><b>DACsettings関数 (D/A変換ボード設定用)</b></font><br>
+			　D/A変換ボードの初期設定用関数を以下に置いておきます。
+			この関数は PCI-3340用です。
+			そのまま使えるはずです。
+			他の型番のD/A変換ボードでもちょっとした改造で使えると思われますが，IF社のI/O公開資料を参照してください。
+			これを参考にして好きなように改良，新造してください。<br>
+			<font size=2><blockquote><pre>
+
+<font color=#0000EE>void</font> DACsettings(<font color=#0000EE>unsigned int</font> BASE0){
+	<font color=#008000>// DACの設定を行う関数</font>
+	
+	iopl(3);		<font color=#008000>// I/O全アドレス空間にアクセス許可</font>
+	<font color=#008000>//------- DAC 設定</font>
+	<font color=#008000>// DAC チャネル 1</font>
+	outb(0x00,BASE0+0x07);	<font color=#008000>// CH1 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 2</font>
+	outb(0x01,BASE0+0x07);	<font color=#008000>// CH2 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 3</font>
+	outb(0x02,BASE0+0x07);	<font color=#008000>// CH3 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 4</font>
+	outb(0x03,BASE0+0x07);	<font color=#008000>// CH4 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 5</font>
+	outb(0x04,BASE0+0x07);	<font color=#008000>// CH5 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 6</font>
+	outb(0x05,BASE0+0x07);	<font color=#008000>// CH6 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 7</font>
+	outb(0x06,BASE0+0x07);	<font color=#008000>// CH7 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	<font color=#008000>// DAC チャネル 8</font>
+	outb(0x07,BASE0+0x07);	<font color=#008000>// CH8 設定</font>
+	outb(0x03,BASE0+0x06);	<font color=#008000>// 出力電圧範囲を±10Vに設定</font>
+	usleep(100);		<font color=#008000>// 設定後に必要な100μsの待機</font>
+	
+	outb(0x03,BASE0+0x05);	<font color=#008000>// 全チャネル同時出力設定</font>
+	
+	<font color=#0000EE>return</font>;
+}
+			</pre></blockquote></font>
+			設定後に100μsの待機がありますが，これはIO公開資料に「出力レンジを設定した後に、最低100μsのウェイトが必要です。」
+			と書いてあるのでusleepが挿入してあります。
+			(とはいうものの，各々のチャネルのレンジの設定後に待機するのか？全チャネルのレンジの設定後に待機するのか？よく分かりません…)<br>
+		<br>
+		<br>
+		<font size=4><b>DACout関数 (電圧出力用)</b></font><br>
+			　D/A変換ボードから指定した電圧を出力する関数を下に置いておきます。<br>
+			<font size=2><blockquote><pre>
+
+<font color=#0000EE>void</font> DACout(<font color=#0000EE>unsigned int</font> BASE0, <font color=#0000EE>unsigned short</font> DACdata[8]){
+	<font color=#008000>// DACから指定した電圧を出力する関数</font>
+	
+	<font color=#008000>//------- DAC 出力</font>
+	<font color=#008000>// DAC チャネル 1</font>
+	outb(0x00,BASE0+0x02);			<font color=#008000>// CH1 設定</font>
+	outb(IIbyteLo(DACdata[0]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[0]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 2</font>
+	outb(0x01,BASE0+0x02);			<font color=#008000>// CH2 設定</font>
+	outb(IIbyteLo(DACdata[1]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[1]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 3</font>
+	outb(0x02,BASE0+0x02);			<font color=#008000>// CH3 設定</font>
+	outb(IIbyteLo(DACdata[2]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[2]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 4</font>
+	outb(0x03,BASE0+0x02);			<font color=#008000>// CH4 設定</font>
+	outb(IIbyteLo(DACdata[3]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[3]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 5</font>
+	outb(0x04,BASE0+0x02);			<font color=#008000>// CH5 設定</font>
+	outb(IIbyteLo(DACdata[4]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[4]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 6</font>
+	outb(0x05,BASE0+0x02);			<font color=#008000>// CH6 設定</font>
+	outb(IIbyteLo(DACdata[5]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[5]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 7</font>
+	outb(0x06,BASE0+0x02);			<font color=#008000>// CH7 設定</font>
+	outb(IIbyteLo(DACdata[6]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[6]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	<font color=#008000>// DAC チャネル 8</font>
+	outb(0x07,BASE0+0x02);			<font color=#008000>// CH8 設定</font>
+	outb(IIbyteLo(DACdata[7]),BASE0+0x00);	<font color=#008000>// DAC出力 下位</font>
+	outb(IIbyteHi(DACdata[7]),BASE0+0x01);	<font color=#008000>// DAC出力 上位</font>
+	
+	outb(0x01,BASE0+0x05);			<font color=#008000>// 全チャネル同時出力実行</font>
+	
+	<font color=#0000EE>return</font>;
+}
+			</pre></blockquote></font>
+		ここで「IIbyteHi」と「IIbyteLo」の二つの関数がありますが，これは２バイトデータの上位および下位１バイト分を抽出して出力する関数です。
+		この関数は以下のように実装します。
+			<font size=2><blockquote><pre>
+			
+<font color=#0000EE>unsigned short</font> IIbyteLo(<font color=#0000EE>unsigned short</font> in){
+	<font color=#008000>// 2byteデータの下位1byteを抽出して出力</font>
+	<font color=#0000EE>return</font> 0x00FF & in;
+}
+
+<font color=#0000EE>unsigned short</font> IIbyteHi(<font color=#0000EE>unsigned short</font> in){
+	<font color=#008000>// 2byteデータの上位1byteを抽出して出力</font>
+	<font color=#0000EE>return</font> 0x00FF & (in >> 8);
+}
+			</pre></blockquote></font>
+		この関数で上位と下位に分けてからDACに放り込んでいます。<br>
+		<br>
+		<br>
+		<font size=4><b>使い方</b></font><br>
+			　上記の関数の実際の使い方について説明します。
+			まずscanpciで調べたBASE0の値をどこかに定義しておきます。
+			次にRTAIの制御ループに入る前の部分で，DACsettings関数を実行します。
+			その次に，制御ループの中でDACout関数で所望の電圧を出力します。
+			ということで以下のような感じになります。
+			<font size=2><blockquote><pre>
+
+<font color=#0000EE>#define</font> BASE0 <font color=#DD7700>ここにscanpciの値</font>
+
+RTAI実時間スレッド{
+	<font color=#0000EE>unsigned short</font> data[8]={0};
+	
+	DACsettings(BASE0);		<font color=#008000>// DACの設定</font>
+	
+	<font color=#0000EE>while</font>(1){
+		<font color=#DD7700>なにかの制御プログラム</font>
+		
+		data[0]=<font color=#DD7700>CH1の所望の電圧</font>
+		data[1]=<font color=#DD7700>CH2の所望の電圧</font>
+		data[2]=<font color=#DD7700>CH3の所望の電圧</font>
+			・
+			・
+			・
+		DACout(BASE0, data);	<font color=#008000>// 電圧出力実行</font>
+
+	}
+}
+			</pre></blockquote></font>
+			電圧は 0x0000で－10V，0xFFFFで＋10Vになります。
+			なので実際に使うときは換算ゲインを掛けましょう。
+			また，下位の制御系(例えばどこかのメーカ製のサーボアンプ/ドライバ)で電流制御やトルク制御を行っている場合は，
+			電流指令値やトルク指令値から出力電圧値に変換する必要もあります。
+			この換算ゲインについては他で説明したいと思います。
+			それからioplとin/out関数を使うにはroot権限が必要なので注意して下さい。<br>
+			　ということで，上記の手法によりRTAI上でも非常に簡単にDACが使えるようになります。
+		<br>
+		<br>
+		<font size=4><b>コーディング例</b></font><br>
+			　具体的なコーディング例は，<a href="rtai-arcs.html">ARCS</a> のソースコードを参照して下さい。
+			C++のクラスにする場合は，<a href="arcs-manual/_p_c_i-3340_8hh_source.html">こんな感じ</a>にしておくと便利です。
+			(2012/01/25追記)
+			<br><br><br><br><br><br>
+		<center>
+			<font size=2>
+				- <?php include('./counter/count.php'); ?> -<br>
+				<br>
+				研究室の横の倉庫 - Side Warehouse of Laboratory<br>
+				Copyright(C), Side Warehouse, All rights reserved.
+			</font>
+		</center>
+	</DIV>
+</html>
